@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  studylink_19
+//  studylink-2019
 //
 //  Created by Manprit Heer on 4/16/19.
 //  Copyright © 2019 Manprit Heer. All rights reserved.

@@ -1,6 +1,6 @@
 //
-//  studylink_19UITests.swift
-//  studylink_19UITests
+//  studylink_2019UITests.swift
+//  studylink-2019UITests
 //
 //  Created by Manprit Heer on 4/16/19.
 //  Copyright © 2019 Manprit Heer. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class studylink_19UITests: XCTestCase {
+class studylink_2019UITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
