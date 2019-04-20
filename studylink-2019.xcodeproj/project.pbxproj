@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BEABD5669F80E8945855B23 /* Pods_studylink_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A717BBE87D8312EFC601B2AD /* Pods_studylink_2019.framework */; };
+		6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */; };
 		821F6DAF2266F600005FD1FB /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 821F6DAE2266F600005FD1FB /* camera.jpg */; };
 		821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */; };
 		82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF12266ECE70086CE27 /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 		82917B122266ECEA0086CE27 /* studylink_2019UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917B112266ECEA0086CE27 /* studylink_2019UITests.swift */; };
 		82917B202266F0420086CE27 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 82917B1F2266F0420086CE27 /* edit.png */; };
 		82917B222266F1060086CE27 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82917B212266F1060086CE27 /* menu2.png */; };
+		B996B258192A8CDB01E2B585 /* Pods_studylink_2019Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */; };
+		C7D8C6F270205A277E963B70 /* Pods_studylink_2019UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCF5D4E4F0AD885AC1BFF86 /* Pods_studylink_2019UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ACDCFADF8F10779C01A121E /* Pods-studylink-2019Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019Tests/Pods-studylink-2019Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		3BCF5D4E4F0AD885AC1BFF86 /* Pods_studylink_2019UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		511E729ABCF9905CB84C708E /* Pods-studylink-2019UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019UITests/Pods-studylink-2019UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E2411BC667E58899CCAC2BF /* Pods-studylink-2019Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019Tests/Pods-studylink-2019Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6D068C2ED10C3B3B4B137137 /* Pods-studylink-2019UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019UITests/Pods-studylink-2019UITests.release.xcconfig"; sourceTree = "<group>"; };
+		7FFB910240AA6C615021A232 /* Pods-studylink-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019.debug.xcconfig"; sourceTree = "<group>"; };
 		821F6DAE2266F600005FD1FB /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewController.swift; sourceTree = "<group>"; };
+		825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82917AEE2266ECE70086CE27 /* studylink-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studylink-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82917AF12266ECE70086CE27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82917AF32266ECE70086CE27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +67,8 @@
 		82917B132266ECEA0086CE27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82917B1F2266F0420086CE27 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		82917B212266F1060086CE27 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
+		A717BBE87D8312EFC601B2AD /* Pods_studylink_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99D7C225EC93EB4F136A34F /* Pods-studylink-2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BEABD5669F80E8945855B23 /* Pods_studylink_2019.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B996B258192A8CDB01E2B585 /* Pods_studylink_2019Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D8C6F270205A277E963B70 /* Pods_studylink_2019UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64BDA0AAD8F03F957B7A2AB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A717BBE87D8312EFC601B2AD /* Pods_studylink_2019.framework */,
+				825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */,
+				3BCF5D4E4F0AD885AC1BFF86 /* Pods_studylink_2019UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		821F6DB022670348005FD1FB /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +135,8 @@
 				82917B052266ECEA0086CE27 /* studylink-2019Tests */,
 				82917B102266ECEA0086CE27 /* studylink-2019UITests */,
 				82917AEF2266ECE70086CE27 /* Products */,
+				8E3A9CEAFC9BA65DC42045FF /* Pods */,
+				64BDA0AAD8F03F957B7A2AB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +153,7 @@
 		82917AF02266ECE70086CE27 /* studylink-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */,
 				821F6DB12267038D005FD1FB /* SFiles */,
 				821F6DB022670348005FD1FB /* VC */,
 				82917AF82266ECE90086CE27 /* Assets.xcassets */,
@@ -153,6 +183,19 @@
 			path = "studylink-2019UITests";
 			sourceTree = "<group>";
 		};
+		8E3A9CEAFC9BA65DC42045FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FFB910240AA6C615021A232 /* Pods-studylink-2019.debug.xcconfig */,
+				A99D7C225EC93EB4F136A34F /* Pods-studylink-2019.release.xcconfig */,
+				1ACDCFADF8F10779C01A121E /* Pods-studylink-2019Tests.debug.xcconfig */,
+				5E2411BC667E58899CCAC2BF /* Pods-studylink-2019Tests.release.xcconfig */,
+				511E729ABCF9905CB84C708E /* Pods-studylink-2019UITests.debug.xcconfig */,
+				6D068C2ED10C3B3B4B137137 /* Pods-studylink-2019UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82917B162266ECEA0086CE27 /* Build configuration list for PBXNativeTarget "studylink-2019" */;
 			buildPhases = (
+				9B392BF508081E9841FA8FBC /* [CP] Check Pods Manifest.lock */,
 				82917AEA2266ECE70086CE27 /* Sources */,
 				82917AEB2266ECE70086CE27 /* Frameworks */,
 				82917AEC2266ECE70086CE27 /* Resources */,
+				298A9C12BD57BE196443BCDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82917B192266ECEA0086CE27 /* Build configuration list for PBXNativeTarget "studylink-2019Tests" */;
 			buildPhases = (
+				BC56E8A835D3EE7A05762F3A /* [CP] Check Pods Manifest.lock */,
 				82917AFE2266ECEA0086CE27 /* Sources */,
 				82917AFF2266ECEA0086CE27 /* Frameworks */,
 				82917B002266ECEA0086CE27 /* Resources */,
@@ -195,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82917B1C2266ECEA0086CE27 /* Build configuration list for PBXNativeTarget "studylink-2019UITests" */;
 			buildPhases = (
+				9AC5B82094AB4B5E031B7E54 /* [CP] Check Pods Manifest.lock */,
 				82917B092266ECEA0086CE27 /* Sources */,
 				82917B0A2266ECEA0086CE27 /* Frameworks */,
 				82917B0B2266ECEA0086CE27 /* Resources */,
@@ -260,6 +307,7 @@
 				821F6DAF2266F600005FD1FB /* camera.jpg in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
 				82917B202266F0420086CE27 /* edit.png in Resources */,
+				6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */,
 				82917AF92266ECE90086CE27 /* Assets.xcassets in Resources */,
 				82917AF72266ECE70086CE27 /* Main.storyboard in Resources */,
 				82917B222266F1060086CE27 /* menu2.png in Resources */,
@@ -281,6 +329,103 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		298A9C12BD57BE196443BCDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AC5B82094AB4B5E031B7E54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-studylink-2019UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B392BF508081E9841FA8FBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-studylink-2019-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC56E8A835D3EE7A05762F3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-studylink-2019Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82917AEA2266ECE70086CE27 /* Sources */ = {
@@ -462,6 +607,7 @@
 		};
 		82917B172266ECEA0086CE27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FFB910240AA6C615021A232 /* Pods-studylink-2019.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +625,7 @@
 		};
 		82917B182266ECEA0086CE27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A99D7C225EC93EB4F136A34F /* Pods-studylink-2019.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +643,7 @@
 		};
 		82917B1A2266ECEA0086CE27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ACDCFADF8F10779C01A121E /* Pods-studylink-2019Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +664,7 @@
 		};
 		82917B1B2266ECEA0086CE27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E2411BC667E58899CCAC2BF /* Pods-studylink-2019Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +685,7 @@
 		};
 		82917B1D2266ECEA0086CE27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 511E729ABCF9905CB84C708E /* Pods-studylink-2019UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +705,7 @@
 		};
 		82917B1E2266ECEA0086CE27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D068C2ED10C3B3B4B137137 /* Pods-studylink-2019UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

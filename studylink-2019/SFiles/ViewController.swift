@@ -7,8 +7,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return classes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
+        // set the text from the data model
+        cell.textLabel?.text = classes[indexPath.row]
+        
+        return cell
+    }
+    
 
 
    
@@ -21,6 +38,15 @@ class ViewController: UIViewController {
     }
     @IBAction func cambox(_ sender: UIButton) {
     }
+    
+    
+    @IBOutlet weak var yearLbl: UILabel!
+    @IBOutlet weak var majorLbl: UILabel!
+    @IBOutlet weak var bioLbl: UILabel!
+    @IBOutlet weak var classesTable: UITableView!
+    var userId:String = ""
+    var classes:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -37,9 +63,24 @@ class ViewController: UIViewController {
         cambox.layer.cornerRadius = cambox.frame.height/2
         cambox.clipsToBounds = true
 
-      
-
-        // Do any additional setup after loading the view, typically from a nib.
+        userId = "user1"
+        
+        retrieveData()
+        classesTable.delegate = self
+        classesTable.dataSource = self
+    }
+    
+    func retrieveData(){
+        Database.database().reference().child("Users").child(userId).observe(.value, with: {(snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.yearLbl.text = value?["Year"] as? String ?? ""
+            self.bioLbl.text = value?["Bio"] as? String ?? ""
+            self.majorLbl.text = value?["Major"] as? String ?? ""
+            let classesVal = snapshot.childSnapshot(forPath: "Classes").value as? NSDictionary
+            
+            self.classes = classesVal?.allValues as? [String] ?? []
+            self.classesTable.reloadData()
+        })
     }
 
 
