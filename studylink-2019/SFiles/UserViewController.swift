@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,6 +68,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         retrieveData()
         classesTable.delegate = self
         classesTable.dataSource = self
+    }
+    
+    @IBAction func setProfilePicture(_ sender: Any) {
+        
     }
     
     func retrieveData(){

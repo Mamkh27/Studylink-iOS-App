@@ -88,6 +88,8 @@ class NewInfoViewController: UIViewController {
         let class4 = class4Txt.text ?? ""
         let class5 = class5Txt.text ?? ""
         
+        firebaseRef.child("Users").child(userId).child("Classes").removeValue()
+        
         if(checkStr(string: class1)){
             firebaseRef.child("Users").child(userId).child("Classes").child("Class1").setValue(class1)
         }
@@ -119,6 +121,7 @@ class NewInfoViewController: UIViewController {
         setBio()
         setYear()
         setClasses()
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
