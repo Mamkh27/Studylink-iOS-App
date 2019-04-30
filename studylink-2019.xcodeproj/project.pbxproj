@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0BEABD5669F80E8945855B23 /* Pods_studylink_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A717BBE87D8312EFC601B2AD /* Pods_studylink_2019.framework */; };
 		6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */; };
+		821345462279000800832A7C /* mag_glass3.png in Resources */ = {isa = PBXBuildFile; fileRef = 821345452279000800832A7C /* mag_glass3.png */; };
+		8213454C2279012100832A7C /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8213454B2279012000832A7C /* back_arrow.png */; };
 		821F6DAF2266F600005FD1FB /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 821F6DAE2266F600005FD1FB /* camera.jpg */; };
 		821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */; };
 		82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF12266ECE70086CE27 /* AppDelegate.swift */; };
@@ -49,6 +51,8 @@
 		6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D068C2ED10C3B3B4B137137 /* Pods-studylink-2019UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019UITests/Pods-studylink-2019UITests.release.xcconfig"; sourceTree = "<group>"; };
 		7FFB910240AA6C615021A232 /* Pods-studylink-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019.debug.xcconfig"; sourceTree = "<group>"; };
+		821345452279000800832A7C /* mag_glass3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mag_glass3.png; sourceTree = "<group>"; };
+		8213454B2279012000832A7C /* back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_arrow.png; sourceTree = "<group>"; };
 		821F6DAE2266F600005FD1FB /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewController.swift; sourceTree = "<group>"; };
 		825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		82134551227908B800832A7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				82917AF82266ECE90086CE27 /* Assets.xcassets */,
+				82917B1F2266F0420086CE27 /* edit.png */,
+				82917B212266F1060086CE27 /* menu2.png */,
+				821F6DAE2266F600005FD1FB /* camera.jpg */,
+				821345452279000800832A7C /* mag_glass3.png */,
+				8213454B2279012000832A7C /* back_arrow.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		821F6DB022670348005FD1FB /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,10 +173,7 @@
 				6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */,
 				821F6DB12267038D005FD1FB /* SFiles */,
 				821F6DB022670348005FD1FB /* VC */,
-				82917AF82266ECE90086CE27 /* Assets.xcassets */,
-				82917B1F2266F0420086CE27 /* edit.png */,
-				82917B212266F1060086CE27 /* menu2.png */,
-				821F6DAE2266F600005FD1FB /* camera.jpg */,
+				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
 			);
 			path = "studylink-2019";
@@ -304,8 +318,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8213454C2279012100832A7C /* back_arrow.png in Resources */,
 				821F6DAF2266F600005FD1FB /* camera.jpg in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
+				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				82917B202266F0420086CE27 /* edit.png in Resources */,
 				6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */,
 				82917AF92266ECE90086CE27 /* Assets.xcassets in Resources */,
