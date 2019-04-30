@@ -7,22 +7,32 @@
 //
 
 import UIKit
-import SwiftKeyChainWrapper
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var TableView: UITableView!
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
+
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 1;
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return;
+}
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+/*
             tableView.delegate = self
         
             tableView.dataSource.self
-        // Do any additional setup after loading the view.
+ 
     }
     func numOfSections(in tableView: UITableView) -> Int{
-        return 1;
-    }
+       return 1;
+   }
     func tableView(_tableView: UITableView, numberofRows section: Int) -> Int{
         return 1;
     }
@@ -30,4 +40,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
     }
+ */
 }
+
