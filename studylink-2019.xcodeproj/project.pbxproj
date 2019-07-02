@@ -13,6 +13,11 @@
 		8213454C2279012100832A7C /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8213454B2279012000832A7C /* back_arrow.png */; };
 		821F6DAF2266F600005FD1FB /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 821F6DAE2266F600005FD1FB /* camera.jpg */; };
 		821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */; };
+		82759B2A22CAC9E300BF5373 /* libbg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2922CAC9E200BF5373 /* libbg_2.png */; };
+		82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82759B2B22CACFE800BF5373 /* LogInViewController.swift */; };
+		82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2D22CAD45700BF5373 /* pic2.jpg */; };
+		82759B3022CAD45F00BF5373 /* pic1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2F22CAD45F00BF5373 /* pic1.jpeg */; };
+		82759B3222CADF2400BF5373 /* studylink.png in Resources */ = {isa = PBXBuildFile; fileRef = 82759B3122CADF2400BF5373 /* studylink.png */; };
 		82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF12266ECE70086CE27 /* AppDelegate.swift */; };
 		82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF32266ECE70086CE27 /* UserViewController.swift */; };
 		82917AF72266ECE70086CE27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82917AF52266ECE70086CE27 /* Main.storyboard */; };
@@ -56,6 +61,11 @@
 		821F6DAE2266F600005FD1FB /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewController.swift; sourceTree = "<group>"; };
 		825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82759B2922CAC9E200BF5373 /* libbg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libbg_2.png; sourceTree = "<group>"; };
+		82759B2B22CACFE800BF5373 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		82759B2D22CAD45700BF5373 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
+		82759B2F22CAD45F00BF5373 /* pic1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpeg; sourceTree = "<group>"; };
+		82759B3122CADF2400BF5373 /* studylink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studylink.png; sourceTree = "<group>"; };
 		82917AEE2266ECE70086CE27 /* studylink-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studylink-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82917AF12266ECE70086CE27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82917AF32266ECE70086CE27 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				82917AF82266ECE90086CE27 /* Assets.xcassets */,
+				82759B2F22CAD45F00BF5373 /* pic1.jpeg */,
+				82759B3122CADF2400BF5373 /* studylink.png */,
+				82759B2D22CAD45700BF5373 /* pic2.jpg */,
+				82759B2922CAC9E200BF5373 /* libbg_2.png */,
 				82917B1F2266F0420086CE27 /* edit.png */,
 				82917B212266F1060086CE27 /* menu2.png */,
 				821F6DAE2266F600005FD1FB /* camera.jpg */,
@@ -141,6 +155,7 @@
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
 				821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */,
+				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
 			);
 			path = SFiles;
 			sourceTree = "<group>";
@@ -318,14 +333,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */,
 				8213454C2279012100832A7C /* back_arrow.png in Resources */,
+				82759B3022CAD45F00BF5373 /* pic1.jpeg in Resources */,
 				821F6DAF2266F600005FD1FB /* camera.jpg in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
 				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				82917B202266F0420086CE27 /* edit.png in Resources */,
 				6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */,
 				82917AF92266ECE90086CE27 /* Assets.xcassets in Resources */,
+				82759B2A22CAC9E300BF5373 /* libbg_2.png in Resources */,
 				82917AF72266ECE70086CE27 /* Main.storyboard in Resources */,
+				82759B3222CADF2400BF5373 /* studylink.png in Resources */,
 				82917B222266F1060086CE27 /* menu2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,
 				821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */,
