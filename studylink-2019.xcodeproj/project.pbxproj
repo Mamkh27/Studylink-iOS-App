@@ -20,6 +20,10 @@
 		8235CB2822CBEE4500336144 /* please.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB2722CBEE4500336144 /* please.png */; };
 		8235CB2A22CBF0D200336144 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB2922CBF0D200336144 /* next.png */; };
 		8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235CB2B22CBF2CD00336144 /* QViewController.swift */; };
+		8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235CB2D22CC0F1300336144 /* Q2ViewController.swift */; };
+		8235CB3022CC170100336144 /* q1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB2F22CC170000336144 /* q1.png */; };
+		8235CB3222CC257C00336144 /* q2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB3122CC257B00336144 /* q2.png */; };
+		8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235CB3322CC337F00336144 /* Q3ViewController.swift */; };
 		82759B2A22CAC9E300BF5373 /* libbg_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2922CAC9E200BF5373 /* libbg_2.png */; };
 		82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82759B2B22CACFE800BF5373 /* LogInViewController.swift */; };
 		82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2D22CAD45700BF5373 /* pic2.jpg */; };
@@ -74,6 +78,10 @@
 		8235CB2722CBEE4500336144 /* please.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = please.png; sourceTree = "<group>"; };
 		8235CB2922CBF0D200336144 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
 		8235CB2B22CBF2CD00336144 /* QViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QViewController.swift; sourceTree = "<group>"; };
+		8235CB2D22CC0F1300336144 /* Q2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q2ViewController.swift; sourceTree = "<group>"; };
+		8235CB2F22CC170000336144 /* q1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q1.png; sourceTree = "<group>"; };
+		8235CB3122CC257B00336144 /* q2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q2.png; sourceTree = "<group>"; };
+		8235CB3322CC337F00336144 /* Q3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Q3ViewController.swift; sourceTree = "<group>"; };
 		825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82759B2922CAC9E200BF5373 /* libbg_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = libbg_2.png; sourceTree = "<group>"; };
 		82759B2B22CACFE800BF5373 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				82917AF82266ECE90086CE27 /* Assets.xcassets */,
+				8235CB3122CC257B00336144 /* q2.png */,
+				8235CB2F22CC170000336144 /* q1.png */,
 				8235CB2922CBF0D200336144 /* next.png */,
 				8235CB2722CBEE4500336144 /* please.png */,
 				8235CB2522CBECF100336144 /* studylink_name.png */,
@@ -177,6 +187,8 @@
 				8235CB2122CBD69400336144 /* WelcomeViewController.swift */,
 				8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */,
 				8235CB2B22CBF2CD00336144 /* QViewController.swift */,
+				8235CB2D22CC0F1300336144 /* Q2ViewController.swift */,
+				8235CB3322CC337F00336144 /* Q3ViewController.swift */,
 			);
 			path = SFiles;
 			sourceTree = "<group>";
@@ -358,9 +370,11 @@
 				82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */,
 				8213454C2279012100832A7C /* back_arrow.png in Resources */,
 				82759B3022CAD45F00BF5373 /* pic1.jpeg in Resources */,
+				8235CB3222CC257C00336144 /* q2.png in Resources */,
 				821F6DAF2266F600005FD1FB /* camera.jpg in Resources */,
 				8235CB2822CBEE4500336144 /* please.png in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
+				8235CB3022CC170100336144 /* q1.png in Resources */,
 				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				8235CB2A22CBF0D200336144 /* next.png in Resources */,
 				82917B202266F0420086CE27 /* edit.png in Resources */,
@@ -493,8 +507,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */,
+				8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */,
 				8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */,
 				8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */,
+				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,
 				8235CB2422CBE6AB00336144 /* UIViewExtensions.swift in Sources */,

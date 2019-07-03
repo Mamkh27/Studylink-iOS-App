@@ -10,10 +10,29 @@ import UIKit
 
 class QViewController: UIViewController {
 
+    @IBOutlet var box1: UIView!
+    @IBOutlet var box2: UIView!
+    @IBOutlet var slider1: UISlider!
+    @IBOutlet var slider2: UISlider!
+    
+    @IBOutlet var nextbtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        box1.layer.cornerRadius = 5;
+        box2.layer.cornerRadius = 5;
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = 0.9;
+        self.view.addSubview(blurEffectView)
+        
+        self.view.bringSubviewToFront(self.box1)
+        self.view.bringSubviewToFront(self.box2)
+        self.view.bringSubviewToFront(self.slider1)
+        self.view.bringSubviewToFront(self.slider2)
+        self.view.bringSubviewToFront(self.nextbtn)
     }
     
 
