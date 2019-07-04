@@ -10,7 +10,8 @@ import UIKit
 import FirebaseDatabase
 
 class NewInfoViewController: UIViewController {
-    @IBOutlet var Continue: UIButton!
+
+    @IBOutlet var nextbtn: UIButton!
     @IBOutlet weak var majorTxt: UITextField!
     @IBOutlet weak var yearTxt: UITextField!
     @IBOutlet weak var bioTxt: UITextView!
@@ -41,7 +42,7 @@ class NewInfoViewController: UIViewController {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
-      self.view.bringSubviewToFront(self.Continue)
+
         self.view.bringSubviewToFront(self.majorTxt)
         self.view.bringSubviewToFront(self.yearTxt)
         self.view.bringSubviewToFront(self.class1Txt)
@@ -54,7 +55,7 @@ class NewInfoViewController: UIViewController {
         self.view.bringSubviewToFront(self.major)
         self.view.bringSubviewToFront(self.bio)
         self.view.bringSubviewToFront(self.gradyear)
-
+        self.view.bringSubviewToFront(self.nextbtn)
 
         
     }
