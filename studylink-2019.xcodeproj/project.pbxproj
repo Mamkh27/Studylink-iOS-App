@@ -14,6 +14,21 @@
 		821F6DAF2266F600005FD1FB /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 821F6DAE2266F600005FD1FB /* camera.jpg */; };
 		821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */; };
 		8231CF5E22CD784400436A9A /* q4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF5D22CD784300436A9A /* q4.png */; };
+		8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231CF6022CD831B00436A9A /* WelcomePt2ViewController.swift */; };
+		8231CF6322CD83BF00436A9A /* almostdone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF6222CD83BF00436A9A /* almostdone.png */; };
+		8231CF6522CD84EB00436A9A /* please2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF6422CD84EB00436A9A /* please2.png */; };
+		8231CF6722CDA5E100436A9A /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF6622CDA5DE00436A9A /* tutorial.png */; };
+		8231CF6922CDA79200436A9A /* continue1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF6822CDA79200436A9A /* continue1.png */; };
+		8231CF6B22CDA7F600436A9A /* continue2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF6A22CDA7F600436A9A /* continue2.png */; };
+		8231CF6D22CDA89000436A9A /* TutorialAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231CF6C22CDA89000436A9A /* TutorialAViewController.swift */; };
+		8231CF6F22CDABFE00436A9A /* continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF6E22CDABFD00436A9A /* continue.png */; };
+		8231CF7422CDB1A900436A9A /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF7322CDB1A900436A9A /* lightbulb.png */; };
+		8231CF7622CDB20700436A9A /* lightbulb2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF7522CDB20700436A9A /* lightbulb2.png */; };
+		8231CF7822CDB2D400436A9A /* hourglass.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF7722CDB2D400436A9A /* hourglass.png */; };
+		8231CF7A22CDB58400436A9A /* major.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF7922CDB58400436A9A /* major.png */; };
+		8231CF7E22CDB6D600436A9A /* gradyear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF7D22CDB6D500436A9A /* gradyear.png */; };
+		8231CF8022CDB87200436A9A /* bio.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF7F22CDB87100436A9A /* bio.png */; };
+		8231CF8222CDBA2500436A9A /* classes.png in Resources */ = {isa = PBXBuildFile; fileRef = 8231CF8122CDBA2500436A9A /* classes.png */; };
 		8235CB2022CBD60D00336144 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB1F22CBD60D00336144 /* welcome.png */; };
 		8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235CB2122CBD69400336144 /* WelcomeViewController.swift */; };
 		8235CB2422CBE6AB00336144 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */; };
@@ -76,6 +91,21 @@
 		821F6DAE2266F600005FD1FB /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewController.swift; sourceTree = "<group>"; };
 		8231CF5D22CD784300436A9A /* q4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q4.png; sourceTree = "<group>"; };
+		8231CF6022CD831B00436A9A /* WelcomePt2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePt2ViewController.swift; sourceTree = "<group>"; };
+		8231CF6222CD83BF00436A9A /* almostdone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = almostdone.png; sourceTree = "<group>"; };
+		8231CF6422CD84EB00436A9A /* please2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = please2.png; sourceTree = "<group>"; };
+		8231CF6622CDA5DE00436A9A /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		8231CF6822CDA79200436A9A /* continue1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue1.png; sourceTree = "<group>"; };
+		8231CF6A22CDA7F600436A9A /* continue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue2.png; sourceTree = "<group>"; };
+		8231CF6C22CDA89000436A9A /* TutorialAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialAViewController.swift; sourceTree = "<group>"; };
+		8231CF6E22CDABFD00436A9A /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
+		8231CF7322CDB1A900436A9A /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightbulb.png; sourceTree = "<group>"; };
+		8231CF7522CDB20700436A9A /* lightbulb2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightbulb2.png; sourceTree = "<group>"; };
+		8231CF7722CDB2D400436A9A /* hourglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass.png; sourceTree = "<group>"; };
+		8231CF7922CDB58400436A9A /* major.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = major.png; sourceTree = "<group>"; };
+		8231CF7D22CDB6D500436A9A /* gradyear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradyear.png; sourceTree = "<group>"; };
+		8231CF7F22CDB87100436A9A /* bio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bio.png; sourceTree = "<group>"; };
+		8231CF8122CDBA2500436A9A /* classes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classes.png; sourceTree = "<group>"; };
 		8235CB1F22CBD60D00336144 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
 		8235CB2122CBD69400336144 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -156,7 +186,20 @@
 		82134551227908B800832A7C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8231CF7F22CDB87100436A9A /* bio.png */,
+				8231CF7322CDB1A900436A9A /* lightbulb.png */,
+				8231CF7922CDB58400436A9A /* major.png */,
 				82917AF82266ECE90086CE27 /* Assets.xcassets */,
+				8231CF7D22CDB6D500436A9A /* gradyear.png */,
+				8231CF8122CDBA2500436A9A /* classes.png */,
+				8231CF7722CDB2D400436A9A /* hourglass.png */,
+				8231CF7522CDB20700436A9A /* lightbulb2.png */,
+				8231CF6E22CDABFD00436A9A /* continue.png */,
+				8231CF6A22CDA7F600436A9A /* continue2.png */,
+				8231CF6822CDA79200436A9A /* continue1.png */,
+				8231CF6622CDA5DE00436A9A /* tutorial.png */,
+				8231CF6422CD84EB00436A9A /* please2.png */,
+				8231CF6222CD83BF00436A9A /* almostdone.png */,
 				8231CF5D22CD784300436A9A /* q4.png */,
 				8235CB3F22CC437C00336144 /* q6.png */,
 				8235CB3D22CC433400336144 /* q5.png */,
@@ -192,17 +235,43 @@
 		821F6DB12267038D005FD1FB /* SFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8231CF7122CDAFBB00436A9A /* Registration */,
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
-				821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */,
 				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
-				8235CB2122CBD69400336144 /* WelcomeViewController.swift */,
 				8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */,
-				8235CB2B22CBF2CD00336144 /* QViewController.swift */,
-				8235CB2D22CC0F1300336144 /* Q2ViewController.swift */,
-				8235CB3322CC337F00336144 /* Q3ViewController.swift */,
 			);
 			path = SFiles;
+			sourceTree = "<group>";
+		};
+		8231CF7022CDAFA500436A9A /* Tutorial VCs */ = {
+			isa = PBXGroup;
+			children = (
+				8231CF6C22CDA89000436A9A /* TutorialAViewController.swift */,
+			);
+			path = "Tutorial VCs";
+			sourceTree = "<group>";
+		};
+		8231CF7122CDAFBB00436A9A /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				8231CF6022CD831B00436A9A /* WelcomePt2ViewController.swift */,
+				821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */,
+				8235CB2122CBD69400336144 /* WelcomeViewController.swift */,
+				8231CF7222CDAFF500436A9A /* Questionnaire VCs */,
+				8231CF7022CDAFA500436A9A /* Tutorial VCs */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		8231CF7222CDAFF500436A9A /* Questionnaire VCs */ = {
+			isa = PBXGroup;
+			children = (
+				8235CB3322CC337F00336144 /* Q3ViewController.swift */,
+				8235CB2D22CC0F1300336144 /* Q2ViewController.swift */,
+				8235CB2B22CBF2CD00336144 /* QViewController.swift */,
+			);
+			path = "Questionnaire VCs";
 			sourceTree = "<group>";
 		};
 		82917AE52266ECE70086CE27 = {
@@ -378,20 +447,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8231CF8022CDB87200436A9A /* bio.png in Resources */,
+				8231CF6F22CDABFE00436A9A /* continue.png in Resources */,
 				8235CB2022CBD60D00336144 /* welcome.png in Resources */,
 				82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */,
+				8231CF6522CD84EB00436A9A /* please2.png in Resources */,
 				8231CF5E22CD784400436A9A /* q4.png in Resources */,
 				8213454C2279012100832A7C /* back_arrow.png in Resources */,
 				82759B3022CAD45F00BF5373 /* pic1.jpeg in Resources */,
+				8231CF6722CDA5E100436A9A /* tutorial.png in Resources */,
 				8235CB3222CC257C00336144 /* q2.png in Resources */,
 				821F6DAF2266F600005FD1FB /* camera.jpg in Resources */,
+				8231CF7622CDB20700436A9A /* lightbulb2.png in Resources */,
 				8235CB2822CBEE4500336144 /* please.png in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
+				8231CF7422CDB1A900436A9A /* lightbulb.png in Resources */,
 				8235CB3022CC170100336144 /* q1.png in Resources */,
 				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				8235CB2A22CBF0D200336144 /* next.png in Resources */,
+				8231CF8222CDBA2500436A9A /* classes.png in Resources */,
+				8231CF7E22CDB6D600436A9A /* gradyear.png in Resources */,
+				8231CF6322CD83BF00436A9A /* almostdone.png in Resources */,
 				8235CB4022CC437D00336144 /* q6.png in Resources */,
 				82917B202266F0420086CE27 /* edit.png in Resources */,
+				8231CF6922CDA79200436A9A /* continue1.png in Resources */,
+				8231CF6B22CDA7F600436A9A /* continue2.png in Resources */,
 				6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */,
 				8235CB2622CBECF100336144 /* studylink_name.png in Resources */,
 				82917AF92266ECE90086CE27 /* Assets.xcassets in Resources */,
@@ -399,7 +479,9 @@
 				82917AF72266ECE70086CE27 /* Main.storyboard in Resources */,
 				82759B3222CADF2400BF5373 /* studylink.png in Resources */,
 				8235CB3E22CC433400336144 /* q5.png in Resources */,
+				8231CF7822CDB2D400436A9A /* hourglass.png in Resources */,
 				8235CB3622CC3F9500336144 /* q3.png in Resources */,
+				8231CF7A22CDB58400436A9A /* major.png in Resources */,
 				82917B222266F1060086CE27 /* menu2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,9 +608,11 @@
 				8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */,
 				8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */,
 				8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */,
+				8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */,
 				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,
+				8231CF6D22CDA89000436A9A /* TutorialAViewController.swift in Sources */,
 				8235CB2422CBE6AB00336144 /* UIViewExtensions.swift in Sources */,
 				821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */,
 			);

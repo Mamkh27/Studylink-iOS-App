@@ -39,6 +39,10 @@ class Q3ViewController: UIViewController {
         super.viewDidLoad()
         labelCurrentValue1.text = "3-5"
         labelCurrentValue2.text = "3-5"
+        
+        box1.layer.cornerRadius = 5;
+        box2.layer.cornerRadius = 5;
+        
 let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
 let blurEffectView = UIVisualEffectView(effect: blurEffect)
     blurEffectView.frame = view.bounds

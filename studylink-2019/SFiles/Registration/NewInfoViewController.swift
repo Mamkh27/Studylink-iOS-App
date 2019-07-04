@@ -10,7 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class NewInfoViewController: UIViewController {
-
+    @IBOutlet var Continue: UIButton!
     @IBOutlet weak var majorTxt: UITextField!
     @IBOutlet weak var yearTxt: UITextField!
     @IBOutlet weak var bioTxt: UITextView!
@@ -19,8 +19,15 @@ class NewInfoViewController: UIViewController {
     @IBOutlet weak var class3Txt: UITextField!
     @IBOutlet weak var class4Txt: UITextField!
     @IBOutlet weak var class5Txt: UITextField!
+    
+    @IBOutlet var classes: UIImageView!
+    @IBOutlet var major: UIImageView!
+    @IBOutlet var bio: UIImageView!
+    @IBOutlet var gradyear: UIImageView!
     var firebaseRef: DatabaseReference!
     var userId: String = ""
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +41,24 @@ class NewInfoViewController: UIViewController {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
-      
+      self.view.bringSubviewToFront(self.Continue)
+        self.view.bringSubviewToFront(self.majorTxt)
+        self.view.bringSubviewToFront(self.yearTxt)
+        self.view.bringSubviewToFront(self.class1Txt)
+        self.view.bringSubviewToFront(self.class2Txt)
+        self.view.bringSubviewToFront(self.class3Txt)
+        self.view.bringSubviewToFront(self.class4Txt)
+        self.view.bringSubviewToFront(self.class5Txt)
+        self.view.bringSubviewToFront(self.bioTxt)
+        self.view.bringSubviewToFront(self.classes)
+        self.view.bringSubviewToFront(self.major)
+        self.view.bringSubviewToFront(self.bio)
+        self.view.bringSubviewToFront(self.gradyear)
+
+
+        
     }
+
     
     func preloadTextViews(){
         firebaseRef.child("Users").child(userId).observe(.value, with: {(snapshot) in
