@@ -27,6 +27,14 @@ class NewInfoViewController: UIViewController {
         firebaseRef = Database.database().reference()
         userId = "user1"
         preloadTextViews()
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = 0.9;
+        self.view.addSubview(blurEffectView)
+      
     }
     
     func preloadTextViews(){

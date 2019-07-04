@@ -13,9 +13,18 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let backgroundImg = UIImageView()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //background animation set-up
+        backgroundImg.frame = CGRect(x:0, y:0, width:self.window!.bounds.height * 1.688,height:self.window!.bounds.height)
+        backgroundImg.image = UIImage(named:"pic2.jpg")
+        
+        
+        self.window!.addSubview(backgroundImg)
+        moveBgLeft()
+        
+        
         // Override point for customization after application launch.
         FirebaseApp.configure()
         return true
@@ -43,6 +52,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func moveBgLeft(){
+        UIView.animate(withDuration: 45, animations: {
+            self.backgroundImg.frame.origin.x = -self.backgroundImg.bounds.width + self.window!.bounds.width
+        }){(finished: Bool) in
+            if finished{
+                self.moveBgRight()
+            }
+            
+        }
+    }
+    
+    func moveBgRight(){
+        UIView.animate(withDuration: 45, animations: {
+            self.backgroundImg.frame.origin.x = 0
+        }){ (finished:Bool) in
+            if finished {
+                self.moveBgLeft()
+            }
+        }}
 }
 

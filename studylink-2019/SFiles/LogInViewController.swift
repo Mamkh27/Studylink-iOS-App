@@ -9,12 +9,22 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-
+    @IBOutlet var loginbtn: UIButton!
+    @IBOutlet weak var loginBox: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+loginbtn.layer.cornerRadius = 5;
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = 0.9;
+        self.view.addSubview(blurEffectView)
+        self.view.bringSubviewToFront(self.loginBox)
         // Do any additional setup after loading the view.
     }
+
     
 
     /*

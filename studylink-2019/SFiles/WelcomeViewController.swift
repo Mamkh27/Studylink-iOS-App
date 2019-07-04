@@ -10,13 +10,36 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet var Next: UIButton!
+    
+    @IBOutlet weak var please: UIImageView!
+    @IBOutlet weak var study_link: UIImageView!
+    @IBOutlet weak var welcome_view: UIView!
+    @IBOutlet weak var welcome_to: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.welcome_to.alpha = 0.0
+        if self.welcome_to.alpha == 0.0{
+        self.welcome_to.fadeIn(duration: 0.75, delay:0.0, completion: nil)
+        }
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = 0.9;
+        self.view.addSubview(blurEffectView)
+        self.view.bringSubviewToFront(self.welcome_to)
+        self.view.bringSubviewToFront(self.study_link)
+        self.view.bringSubviewToFront(self.please)
+        self.view.bringSubviewToFront(self.Next)
+        Next.layer.cornerRadius = 5;
+        
+        
     }
-    
 
+
+        }
     /*
     // MARK: - Navigation
 
@@ -27,4 +50,4 @@ class WelcomeViewController: UIViewController {
     }
     */
 
-}
+
