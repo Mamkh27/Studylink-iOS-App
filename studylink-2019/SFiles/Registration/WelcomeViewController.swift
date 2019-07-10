@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class WelcomeViewController: UIViewController {
 
@@ -35,6 +36,7 @@ class WelcomeViewController: UIViewController {
         self.view.bringSubviewToFront(self.Next)
         Next.layer.cornerRadius = 5;
         
+        print(Auth.auth().currentUser)
         
     }
 

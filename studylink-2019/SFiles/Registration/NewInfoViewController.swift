@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
+import GoogleSignIn
 
 class NewInfoViewController: UIViewController {
     @IBOutlet var Continue: UIButton!
@@ -32,7 +34,10 @@ class NewInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firebaseRef = Database.database().reference()
-        userId = "user1"
+        userId = Auth.auth().currentUser?.uid ?? "user1"
+        if(userId == "user1"){
+            userId = GIDSignIn.sharedInstance()?.currentUser.userID ?? "user1"
+        }
         preloadTextViews()
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -50,10 +55,10 @@ class NewInfoViewController: UIViewController {
         self.view.bringSubviewToFront(self.class4Txt)
         self.view.bringSubviewToFront(self.class5Txt)
         self.view.bringSubviewToFront(self.bioTxt)
-        self.view.bringSubviewToFront(self.classes)
-        self.view.bringSubviewToFront(self.major)
-        self.view.bringSubviewToFront(self.bio)
-        self.view.bringSubviewToFront(self.gradyear)
+//        self.view.bringSubviewToFront(self.classes)
+//        self.view.bringSubviewToFront(self.major)
+//        self.view.bringSubviewToFront(self.bio)
+//        self.view.bringSubviewToFront(self.gradyear)
 
 
         

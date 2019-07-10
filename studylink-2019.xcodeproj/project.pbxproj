@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BEABD5669F80E8945855B23 /* Pods_studylink_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A717BBE87D8312EFC601B2AD /* Pods_studylink_2019.framework */; };
+		6B0A45AD22CDD69600BAD2F5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */; };
 		6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */; };
 		821345462279000800832A7C /* mag_glass3.png in Resources */ = {isa = PBXBuildFile; fileRef = 821345452279000800832A7C /* mag_glass3.png */; };
 		8213454C2279012100832A7C /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8213454B2279012000832A7C /* back_arrow.png */; };
@@ -83,6 +84,7 @@
 		3BCF5D4E4F0AD885AC1BFF86 /* Pods_studylink_2019UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		511E729ABCF9905CB84C708E /* Pods-studylink-2019UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019UITests/Pods-studylink-2019UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E2411BC667E58899CCAC2BF /* Pods-studylink-2019Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019Tests/Pods-studylink-2019Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6BF72CAD226A4D1700591EBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6D068C2ED10C3B3B4B137137 /* Pods-studylink-2019UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019UITests/Pods-studylink-2019UITests.release.xcconfig"; sourceTree = "<group>"; };
 		7FFB910240AA6C615021A232 /* Pods-studylink-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
 				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
+				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
 				8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */,
 			);
 			path = SFiles;
@@ -351,6 +354,7 @@
 				82917AEB2266ECE70086CE27 /* Frameworks */,
 				82917AEC2266ECE70086CE27 /* Resources */,
 				298A9C12BD57BE196443BCDF /* [CP] Embed Pods Frameworks */,
+				D21D18C752508F45E134F2E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -512,7 +516,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -521,7 +527,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -597,6 +605,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D21D18C752508F45E134F2E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -607,6 +637,7 @@
 				82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */,
 				8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */,
 				8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */,
+				6B0A45AD22CDD69600BAD2F5 /* RegisterViewController.swift in Sources */,
 				8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */,
 				8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */,
 				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,

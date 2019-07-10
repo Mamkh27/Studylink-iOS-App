@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
+import GoogleSignIn
 
 class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -64,14 +66,41 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         cambox.clipsToBounds = true
 
         userId = "user1"
-        
+        userId = GIDSignIn.sharedInstance()?.currentUser.userID ?? "user1"
         retrieveData()
         classesTable.delegate = self
         classesTable.dataSource = self
+        
+        print(GIDSignIn.sharedInstance()?.currentUser.userID)
+        
     }
     
     @IBAction func setProfilePicture(_ sender: Any) {
         
+    }
+    @IBAction func menuBtn(_ sender: Any) {
+        var errorMsg: String = ""
+        errorMsg = "Are you sure you would like to logout?"
+        
+        let alert = UIAlertController(title: "Logging out?", message: errorMsg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { action in
+            self.logoutUser()
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func logoutUser(){
+        
+        do {
+            try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "logoutUser", sender: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        GIDSignIn.sharedInstance()?.signOut()
     }
     
     func retrieveData(){

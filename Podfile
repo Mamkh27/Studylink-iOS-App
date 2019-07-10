@@ -10,6 +10,7 @@ target 'studylink-2019' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 
   target 'studylink-2019Tests' do
     inherit! :search_paths

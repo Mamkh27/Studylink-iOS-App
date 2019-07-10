@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Log In View Controller-->
         <scene sceneID="ZVm-d3-TBb">
             <objects>
-                <viewController id="edU-44-aln" customClass="LogInViewController" customModule="studylink_2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="edU-44-aln" customClass="LogInViewController" customModule="studylink_2019" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QQI-VF-SKa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azS-9Q-UJy">
                                 <rect key="frame" x="16" y="174" width="343" height="444"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTx-Wu-huP">
+                                        <rect key="frame" x="110" y="373.5" width="123" height="30"/>
+                                        <state key="normal" title="Forgot Password?">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="edU-44-aln" eventType="touchUpInside" id="xYv-uN-ibc"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGT-OO-rUH">
                                         <rect key="frame" x="43" y="241" width="257" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
@@ -28,7 +37,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-3M-IDQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4I-3M-IDQ">
                                         <rect key="frame" x="43" y="203" width="257" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.33979963587494522" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -51,13 +60,16 @@
                                             <constraint firstAttribute="width" constant="86" id="7do-fu-Nt5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
-                                        <state key="normal" title="Log in"/>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginBtn:" destination="edU-44-aln" eventType="touchUpInside" id="cuc-gn-kxE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrA-UF-qHg">
                                         <rect key="frame" x="138" y="414" width="67" height="30"/>
                                         <state key="normal" title="New User"/>
                                         <connections>
-                                            <segue destination="sgu-6b-e8s" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="hYk-l1-8ha"/>
+                                            <action selector="signupBtn:" destination="edU-44-aln" eventType="touchUpInside" id="Vdz-iN-BZZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,9 +83,11 @@
                                     <constraint firstItem="nGT-OO-rUH" firstAttribute="trailing" secondItem="Z4I-3M-IDQ" secondAttribute="trailing" id="RLK-nd-hzE"/>
                                     <constraint firstItem="vrA-UF-qHg" firstAttribute="leading" secondItem="z1H-zy-C4w" secondAttribute="leading" constant="10" id="XII-5U-2Ez"/>
                                     <constraint firstItem="jLX-J4-wc6" firstAttribute="leading" secondItem="azS-9Q-UJy" secondAttribute="leading" constant="20" id="bmx-pZ-3bd"/>
+                                    <constraint firstItem="kTx-Wu-huP" firstAttribute="centerX" secondItem="azS-9Q-UJy" secondAttribute="centerX" id="dLz-eJ-vSM"/>
                                     <constraint firstItem="Z4I-3M-IDQ" firstAttribute="top" secondItem="azS-9Q-UJy" secondAttribute="top" constant="203" id="gcI-p3-yel"/>
                                     <constraint firstItem="Z4I-3M-IDQ" firstAttribute="top" secondItem="jLX-J4-wc6" secondAttribute="bottom" constant="55" id="mC7-Gk-KYJ"/>
                                     <constraint firstItem="Z4I-3M-IDQ" firstAttribute="leading" secondItem="azS-9Q-UJy" secondAttribute="leading" constant="43" id="pG1-XQ-Yf0"/>
+                                    <constraint firstItem="kTx-Wu-huP" firstAttribute="centerY" secondItem="azS-9Q-UJy" secondAttribute="centerY" multiplier="1.75" id="pHH-Uq-Koq"/>
                                     <constraint firstItem="nGT-OO-rUH" firstAttribute="top" secondItem="Z4I-3M-IDQ" secondAttribute="bottom" constant="8" symbolic="YES" id="phw-Zd-jNh"/>
                                     <constraint firstItem="jLX-J4-wc6" firstAttribute="centerX" secondItem="azS-9Q-UJy" secondAttribute="centerX" constant="-2.5" id="qEU-Lk-vWq"/>
                                     <constraint firstItem="nGT-OO-rUH" firstAttribute="leading" secondItem="Z4I-3M-IDQ" secondAttribute="leading" id="y79-D1-Zap"/>
@@ -94,8 +108,12 @@
                         <viewLayoutGuide key="safeArea" id="64p-Xr-EvL"/>
                     </view>
                     <connections>
-                        <outlet property="loginBox" destination="azS-9Q-UJy" id="Kaf-4G-WZZ"/>
-                        <outlet property="loginbtn" destination="z1H-zy-C4w" id="VT3-CB-lbK"/>
+                        <outlet property="emailTxt" destination="Z4I-3M-IDQ" id="9L4-X6-cwo"/>
+                        <outlet property="loginBox" destination="azS-9Q-UJy" id="nqv-Yc-b2T"/>
+                        <outlet property="loginbtn" destination="z1H-zy-C4w" id="zoy-qD-Ezb"/>
+                        <outlet property="passwordTxt" destination="nGT-OO-rUH" id="TeR-5H-hxX"/>
+                        <segue destination="MdQ-na-zvP" kind="presentation" identifier="loginFirstSegue" id="bWa-po-xfj"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginSegue" id="I6e-lI-LHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I16-yk-1gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,6 +153,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="menu2.png"/>
                                                 <connections>
+                                                    <action selector="menuBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgp-lf-gJH"/>
                                                     <action selector="selectmenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peq-Hd-TCI"/>
                                                 </connections>
                                             </button>
@@ -281,21 +300,22 @@
                         <outlet property="image" destination="rxQ-fA-0wE" id="Rie-gD-1sg"/>
                         <outlet property="majorLbl" destination="Vcw-up-FFZ" id="J0D-YL-Aww"/>
                         <outlet property="yearLbl" destination="Uuh-gw-U7P" id="FgL-sm-HGn"/>
+                        <segue destination="edU-44-aln" kind="presentation" identifier="logoutUser" id="Bts-1W-yy5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1998" y="-597"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="HnC-47-1h8">
             <objects>
-                <viewController id="sgu-6b-e8s" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sgu-6b-e8s" customClass="RegisterViewController" customModule="studylink_2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2T-X9-pU1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4O-Fh-6pg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4O-Fh-6pg">
                                 <rect key="frame" x="59" y="359" width="257" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -313,7 +333,7 @@
                                 <rect key="frame" x="93" y="585" width="189" height="30"/>
                                 <state key="normal" title="Log in with an Existing User"/>
                                 <connections>
-                                    <segue destination="edU-44-aln" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="wYV-NX-ByQ"/>
+                                    <action selector="loginReturn:" destination="sgu-6b-e8s" eventType="touchUpInside" id="eed-FA-yZp"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-qO-oVy">
@@ -340,7 +360,7 @@
                                     <color key="titleColor" red="0.13002884180254839" green="0.33395117723724727" blue="0.38891973350253806" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MdQ-na-zvP" kind="presentation" modalTransitionStyle="crossDissolve" id="5Rq-e8-sBB"/>
+                                    <action selector="registerUser:" destination="sgu-6b-e8s" eventType="touchUpInside" id="vsv-Ud-3KK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,6 +387,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QY3-v9-0sn"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxt" destination="A9e-5y-eSr" id="VeQ-CN-LFb"/>
+                        <outlet property="passwordTxt" destination="XpZ-qO-oVy" id="Clp-uU-QjX"/>
+                        <outlet property="usernameTxt" destination="M4O-Fh-6pg" id="jjd-W8-39L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x4u-H0-3MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -461,6 +486,7 @@
                         <viewLayoutGuide key="safeArea" id="XuG-K0-UIy"/>
                     </view>
                     <connections>
+                        <outlet property="Continue" destination="nfr-Gr-C7S" id="ylp-76-DJs"/>
                         <outlet property="bioTxt" destination="WUg-y5-Lc9" id="nKj-TP-6OT"/>
                         <outlet property="class1Txt" destination="xkl-2c-2HO" id="Dr6-hd-je7"/>
                         <outlet property="class2Txt" destination="b64-jh-BLQ" id="vfn-gv-eWF"/>
@@ -1243,13 +1269,13 @@
         <image name="q4.png" width="1080" height="1080"/>
         <image name="q5.png" width="1080" height="1080"/>
         <image name="q6.png" width="1080" height="1080"/>
-        <image name="studylink.png" width="1159" height="1546"/>
+        <image name="studylink.png" width="278.16000366210938" height="371"/>
         <image name="studylink_name.png" width="1080" height="1080"/>
         <image name="welcome.png" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kn3-7c-clD"/>
         <segue reference="ZOP-zL-UAj"/>
-        <segue reference="QKt-mm-IPF"/>
+        <segue reference="tNi-8s-yR1"/>
+        <segue reference="kn3-7c-clD"/>
     </inferredMetricsTieBreakers>
 </document>
