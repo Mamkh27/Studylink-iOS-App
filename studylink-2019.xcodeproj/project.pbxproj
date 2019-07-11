@@ -94,6 +94,11 @@
 		82AF351822CEAB6A00309FC3 /* badge1.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF351722CEAB6A00309FC3 /* badge1.png */; };
 		82AF351A22CEABFF00309FC3 /* badge2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF351922CEABFF00309FC3 /* badge2.png */; };
 		82AF351C22CFADC700309FC3 /* badge3.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF351B22CFADC600309FC3 /* badge3.png */; };
+		82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BEE7B122D7D71400790EDC /* MessengerViewController.swift */; };
+		82BEE7B422D7ED1700790EDC /* mutual.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEE7B322D7ED1400790EDC /* mutual.png */; };
+		82BEE7B622D7EEDC00790EDC /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEE7B522D7EED600790EDC /* calendar.png */; };
+		82BEE7B822D7EFC900790EDC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEE7B722D7EFC400790EDC /* profile.png */; };
+		82BEE7BA22D7F5F700790EDC /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BEE7B922D7F5F700790EDC /* MenuBar.swift */; };
 		82D6CB0322D6BEC9006495FF /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D6CB0222D6BEC8006495FF /* filter.png */; };
 		82D6CB3322D6DFC4006495FF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6CB3222D6DFC4006495FF /* RoundButton.swift */; };
 		82D6CB3522D6ECCB006495FF /* girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82D6CB3422D6ECCA006495FF /* girl.jpg */; };
@@ -219,6 +224,11 @@
 		82AF351722CEAB6A00309FC3 /* badge1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge1.png; sourceTree = "<group>"; };
 		82AF351922CEABFF00309FC3 /* badge2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge2.png; sourceTree = "<group>"; };
 		82AF351B22CFADC600309FC3 /* badge3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge3.png; sourceTree = "<group>"; };
+		82BEE7B122D7D71400790EDC /* MessengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
+		82BEE7B322D7ED1400790EDC /* mutual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mutual.png; sourceTree = "<group>"; };
+		82BEE7B522D7EED600790EDC /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		82BEE7B722D7EFC400790EDC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		82BEE7B922D7F5F700790EDC /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		82D6CB0222D6BEC8006495FF /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
 		82D6CB3222D6DFC4006495FF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		82D6CB3422D6ECCA006495FF /* girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl.jpg; sourceTree = "<group>"; };
@@ -291,6 +301,7 @@
 			children = (
 				8231CF7122CDAFBB00436A9A /* Registration */,
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
+				82BEE7B122D7D71400790EDC /* MessengerViewController.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
 				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
 				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
@@ -377,6 +388,9 @@
 		826BCDE922D01E4600586DEE /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				82BEE7B722D7EFC400790EDC /* profile.png */,
+				82BEE7B522D7EED600790EDC /* calendar.png */,
+				82BEE7B322D7ED1400790EDC /* mutual.png */,
 				82D6CB0222D6BEC8006495FF /* filter.png */,
 				82759B2D22CAD45700BF5373 /* pic2.jpg */,
 				82759B3122CADF2400BF5373 /* studylink.png */,
@@ -451,6 +465,7 @@
 				821F6DB022670348005FD1FB /* VC */,
 				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
+				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
 			);
 			path = "studylink-2019";
 			sourceTree = "<group>";
@@ -622,6 +637,7 @@
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
 				8231CF7422CDB1A900436A9A /* lightbulb.png in Resources */,
 				82AF351222CE9A7A00309FC3 /* cam_3.png in Resources */,
+				82BEE7B422D7ED1700790EDC /* mutual.png in Resources */,
 				8235CB3022CC170100336144 /* q1.png in Resources */,
 				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				8235CB2A22CBF0D200336144 /* next.png in Resources */,
@@ -653,7 +669,9 @@
 				82917AF72266ECE70086CE27 /* Main.storyboard in Resources */,
 				82759B3222CADF2400BF5373 /* studylink.png in Resources */,
 				82D6CB0322D6BEC9006495FF /* filter.png in Resources */,
+				82BEE7B822D7EFC900790EDC /* profile.png in Resources */,
 				8235CB3E22CC433400336144 /* q5.png in Resources */,
+				82BEE7B622D7EEDC00790EDC /* calendar.png in Resources */,
 				8231CF7822CDB2D400436A9A /* hourglass.png in Resources */,
 				8264CE0C22D160C2000110E4 /* b13_.png in Resources */,
 				82AF350E22CE96A000309FC3 /* menu_2.png in Resources */,
@@ -821,9 +839,11 @@
 				8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */,
 				8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */,
 				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,
+				82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,
 				8231CF6D22CDA89000436A9A /* TutorialAViewController.swift in Sources */,
+				82BEE7BA22D7F5F700790EDC /* MenuBar.swift in Sources */,
 				8235CB2422CBE6AB00336144 /* UIViewExtensions.swift in Sources */,
 				82AF351622CEAA7200309FC3 /* BadgeViewController.swift in Sources */,
 				82AF351422CEA85F00309FC3 /* CardViewController.swift in Sources */,

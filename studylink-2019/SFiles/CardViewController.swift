@@ -12,6 +12,9 @@ class CardViewController: UIViewController {
 
     
 
+    @IBOutlet var mutualLine: UIView!
+    @IBOutlet var calendarLine: UIView!
+    @IBOutlet var profileLine: UIView!
     @IBOutlet var buttonsView: UIView!
     
     @IBOutlet var linkedView: UIImageView!
@@ -24,9 +27,14 @@ class CardViewController: UIViewController {
     @IBOutlet var darkFillView: RoundButton!
     @IBOutlet var menuView: UIView!
     @IBOutlet var profilebtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        mutualLine.alpha = 0;
+        calendarLine.alpha = 0;
+        profileLine.alpha = 1;
+
         card.layer.cornerRadius = 5;
         card.layer.masksToBounds = true;
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -48,10 +56,27 @@ class CardViewController: UIViewController {
         
         self.view.bringSubviewToFront(self.lastInitial)
         self.view.bringSubviewToFront(self.buttonsView)
-
+        
     }
         
     
+    @IBAction func calendarChosen(_ sender: Any) {
+        self.calendarLine.alpha = 1;
+        self.profileLine.alpha = 0;
+        self.mutualLine.alpha = 0;
+    }
+    
+    @IBAction func mutualChosen(_ sender: Any) {
+        self.calendarLine.alpha = 0;
+        self.profileLine.alpha = 0;
+        self.mutualLine.alpha = 1;
+    }
+    
+    @IBAction func profileChosen(_ sender: Any) {
+        self.calendarLine.alpha = 0;
+        self.profileLine.alpha = 1;
+        self.mutualLine.alpha = 0;
+    }
     
     
     @IBAction func toggleMenu(_ sender: Any) {
@@ -144,11 +169,10 @@ class CardViewController: UIViewController {
 
         }
     
-    
     @IBAction func resetBtn(_ sender: Any) {
         resetCard()
     }
-    
+ 
     }
     
 
