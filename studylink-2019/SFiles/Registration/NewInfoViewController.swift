@@ -57,11 +57,11 @@ class NewInfoViewController: UIViewController {
         self.view.bringSubviewToFront(self.class5Txt)
         self.view.bringSubviewToFront(self.bioTxt)
 
-//        self.view.bringSubviewToFront(self.classes)
-//        self.view.bringSubviewToFront(self.major)
-//        self.view.bringSubviewToFront(self.bio)
-//        self.view.bringSubviewToFront(self.gradyear)
-//        self.view.bringSubviewToFront(self.nextbtn)
+        self.view.bringSubviewToFront(self.classes)
+        self.view.bringSubviewToFront(self.major)
+        self.view.bringSubviewToFront(self.bio)
+        self.view.bringSubviewToFront(self.gradyear)
+        self.view.bringSubviewToFront(self.nextbtn)
 
         
     }
@@ -125,7 +125,7 @@ class NewInfoViewController: UIViewController {
         let class3 = class3Txt.text ?? ""
         let class4 = class4Txt.text ?? ""
         let class5 = class5Txt.text ?? ""
-        
+        print("UserID", userId)
         firebaseRef.child("Users").child(userId).child("Classes").removeValue()
         
         if(checkStr(string: class1)){

@@ -76,26 +76,28 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
         view.addSubview(signInBtn)
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser?, withError error: Error!) {
         print("Signing in")
         if(user != nil){
-            guard let authentication = user.authentication else { return }
+            guard let authentication = user?.authentication else { return }
             let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
         }
         if(user != nil){
-            createUser(uid: user.userID, firstname: user.profile.givenName, lastname: user.profile.familyName, email: user.profile.email)
+            let id = user?.userID ?? "user1"
+            let first_name = user?.profile.givenName ?? ""
+            let last_name = user?.profile.familyName ?? ""
+            let email = user?.profile.email ?? ""
+            createUser(uid: id, firstname: first_name, lastname: last_name, email: email)
         }
-        
-        
     }
     
     func createUser(uid:String, firstname: String, lastname: String, email: String){
         let fullname = firstname + " " + lastname
-        var userInfo:Dictionary = ["Fullname":fullname, "Email":email, "First": "true"]
+        var userInfo:Dictionary = ["Fullname":fullname, "Email":email]
         print("Create User")
         print(uid)
         if(checkEmail(email: email)){
-            checkFirst(uid: uid)
+            checkFirstGmail(uid: uid, userInfo: userInfo)
         } else {
             GIDSignIn.sharedInstance()?.signOut()
             self.showAlert(cases: 2)
@@ -190,17 +192,23 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     func checkFirst(uid: String){
         print("Check First")
-        Database.database().reference().child("Users").child(uid).observe(.value, with: {(snapshot) in
-            let value = snapshot.value as? NSDictionary ?? [:]
-            let first = value["First"] as? String ?? ""
-            if(first == "true"){
-                print("First:", first)
-                Database.database().reference().child("Users").child(uid).child("First").setValue("false")
-                self.loginUser(first: true)
-                return
-            } else {
+        Database.database().reference().child("Users").observe(.value, with: {(snapshot) in
+            if(snapshot.hasChild(uid)){
                 self.loginUser(first: false)
-                return
+            } else {
+                self.loginUser(first: true)
+            }
+        })
+    }
+    
+    func checkFirstGmail(uid: String, userInfo: [String: String]){
+        print("Check First")
+        Database.database().reference().child("Users").observe(.value, with: {(snapshot) in
+            if(snapshot.hasChild(uid)){
+                self.loginUser(first: false)
+            } else {
+                Database.database().reference().child("Users").child(uid).setValue(userInfo)
+                self.loginUser(first: true)
             }
         })
         

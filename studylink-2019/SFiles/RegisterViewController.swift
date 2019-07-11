@@ -32,16 +32,19 @@ class RegisterViewController: UIViewController {
                 print("Davis email")
                 Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
                     if(error != nil){
-                        print(error?.localizedDescription)
+                        let error_desc = error?.localizedDescription ?? ""
+                        self.showError(err: error_desc)
                         return
                     }
-                    let userId = user?.user.uid ?? ""
-                    print(userId)
-                    if(userId != ""){
-                        let userInfo:Dictionary = ["Fullname":fullname, "Email":email, "First": "true"]
-                    Database.database().reference().child("Users/"+userId).setValue(userInfo)
-                    self.showToast(controller: self, message: "Registered User", seconds: 0.5)
-                    self.dismiss(animated: true, completion: nil)
+                        let userId = user?.user.uid ?? ""
+                        print(userId)
+                        if(userId != ""){
+                            let userInfo:Dictionary = ["Fullname":fullname, "Email":email, "First": "true"]
+                        Database.database().reference().child("Users/"+userId).setValue(userInfo)
+                            self.showToast(controller: self, message: "Registered User", seconds: 0.5)
+                            self.dismiss(animated: true, completion: nil)
+                        
+                        
                     }
                 })
                 
@@ -63,9 +66,16 @@ class RegisterViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds, execute: {
             alert.dismiss(animated: true, completion: {
-                self.navigationController?.popToRootViewController(animated: true)
             })
         })
+    }
+    
+    func showError(err: String){
+        let alert = UIAlertController(title: "Error", message: err, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func showAlert(cases: Int){

@@ -55,6 +55,8 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var classesTable: UITableView!
     var userId:String = ""
     var classes:[String] = []
+    @IBOutlet weak var firstLbl: UILabel!
+    @IBOutlet weak var lastnameLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         image.layer.cornerRadius = image.frame.height/2
         image.clipsToBounds = true
         
+        setNames()
         
         cambox.layer.borderWidth = 1
         cambox.layer.masksToBounds = false
@@ -85,6 +88,14 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         print(GIDSignIn.sharedInstance()?.currentUser.userID)
         
+    }
+    
+    func setNames(){
+        let user = GIDSignIn.sharedInstance()?.currentUser.profile
+        let first_name = user?.givenName ?? ""
+        let last_name = user?.familyName ?? ""
+        firstLbl.text = first_name
+        lastnameLbl.text = last_name
     }
     
 

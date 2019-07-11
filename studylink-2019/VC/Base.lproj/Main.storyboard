@@ -370,7 +370,9 @@
                         <outlet property="bioLbl" destination="FqF-fV-Xoe" id="YPf-NG-51W"/>
                         <outlet property="cambox" destination="Ilb-fo-Jnx" id="p45-Lm-eKC"/>
                         <outlet property="classesTable" destination="Y9H-Zi-Wr8" id="GlO-Gy-U7Z"/>
+                        <outlet property="firstLbl" destination="6Bo-Lr-K29" id="BYn-ff-w23"/>
                         <outlet property="image" destination="rxQ-fA-0wE" id="Rie-gD-1sg"/>
+                        <outlet property="lastnameLbl" destination="736-WP-KNj" id="T6S-ic-4YG"/>
                         <outlet property="mainview" destination="8bC-Xf-vdC" id="Keh-0P-0eg"/>
                         <outlet property="majorLbl" destination="Vcw-up-FFZ" id="J0D-YL-Aww"/>
                         <outlet property="outerview" destination="Y69-LJ-9WG" id="hhq-gs-pxC"/>
@@ -647,11 +649,7 @@
                         <viewLayoutGuide key="safeArea" id="XuG-K0-UIy"/>
                     </view>
                     <connections>
-<<<<<<< HEAD
-                        <outlet property="Continue" destination="nfr-Gr-C7S" id="ylp-76-DJs"/>
-=======
                         <outlet property="bio" destination="AlO-Hz-5kB" id="8W1-CO-0Go"/>
->>>>>>> f4250fa2e3b6ae019156dee3db5411c6993d502e
                         <outlet property="bioTxt" destination="WUg-y5-Lc9" id="nKj-TP-6OT"/>
                         <outlet property="class1Txt" destination="xkl-2c-2HO" id="Dr6-hd-je7"/>
                         <outlet property="class2Txt" destination="b64-jh-BLQ" id="vfn-gv-eWF"/>
@@ -2382,13 +2380,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZOP-zL-UAj"/>
-<<<<<<< HEAD
-        <segue reference="tNi-8s-yR1"/>
-        <segue reference="kn3-7c-clD"/>
-=======
         <segue reference="QKt-mm-IPF"/>
         <segue reference="WpR-Na-VRB"/>
-        <segue reference="XMi-O4-KsI"/>
->>>>>>> f4250fa2e3b6ae019156dee3db5411c6993d502e
+        <segue reference="buo-Co-FFG"/>
+        <segue reference="jh2-fE-6eq"/>
     </inferredMetricsTieBreakers>
 </document>
