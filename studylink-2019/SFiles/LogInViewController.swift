@@ -78,13 +78,12 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print("Signing in")
-        if(user != nil){
             guard let authentication = user.authentication else { return }
             let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
-        }
-        if(user != nil){
+        
+            print(user.userID)
             createUser(uid: user.userID, firstname: user.profile.givenName, lastname: user.profile.familyName, email: user.profile.email)
-        }
+        
         
         
     }
