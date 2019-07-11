@@ -11,7 +11,7 @@ import UIKit
 class CardViewController: UIViewController {
 
     
-    @IBOutlet var view3: UIView!
+
     @IBOutlet var buttonsView: UIView!
     
     @IBOutlet var linkedView: UIImageView!
@@ -26,7 +26,9 @@ class CardViewController: UIViewController {
     @IBOutlet var profilebtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+        card.layer.cornerRadius = 5;
+        card.layer.masksToBounds = true;
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
@@ -34,7 +36,7 @@ class CardViewController: UIViewController {
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.profilebtn)
-                self.view.bringSubviewToFront(self.view3)
+                
         self.view.bringSubviewToFront(self.card)
         self.view.bringSubviewToFront(self.view2)
     self.view.bringSubviewToFront(self.toggleMenuButton)
@@ -97,10 +99,57 @@ class CardViewController: UIViewController {
         linkedView.alpha = abs(yFromCenter) / view.center.y
         
         if sender.state == UIGestureRecognizer.State.ended {
-            linkedView.alpha = 0
-        UIView.animate(withDuration: 0.2, animations: {
-            card.center = self.view.center
-            })
+            if card.center.y < 75 {
+                //Move the card all the way up, off the screen
+                UIView.animate(withDuration: 0.3, animations: {
+                    card.center = CGPoint(x: card.center.x , y: card.center.y - 200 )
+                    card.alpha = 0
+                })
+            performSegue(withIdentifier: "swipeUp", sender: self)
+                return
+            } else if card.center.x < 75 {
+                //Move to left side to previous card
+                UIView.animate(withDuration: 0.3, animations: {
+                    card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
+                    card.alpha = 0;
+                })
+                return
+                
+                //FIX ME: INSERT CODE FOR PREVIOUS CARD HERE
+                
+            } else if card.center.x > (view.frame.width - 85){
+            //Move to right side to next card
+                UIView.animate(withDuration: 0.3, animations: {
+                    card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
+                    card.alpha = 0;
+                })
+                
+                //FIX ME: INSERT CODE FOR NEW CARD HERE
+                
+                return
+            }
+        //go back to center
+        resetCard()
         }
+        
     }
-}
+        func resetCard(){
+
+            UIView.animate(withDuration: 0.2, animations: {
+                self.card.center = self.view.center
+                    self.linkedView.alpha = 0
+                    self.card.alpha = 1
+            })
+  
+
+        }
+    
+    
+    @IBAction func resetBtn(_ sender: Any) {
+        resetCard()
+    }
+    
+    }
+    
+
+
