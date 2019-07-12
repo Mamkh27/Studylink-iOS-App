@@ -39,6 +39,7 @@ class NewInfoViewController: UIViewController {
         if(userId == "user1"){
             userId = GIDSignIn.sharedInstance()?.currentUser.userID ?? "user1"
         }
+        print("UserID", userId)
         preloadTextViews()
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -62,6 +63,8 @@ class NewInfoViewController: UIViewController {
         self.view.bringSubviewToFront(self.bio)
         self.view.bringSubviewToFront(self.gradyear)
         self.view.bringSubviewToFront(self.nextbtn)
+        
+        
 
         
     }
@@ -125,7 +128,7 @@ class NewInfoViewController: UIViewController {
         let class3 = class3Txt.text ?? ""
         let class4 = class4Txt.text ?? ""
         let class5 = class5Txt.text ?? ""
-        print("UserID", userId)
+        
         firebaseRef.child("Users").child(userId).child("Classes").removeValue()
         
         if(checkStr(string: class1)){

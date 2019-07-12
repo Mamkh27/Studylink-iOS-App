@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -289,14 +289,14 @@
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="0.2540935359589041" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bo-Lr-K29">
-                                                <rect key="frame" x="108" y="276" width="81" height="25"/>
+                                                <rect key="frame" x="66" y="276" width="123" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
                                                 <color key="textColor" red="0.27640520240449662" green="0.27640520240449662" blue="0.27640520240449662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastInitial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="736-WP-KNj">
-                                                <rect key="frame" x="192" y="276" width="74" height="25"/>
+                                                <rect key="frame" x="192" y="276" width="129" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="18"/>
                                                 <color key="textColor" red="0.27640520240449662" green="0.27640520240449662" blue="0.27640520240449662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -492,7 +492,7 @@
                                 <rect key="frame" x="16" y="269" width="343" height="88"/>
                                 <color key="backgroundColor" red="0.07603833586" green="0.19786541129999999" blue="0.21177030459999999" alpha="0.12598993999999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Bio Example: Hi! John Doe here.. I'm looking for a lab partner for PHY9C for the Tuesday sections. Available on weekends for studying!</string>
-                                <color key="textColor" red="0.31458201139999997" green="0.31458201139999997" blue="0.31458201139999997" alpha="0.1796607449" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -543,14 +543,14 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="class 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkl-2c-2HO">
                                 <rect key="frame" x="35" y="409" width="305" height="30"/>
                                 <color key="backgroundColor" red="0.68167699739999998" green="0.68167699739999998" blue="0.68167699739999998" alpha="0.29947024830000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="class 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b64-jh-BLQ">
                                 <rect key="frame" x="35" y="447" width="305" height="30"/>
                                 <color key="backgroundColor" red="0.68167699739999998" green="0.68167699739999998" blue="0.68167699739999998" alpha="0.29947024830000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -560,7 +560,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VC9-wW-0XE"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -570,7 +570,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0Tt-e4-ePn"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -580,7 +580,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KHd-6o-ybY"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -594,7 +594,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="hRU-eI-3aS" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="tyX-5m-SOz"/>
+                                    <action selector="continueBtn:" destination="Rcd-5g-vsT" eventType="touchUpInside" id="2L4-7r-hQ1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2678,7 +2678,7 @@
         <image name="continue.png" width="1080" height="1080"/>
         <image name="edit_2.png" width="1080" height="1080"/>
         <image name="filter.png" width="1080" height="1080"/>
-        <image name="girl.jpg" width="4758" height="3172"/>
+        <image name="girl.jpg" width="1427.4000244140625" height="951.5999755859375"/>
         <image name="gradyear.png" width="589" height="99"/>
         <image name="hourglass.png" width="1080" height="1080"/>
         <image name="lightbulb2.png" width="1080" height="1080"/>
@@ -2697,13 +2697,12 @@
         <image name="q4.png" width="1080" height="1080"/>
         <image name="q5.png" width="1080" height="1080"/>
         <image name="q6.png" width="1080" height="1080"/>
-        <image name="studylink.png" width="1159" height="1546"/>
+        <image name="studylink.png" width="278.16000366210938" height="371"/>
         <image name="studylink_name.png" width="1080" height="1080"/>
         <image name="tutorial.png" width="1080" height="1080"/>
         <image name="welcome.png" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D75-td-2Jg"/>
         <segue reference="ZOP-zL-UAj"/>
         <segue reference="QKt-mm-IPF"/>
         <segue reference="WpR-Na-VRB"/>

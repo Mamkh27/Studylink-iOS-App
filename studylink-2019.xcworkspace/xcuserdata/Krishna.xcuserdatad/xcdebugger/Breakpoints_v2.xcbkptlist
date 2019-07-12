@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "studylink-2019/SFiles/LogInViewController.swift"
-            timestampString = "584581732.613784"
+            timestampString = "584584420.146832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "sendEmail(email_add:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "studylink-2019/SFiles/LogInViewController.swift"
-            timestampString = "584581732.614405"
+            timestampString = "584584420.1470751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "sendEmail(email_add:)"
             landmarkType = "7">
          </BreakpointContent>
