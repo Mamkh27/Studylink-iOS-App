@@ -10,60 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "studylink-2019/SFiles/LogInViewController.swift"
-            timestampString = "584581732.612507"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "createUser(uid:firstname:lastname:email:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "studylink_2019.LogInViewController.createUser(uid: Swift.String, firstname: Swift.String, lastname: Swift.String, email: Swift.String) -&gt; ()"
-                  moduleName = "studylink-2019"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Krishna/Desktop/Work/studylink_2019/studylink-2019/SFiles/LogInViewController.swift"
-                  timestampString = "584248821.089293"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "1004">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in studylink_2019.LogInViewController.createUser(uid: Swift.String, firstname: Swift.String, lastname: Swift.String, email: Swift.String) -&gt; ()"
-                  moduleName = "studylink-2019"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Krishna/Desktop/Work/studylink_2019/studylink-2019/SFiles/LogInViewController.swift"
-                  timestampString = "584248821.091903"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "214">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "studylink-2019/SFiles/LogInViewController.swift"
             timestampString = "584581732.613784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
             endingLineNumber = "193"
-            landmarkName = "checkFirst(uid:)"
+            landmarkName = "sendEmail(email_add:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "196"
             endingLineNumber = "196"
-            landmarkName = "checkFirst(uid:)"
+            landmarkName = "sendEmail(email_add:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -94,6 +94,15 @@
 		82AF351822CEAB6A00309FC3 /* badge1.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF351722CEAB6A00309FC3 /* badge1.png */; };
 		82AF351A22CEABFF00309FC3 /* badge2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF351922CEABFF00309FC3 /* badge2.png */; };
 		82AF351C22CFADC700309FC3 /* badge3.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF351B22CFADC600309FC3 /* badge3.png */; };
+		82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BEE7B122D7D71400790EDC /* MessengerViewController.swift */; };
+		82BEE7B422D7ED1700790EDC /* mutual.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEE7B322D7ED1400790EDC /* mutual.png */; };
+		82BEE7B622D7EEDC00790EDC /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEE7B522D7EED600790EDC /* calendar.png */; };
+		82BEE7B822D7EFC900790EDC /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 82BEE7B722D7EFC400790EDC /* profile.png */; };
+		82BEE7BA22D7F5F700790EDC /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BEE7B922D7F5F700790EDC /* MenuBar.swift */; };
+		82D6CB0322D6BEC9006495FF /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D6CB0222D6BEC8006495FF /* filter.png */; };
+		82D6CB3322D6DFC4006495FF /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6CB3222D6DFC4006495FF /* RoundButton.swift */; };
+		82D6CB3522D6ECCB006495FF /* girl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82D6CB3422D6ECCA006495FF /* girl.jpg */; };
+		82D6CB3722D6FC65006495FF /* linked.png in Resources */ = {isa = PBXBuildFile; fileRef = 82D6CB3622D6FC5D006495FF /* linked.png */; };
 		B996B258192A8CDB01E2B585 /* Pods_studylink_2019Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */; };
 		C7D8C6F270205A277E963B70 /* Pods_studylink_2019UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCF5D4E4F0AD885AC1BFF86 /* Pods_studylink_2019UITests.framework */; };
 /* End PBXBuildFile section */
@@ -215,6 +224,15 @@
 		82AF351722CEAB6A00309FC3 /* badge1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge1.png; sourceTree = "<group>"; };
 		82AF351922CEABFF00309FC3 /* badge2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge2.png; sourceTree = "<group>"; };
 		82AF351B22CFADC600309FC3 /* badge3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge3.png; sourceTree = "<group>"; };
+		82BEE7B122D7D71400790EDC /* MessengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
+		82BEE7B322D7ED1400790EDC /* mutual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mutual.png; sourceTree = "<group>"; };
+		82BEE7B522D7EED600790EDC /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		82BEE7B722D7EFC400790EDC /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		82BEE7B922D7F5F700790EDC /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		82D6CB0222D6BEC8006495FF /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
+		82D6CB3222D6DFC4006495FF /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		82D6CB3422D6ECCA006495FF /* girl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl.jpg; sourceTree = "<group>"; };
+		82D6CB3622D6FC5D006495FF /* linked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linked.png; sourceTree = "<group>"; };
 		A717BBE87D8312EFC601B2AD /* Pods_studylink_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99D7C225EC93EB4F136A34F /* Pods-studylink-2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019.release.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +278,7 @@
 		82134551227908B800832A7C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				82D6CB3422D6ECCA006495FF /* girl.jpg */,
 				826BCDEA22D01E8C00586DEE /* descriptions */,
 				826BCDE922D01E4600586DEE /* icons */,
 				826BCD7422D017E500586DEE /* badges */,
@@ -282,12 +301,14 @@
 			children = (
 				8231CF7122CDAFBB00436A9A /* Registration */,
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
+				82BEE7B122D7D71400790EDC /* MessengerViewController.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
 				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
 				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
 				8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */,
 				82964F1222CE7AE700D90169 /* curvedView.swift */,
 				82AF351322CEA85F00309FC3 /* CardViewController.swift */,
+				82D6CB3222D6DFC4006495FF /* RoundButton.swift */,
 			);
 			path = SFiles;
 			sourceTree = "<group>";
@@ -359,6 +380,7 @@
 				82AF351B22CFADC600309FC3 /* badge3.png */,
 				82AF351922CEABFF00309FC3 /* badge2.png */,
 				82AF351722CEAB6A00309FC3 /* badge1.png */,
+				82D6CB3622D6FC5D006495FF /* linked.png */,
 			);
 			path = badges;
 			sourceTree = "<group>";
@@ -366,6 +388,10 @@
 		826BCDE922D01E4600586DEE /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				82BEE7B722D7EFC400790EDC /* profile.png */,
+				82BEE7B522D7EED600790EDC /* calendar.png */,
+				82BEE7B322D7ED1400790EDC /* mutual.png */,
+				82D6CB0222D6BEC8006495FF /* filter.png */,
 				82759B2D22CAD45700BF5373 /* pic2.jpg */,
 				82759B3122CADF2400BF5373 /* studylink.png */,
 				82AF351122CE9A7900309FC3 /* cam_3.png */,
@@ -439,6 +465,7 @@
 				821F6DB022670348005FD1FB /* VC */,
 				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
+				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
 			);
 			path = "studylink-2019";
 			sourceTree = "<group>";
@@ -610,9 +637,11 @@
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
 				8231CF7422CDB1A900436A9A /* lightbulb.png in Resources */,
 				82AF351222CE9A7A00309FC3 /* cam_3.png in Resources */,
+				82BEE7B422D7ED1700790EDC /* mutual.png in Resources */,
 				8235CB3022CC170100336144 /* q1.png in Resources */,
 				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				8235CB2A22CBF0D200336144 /* next.png in Resources */,
+				82D6CB3722D6FC65006495FF /* linked.png in Resources */,
 				8264CE0422D160C2000110E4 /* b29_.png in Resources */,
 				8264CE1822D160C2000110E4 /* b25_.png in Resources */,
 				8231CF8222CDBA2500436A9A /* classes.png in Resources */,
@@ -628,6 +657,7 @@
 				82917B202266F0420086CE27 /* edit.png in Resources */,
 				82AF351022CE98DA00309FC3 /* cam_2.png in Resources */,
 				6BF72CAE226A4D1700591EBC /* GoogleService-Info.plist in Resources */,
+				82D6CB3522D6ECCB006495FF /* girl.jpg in Resources */,
 				8235CB2622CBECF100336144 /* studylink_name.png in Resources */,
 				8264CE1722D160C2000110E4 /* b7_.png in Resources */,
 				8264CE0322D160C2000110E4 /* b18_.png in Resources */,
@@ -638,7 +668,10 @@
 				8264CE1322D160C2000110E4 /* b14_.png in Resources */,
 				82917AF72266ECE70086CE27 /* Main.storyboard in Resources */,
 				82759B3222CADF2400BF5373 /* studylink.png in Resources */,
+				82D6CB0322D6BEC9006495FF /* filter.png in Resources */,
+				82BEE7B822D7EFC900790EDC /* profile.png in Resources */,
 				8235CB3E22CC433400336144 /* q5.png in Resources */,
+				82BEE7B622D7EEDC00790EDC /* calendar.png in Resources */,
 				8231CF7822CDB2D400436A9A /* hourglass.png in Resources */,
 				8264CE0C22D160C2000110E4 /* b13_.png in Resources */,
 				82AF350E22CE96A000309FC3 /* menu_2.png in Resources */,
@@ -806,12 +839,15 @@
 				8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */,
 				8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */,
 				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,
+				82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,
 				8231CF6D22CDA89000436A9A /* TutorialAViewController.swift in Sources */,
+				82BEE7BA22D7F5F700790EDC /* MenuBar.swift in Sources */,
 				8235CB2422CBE6AB00336144 /* UIViewExtensions.swift in Sources */,
 				82AF351622CEAA7200309FC3 /* BadgeViewController.swift in Sources */,
 				82AF351422CEA85F00309FC3 /* CardViewController.swift in Sources */,
+				82D6CB3322D6DFC4006495FF /* RoundButton.swift in Sources */,
 				821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */,
 				82964F1322CE7AE700D90169 /* curvedView.swift in Sources */,
 			);
