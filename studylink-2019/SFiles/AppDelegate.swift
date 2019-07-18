@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+
         //background animation set-up
         backgroundImg.frame = CGRect(x:0, y:0, width:self.window!.bounds.height * 1.688,height:self.window!.bounds.height)
         backgroundImg.image = UIImage(named:"pic2.jpg")
@@ -44,12 +46,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         self.window!.addSubview(backgroundImg)
         moveBgLeft()
         
-        
+
         // Override point for customization after application launch.
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         return true
+        
+      
     }
     
     @available(iOS 9.0, *)

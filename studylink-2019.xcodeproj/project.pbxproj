@@ -85,6 +85,10 @@
 		82917B202266F0420086CE27 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 82917B1F2266F0420086CE27 /* edit.png */; };
 		82917B222266F1060086CE27 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82917B212266F1060086CE27 /* menu2.png */; };
 		82964F1322CE7AE700D90169 /* curvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82964F1222CE7AE700D90169 /* curvedView.swift */; };
+		82A6E0BB22DD4DA9004A1815 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */; };
+		82A6E0BD22E0233E004A1815 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A6E0BC22E0233A004A1815 /* chat.png */; };
+		82A6E0BF22E02482004A1815 /* My Post Copy (5).png in Resources */ = {isa = PBXBuildFile; fileRef = 82A6E0BE22E0247E004A1815 /* My Post Copy (5).png */; };
+		82A6E0C122E0248D004A1815 /* myprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A6E0C022E0248D004A1815 /* myprofile.png */; };
 		82AF350C22CE95AE00309FC3 /* edit_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF350B22CE95AD00309FC3 /* edit_2.png */; };
 		82AF350E22CE96A000309FC3 /* menu_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF350D22CE969F00309FC3 /* menu_2.png */; };
 		82AF351022CE98DA00309FC3 /* cam_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82AF350F22CE98DA00309FC3 /* cam_2.png */; };
@@ -215,6 +219,10 @@
 		82917B1F2266F0420086CE27 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		82917B212266F1060086CE27 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
 		82964F1222CE7AE700D90169 /* curvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = curvedView.swift; sourceTree = "<group>"; };
+		82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		82A6E0BC22E0233A004A1815 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		82A6E0BE22E0247E004A1815 /* My Post Copy (5).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My Post Copy (5).png"; sourceTree = "<group>"; };
+		82A6E0C022E0248D004A1815 /* myprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myprofile.png; sourceTree = "<group>"; };
 		82AF350B22CE95AD00309FC3 /* edit_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit_2.png; sourceTree = "<group>"; };
 		82AF350D22CE969F00309FC3 /* menu_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_2.png; sourceTree = "<group>"; };
 		82AF350F22CE98DA00309FC3 /* cam_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cam_2.png; sourceTree = "<group>"; };
@@ -388,6 +396,9 @@
 		826BCDE922D01E4600586DEE /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				82A6E0BE22E0247E004A1815 /* My Post Copy (5).png */,
+				82A6E0C022E0248D004A1815 /* myprofile.png */,
+				82A6E0BC22E0233A004A1815 /* chat.png */,
 				82BEE7B722D7EFC400790EDC /* profile.png */,
 				82BEE7B522D7EED600790EDC /* calendar.png */,
 				82BEE7B322D7ED1400790EDC /* mutual.png */,
@@ -466,6 +477,7 @@
 				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
 				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
+				82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */,
 			);
 			path = "studylink-2019";
 			sourceTree = "<group>";
@@ -660,7 +672,9 @@
 				82D6CB3522D6ECCB006495FF /* girl.jpg in Resources */,
 				8235CB2622CBECF100336144 /* studylink_name.png in Resources */,
 				8264CE1722D160C2000110E4 /* b7_.png in Resources */,
+				82A6E0BD22E0233E004A1815 /* chat.png in Resources */,
 				8264CE0322D160C2000110E4 /* b18_.png in Resources */,
+				82A6E0BF22E02482004A1815 /* My Post Copy (5).png in Resources */,
 				8264CE1022D160C2000110E4 /* b3_.png in Resources */,
 				8264CE0B22D160C2000110E4 /* b16_.png in Resources */,
 				82AF351822CEAB6A00309FC3 /* badge1.png in Resources */,
@@ -677,6 +691,7 @@
 				82AF350E22CE96A000309FC3 /* menu_2.png in Resources */,
 				8264CE0D22D160C2000110E4 /* b11_.png in Resources */,
 				8235CB3622CC3F9500336144 /* q3.png in Resources */,
+				82A6E0C122E0248D004A1815 /* myprofile.png in Resources */,
 				8264CE1222D160C2000110E4 /* b2_.png in Resources */,
 				8264CE0E22D160C2000110E4 /* b1_.png in Resources */,
 				8264CDFC22D160C2000110E4 /* b26_.png in Resources */,
@@ -839,6 +854,7 @@
 				8235CB2C22CBF2CD00336144 /* QViewController.swift in Sources */,
 				8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */,
 				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,
+				82A6E0BB22DD4DA9004A1815 /* TabViewController.swift in Sources */,
 				82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,

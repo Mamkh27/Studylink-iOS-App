@@ -24,6 +24,7 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
         loginbtn.layer.cornerRadius = 5;
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)

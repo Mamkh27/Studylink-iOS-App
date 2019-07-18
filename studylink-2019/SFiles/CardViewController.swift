@@ -10,12 +10,9 @@ import UIKit
 
 class CardViewController: UIViewController {
 
-    
+   
+ 
 
-    @IBOutlet var mutualLine: UIView!
-    @IBOutlet var calendarLine: UIView!
-    @IBOutlet var profileLine: UIView!
-    @IBOutlet var buttonsView: UIView!
     
     @IBOutlet var linkedView: UIImageView!
     @IBOutlet var lastInitial: UILabel!
@@ -28,12 +25,15 @@ class CardViewController: UIViewController {
     @IBOutlet var menuView: UIView!
     @IBOutlet var profilebtn: UIButton!
     
-    
+
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        mutualLine.alpha = 0;
-        calendarLine.alpha = 0;
-        profileLine.alpha = 1;
+  
+        
+
+        image.layer.cornerRadius = 5;
+        image.layer.masksToBounds = true;
 
         card.layer.cornerRadius = 5;
         card.layer.masksToBounds = true;
@@ -55,28 +55,50 @@ class CardViewController: UIViewController {
         self.view.bringSubviewToFront(self.firstName)
         
         self.view.bringSubviewToFront(self.lastInitial)
-        self.view.bringSubviewToFront(self.buttonsView)
+        
+        
+        
+
+        
+setupMenuBar()
+
+        let blurEffect1 = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView1 = UIVisualEffectView(effect: blurEffect1)
+        blurEffectView1.frame = menuBar.frame
+        blurEffectView1.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView1.alpha = 0.9;
+        self.view.addSubview(blurEffectView1)
         
     }
+    
+    func addConstraintsWithFormat(_ format: String, views: UIView...) {
+        var viewDict = [String: UIView]()
         
-    
-    @IBAction func calendarChosen(_ sender: Any) {
-        self.calendarLine.alpha = 1;
-        self.profileLine.alpha = 0;
-        self.mutualLine.alpha = 0;
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewDict[key] = view
+        }
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDict))
     }
     
-    @IBAction func mutualChosen(_ sender: Any) {
-        self.calendarLine.alpha = 0;
-        self.profileLine.alpha = 0;
-        self.mutualLine.alpha = 1;
-    }
+    let menuBar: MenuBar = {
+        let mb = MenuBar()
+        return mb
+    }()
     
-    @IBAction func profileChosen(_ sender: Any) {
-        self.calendarLine.alpha = 0;
-        self.profileLine.alpha = 1;
-        self.mutualLine.alpha = 0;
+    private func setupMenuBar(){
+    view.addSubview(menuBar)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar)
+        menuBar.transform = CGAffineTransform(translationX: 0, y: 615)
+
+ 
     }
+
+
     
     
     @IBAction func toggleMenu(_ sender: Any) {
