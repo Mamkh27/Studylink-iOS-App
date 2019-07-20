@@ -19,8 +19,7 @@ class MessengerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        self.navBarImage.layer.cornerRadius = self.navBarImage.frame.size.width / 2;
-        self.navBarImage.clipsToBounds = true;
+
         // Do any additional setup after loading the view.
     }
     
