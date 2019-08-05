@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+class CardViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 
    
- 
+ let cellId = "cellId"
 
     
     @IBOutlet var linkedView: UIImageView!
@@ -30,7 +30,7 @@ class CardViewController: UIViewController {
 
         super.viewDidLoad()
   
-        
+
 
         image.layer.cornerRadius = 5;
         image.layer.masksToBounds = true;
@@ -44,24 +44,22 @@ class CardViewController: UIViewController {
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.profilebtn)
-                
         self.view.bringSubviewToFront(self.card)
         self.view.bringSubviewToFront(self.view2)
-    self.view.bringSubviewToFront(self.toggleMenuButton)
+        self.view.bringSubviewToFront(self.toggleMenuButton)
         self.view.bringSubviewToFront(self.darkFillView)
         self.view.bringSubviewToFront(self.menuView)
         self.view.bringSubviewToFront(self.image)
-
         self.view.bringSubviewToFront(self.firstName)
-        
         self.view.bringSubviewToFront(self.lastInitial)
         
         
         
-
-        
+setupMenuOptions()
 setupMenuBar()
-
+ 
+print("This is" + self.menuBar.whichOptionisActive)
+        
         let blurEffect1 = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView1 = UIVisualEffectView(effect: blurEffect1)
         blurEffectView1.frame = menuBar.frame
@@ -69,7 +67,16 @@ setupMenuBar()
         blurEffectView1.alpha = 0.9;
         self.view.addSubview(blurEffectView1)
         
+        /*
+        if(self.menuBar.whichOptionisActive == "profile"){
+            menuOptions.isRed()
     }
+        else {
+            menuOptions.isWhite()
+        }
+ */
+    }
+
     
     func addConstraintsWithFormat(_ format: String, views: UIView...) {
         var viewDict = [String: UIView]()
@@ -88,6 +95,11 @@ setupMenuBar()
         return mb
     }()
     
+    let menuOptions: MenuOptions = {
+        let mo = MenuOptions()
+        return mo
+    }()
+    
     private func setupMenuBar(){
     view.addSubview(menuBar)
         
@@ -98,9 +110,16 @@ setupMenuBar()
  
     }
 
+  private func setupMenuOptions(){
+        view.addSubview(menuBar.menuOps)
+    addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps)
+    addConstraintsWithFormat("V:|[v0(215)]", views: menuBar.menuOps)
+ 
+    menuBar.menuOps.transform = CGAffineTransform(translationX: 0, y: 395)
+    
+    }
 
-    
-    
+ 
     @IBAction func toggleMenu(_ sender: Any) {
         if darkFillView.transform == CGAffineTransform.identity {
             UIView.animate(withDuration: 1, animations: {
