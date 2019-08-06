@@ -52,12 +52,14 @@ class CardViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         self.view.bringSubviewToFront(self.image)
         self.view.bringSubviewToFront(self.firstName)
         self.view.bringSubviewToFront(self.lastInitial)
+
         
         
         
 setupMenuOptions()
 setupMenuBar()
- 
+
+        
 print("This is" + self.menuBar.whichOptionisActive)
         
         let blurEffect1 = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -76,7 +78,34 @@ print("This is" + self.menuBar.whichOptionisActive)
         }
  */
     }
-
+/*
+    func setupFilterLabels(){
+        self.view.addSubview(self.menuBar.menuOps.fltrThreeLbl)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrThreeLbl)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrThreeLbl)
+        menuBar.menuOps.fltrThreeLbl.transform = CGAffineTransform(translationX:100, y: 360)
+        
+///////////////////////////////////////////////////////////////////////////
+        
+        self.view.addSubview(self.menuBar.menuOps.fltrTwoLbl)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrTwoLbl)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrTwoLbl)
+         menuBar.menuOps.fltrTwoLbl.transform = CGAffineTransform(translationX: 0, y:360)
+        
+ ///////////////////////////////////////////////////////////////////////////
+        
+        self.view.addSubview(self.menuBar.menuOps.fltrOneLbl)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrOneLbl)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrOneLbl)
+        menuBar.menuOps.fltrOneLbl.transform = CGAffineTransform(translationX: -100, y:360)
+        
+        
+    }
+   */
+    
     
     func addConstraintsWithFormat(_ format: String, views: UIView...) {
         var viewDict = [String: UIView]()

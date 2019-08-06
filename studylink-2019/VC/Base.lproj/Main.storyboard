@@ -450,7 +450,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="FH9-1D-Grs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.13002884180254839" green="0.33395117723724727" blue="0.38891973350253806" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -878,22 +878,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONe-OM-33L" userLabel="card">
                                 <rect key="frame" x="0.0" y="78" width="375" height="515"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-Nu-Iyb">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-Nu-Iyb">
                                         <rect key="frame" x="37" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29Y-tb-JVR">
-                                        <rect key="frame" x="54" y="255" width="108" height="33"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brooklyn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29Y-tb-JVR">
+                                        <rect key="frame" x="54" y="255" width="94" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-15-jPT">
-                                        <rect key="frame" x="174" y="255" width="27" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -906,6 +899,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.24248493020304573" green="0.24248493020304573" blue="0.24248493020304573" alpha="0.3006474743150685" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-15-jPT">
+                                        <rect key="frame" x="156" y="255" width="27" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.91403574486301364" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
@@ -3352,6 +3352,7 @@
         <image name="edit_2.png" width="1080" height="1080"/>
         <image name="filter.png" width="1080" height="1080"/>
         <image name="girl.jpg" width="4758" height="3172"/>
+        <image name="girl2.jpg" width="2048" height="1365"/>
         <image name="gradyear.png" width="589" height="99"/>
         <image name="hourglass.png" width="1080" height="1080"/>
         <image name="iconTab0" width="25" height="25"/>
@@ -3378,13 +3379,13 @@
         <image name="welcome.png" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ext-vD-Lgt"/>
+        <segue reference="hO0-Ox-mvh"/>
         <segue reference="tNi-8s-yR1"/>
-        <segue reference="Pby-cx-fT0"/>
+        <segue reference="olS-hS-Ebt"/>
         <segue reference="Ra0-kD-XUs"/>
         <segue reference="E5i-U5-RHp"/>
         <segue reference="XMi-O4-KsI"/>
-        <segue reference="I6e-lI-LHn"/>
+        <segue reference="jh2-fE-6eq"/>
         <segue reference="MYP-wb-K5P"/>
     </inferredMetricsTieBreakers>
 </document>

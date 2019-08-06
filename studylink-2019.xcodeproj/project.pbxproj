@@ -76,6 +76,10 @@
 		82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82759B2B22CACFE800BF5373 /* LogInViewController.swift */; };
 		82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2D22CAD45700BF5373 /* pic2.jpg */; };
 		82759B3222CADF2400BF5373 /* studylink.png in Resources */ = {isa = PBXBuildFile; fileRef = 82759B3122CADF2400BF5373 /* studylink.png */; };
+		82831F5922F8D2C0002E2C7C /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5822F8D2C0002E2C7C /* MonthView.swift */; };
+		82831F5B22F8D94F002E2C7C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5A22F8D94F002E2C7C /* CalendarView.swift */; };
+		82831F5D22F8E2E1002E2C7C /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */; };
+		82831F5F22F96F2A002E2C7C /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82831F5E22F96F26002E2C7C /* girl2.jpg */; };
 		82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF12266ECE70086CE27 /* AppDelegate.swift */; };
 		82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF32266ECE70086CE27 /* UserViewController.swift */; };
 		82917AF72266ECE70086CE27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82917AF52266ECE70086CE27 /* Main.storyboard */; };
@@ -205,6 +209,10 @@
 		82759B2B22CACFE800BF5373 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		82759B2D22CAD45700BF5373 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
 		82759B3122CADF2400BF5373 /* studylink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studylink.png; sourceTree = "<group>"; };
+		82831F5822F8D2C0002E2C7C /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		82831F5A22F8D94F002E2C7C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		82831F5E22F96F26002E2C7C /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
 		82917AEE2266ECE70086CE27 /* studylink-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studylink-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82917AF12266ECE70086CE27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82917AF32266ECE70086CE27 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +296,7 @@
 		82134551227908B800832A7C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				82831F5E22F96F26002E2C7C /* girl2.jpg */,
 				82D6CB3422D6ECCA006495FF /* girl.jpg */,
 				826BCDEA22D01E8C00586DEE /* descriptions */,
 				826BCDE922D01E4600586DEE /* icons */,
@@ -309,15 +318,14 @@
 		821F6DB12267038D005FD1FB /* SFiles */ = {
 			isa = PBXGroup;
 			children = (
+				82831F5522F8C107002E2C7C /* Card */,
 				8231CF7122CDAFBB00436A9A /* Registration */,
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
 				82BEE7B122D7D71400790EDC /* MessengerViewController.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
 				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
-				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
 				8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */,
 				82964F1222CE7AE700D90169 /* curvedView.swift */,
-				82AF351322CEA85F00309FC3 /* CardViewController.swift */,
 				82D6CB3222D6DFC4006495FF /* RoundButton.swift */,
 			);
 			path = SFiles;
@@ -334,6 +342,7 @@
 		8231CF7122CDAFBB00436A9A /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
 				82AF351522CEAA7200309FC3 /* BadgeViewController.swift */,
 				826BCDEC22D02CA500586DEE /* Badge2ViewController.swift */,
 				8231CF6022CD831B00436A9A /* WelcomePt2ViewController.swift */,
@@ -448,6 +457,19 @@
 			path = descriptions;
 			sourceTree = "<group>";
 		};
+		82831F5522F8C107002E2C7C /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				82AF351322CEA85F00309FC3 /* CardViewController.swift */,
+				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
+				8230FD7E22F53877001B6834 /* MenuOptions.swift */,
+				82831F5822F8D2C0002E2C7C /* MonthView.swift */,
+				82831F5A22F8D94F002E2C7C /* CalendarView.swift */,
+				82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		82917AE52266ECE70086CE27 = {
 			isa = PBXGroup;
 			children = (
@@ -478,8 +500,6 @@
 				821F6DB022670348005FD1FB /* VC */,
 				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
-				8230FD7E22F53877001B6834 /* MenuOptions.swift */,
-				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
 				82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */,
 			);
 			path = "studylink-2019";
@@ -650,6 +670,7 @@
 				8264CE1122D160C2000110E4 /* b4_.png in Resources */,
 				8235CB2822CBEE4500336144 /* please.png in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
+				82831F5F22F96F2A002E2C7C /* girl2.jpg in Resources */,
 				8231CF7422CDB1A900436A9A /* lightbulb.png in Resources */,
 				82AF351222CE9A7A00309FC3 /* cam_3.png in Resources */,
 				82BEE7B422D7ED1700790EDC /* mutual.png in Resources */,
@@ -851,6 +872,7 @@
 			files = (
 				82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */,
 				8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */,
+				82831F5B22F8D94F002E2C7C /* CalendarView.swift in Sources */,
 				826BCDED22D02CA500586DEE /* Badge2ViewController.swift in Sources */,
 				8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */,
 				6B0A45AD22CDD69600BAD2F5 /* RegisterViewController.swift in Sources */,
@@ -860,6 +882,8 @@
 				8230FD7F22F53877001B6834 /* MenuOptions.swift in Sources */,
 				82A6E0BB22DD4DA9004A1815 /* TabViewController.swift in Sources */,
 				82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */,
+				82831F5922F8D2C0002E2C7C /* MonthView.swift in Sources */,
+				82831F5D22F8E2E1002E2C7C /* WeekdaysView.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
 				82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */,
 				8231CF6D22CDA89000436A9A /* TutorialAViewController.swift in Sources */,

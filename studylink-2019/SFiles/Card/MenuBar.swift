@@ -40,7 +40,7 @@ let cellId = "cellId"
         addContraintsWithFormat("V:|[v0]|", views: collectionView)
         let selectedIndexPath = NSIndexPath(item:0, section: 0)
         collectionView.selectItem(at: selectedIndexPath as IndexPath, animated: false, scrollPosition:[])
-
+menuOps.hideCalendar()
         
 }
     
@@ -50,19 +50,25 @@ let cellId = "cellId"
     
  
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if ((imageNames[indexPath.item] == "iconTab1")){
             whichOptionisActive = "calendar"
-            menuOps.isRed()
+            menuOps.hideProfile()
+            menuOps.displayCalendar()
+            menuOps.hideMutuals()
         
         }
         if (imageNames[indexPath.item] == "iconTab3"){
             whichOptionisActive = "mutual"
-            menuOps.isWhite()
+            menuOps.hideProfile()
+            menuOps.hideCalendar()
+            menuOps.displayMutuals()
         }
         if (imageNames[indexPath.item] == "iconTab0"){
             whichOptionisActive = "profile"
-            menuOps.isBlue()
+            menuOps.displayProfile()
+            menuOps.hideCalendar()
+            menuOps.hideMutuals()
         }
 print(whichOptionisActive)
     }
@@ -77,11 +83,11 @@ print(whichOptionisActive)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:frame.width / 3, height:frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
  
