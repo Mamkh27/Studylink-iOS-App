@@ -36,11 +36,25 @@ class QViewController: UIViewController {
     @IBOutlet var nextbtn: UIButton!
     @IBOutlet var labelCurrentValue1: UILabel!
     @IBOutlet var labelCurrentValue2: UILabel!
+    
+    var slider_vals = [
+        "Q1": 2,
+        "Q2": 2
+    ]
+    
+    var options1 = ["Independent", "Both", "Interactive"]
+    var options2 = ["Listener", "Both", "Leader"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         box1.layer.cornerRadius = 5;
         box2.layer.cornerRadius = 5;
+        
+        
+        labelCurrentValue1.text = options1[1]
+        labelCurrentValue2.text = options2[2]
+        
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
@@ -68,19 +82,26 @@ class QViewController: UIViewController {
         handleFilter()
     }
     
-    @IBAction func sliderChanged(_ sender: Any) {
+    @IBAction func sliderChanged(_ sender: UISlider) {
         //Restrict slider to fixed value
-        let fixed = roundf((sender as AnyObject).value / 5.0) * 5.0;
+        let fixed = roundf((sender as AnyObject).value / 1.0) * 1.0;
         (sender as AnyObject).setValue(fixed, animated: true)
-        
-        handleFilter()
+        let currentVal = Int(sender.value)
+        print(currentVal)
+        let index = currentVal-1
+        labelCurrentValue1.text = options1[index]
+        slider_vals["Q1"] = currentVal
+//        handleFilter()
     }
     
-    @IBAction func slider2Changed(_ sender: Any) {
-        let fixed = roundf((sender as AnyObject).value / 5.0) * 5.0;
+    @IBAction func slider2Changed(_ sender: UISlider) {
+        let fixed = roundf((sender as AnyObject).value / 1.0) * 1.0;
         (sender as AnyObject).setValue(fixed, animated: true)
-        
-        handleFilter()
+        let currentVal = Int(sender.value)
+        let index = currentVal-1
+        labelCurrentValue2.text = options2[index]
+        slider_vals["Q2"] = currentVal
+//        handleFilter()
     }
     
     
@@ -124,9 +145,42 @@ class QViewController: UIViewController {
         case .both:
             labelCurrentValue1.text = "Both"
         }
+        
     }
     
+    func setPreferencesVal(){
+        
+        switch labelCurrentValue1.text {
+        case "Independent":
+            slider_vals["Q1"] = 1
+        case "Both":
+            slider_vals["Q1"] = 2
+        case "Interactive":
+            slider_vals["Q1"] = 3
+        default:
+            slider_vals["Q1"] = 0
+        }
+        
+        switch labelCurrentValue2.text {
+        case "Independent":
+            slider_vals["Q2"] = 1
+        case "Both":
+            slider_vals["Q2"] = 2
+        case "Interactive":
+            slider_vals["Q2"] = 3
+        default:
+            slider_vals["Q2"] = 0
+        }
+    }
 
+    
+    @IBAction func nextBtn(_ sender: Any) {
+        print(slider_vals)
+        let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "Q2View") as! Q2ViewController
+        vc.slider_vals = slider_vals
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     /*
     // MARK: - Navigation

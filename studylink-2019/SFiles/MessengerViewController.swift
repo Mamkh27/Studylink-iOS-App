@@ -18,10 +18,19 @@ class MessengerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        self.navBarImage.layer.cornerRadius = self.navBarImage.frame.size.width / 2;
-        self.navBarImage.clipsToBounds = true;
+        
+        
+        print("Reaching Messenger View")
+        self.navigationItem.title = "Messenger"
+        let image = UIImage(named: "icons8-search-30")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showMessages))
+        
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func showMessages(){
+        let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "userMessageView") as! MessageUserViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 

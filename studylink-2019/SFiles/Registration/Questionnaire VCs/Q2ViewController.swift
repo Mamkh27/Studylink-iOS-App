@@ -36,6 +36,10 @@ class Q2ViewController: UIViewController {
     @IBOutlet var hours3: UILabel!
     @IBOutlet var hours4: UILabel!
     
+    var slider_vals: [String: Int] = [:]
+    
+    var options1 = ["In Advance", "Both", "Spontaneous"]
+    var options2 = ["1-4 Hrs", "4-8 Hrs", "8-10 Hrs", "11+ Hrs"]
     
     
     override func viewDidLoad() {
@@ -50,6 +54,13 @@ class Q2ViewController: UIViewController {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
+
+        
+        labelCurrentValue1.text = options1[1]
+        labelCurrentValue2.text = options2[1]
+        
+        slider_vals["Q3"] = 2
+        slider_vals["Q4"] = 2
         
         self.view.bringSubviewToFront(self.box1)
         self.view.bringSubviewToFront(self.box2)
@@ -77,19 +88,25 @@ class Q2ViewController: UIViewController {
     }
     
 
-    @IBAction func sliderChanged(_ sender: Any) {
-        let fixed = roundf((sender as AnyObject).value / 5.0) * 5.0;
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        let fixed = roundf((sender as AnyObject).value / 1.0) * 1.0;
         (sender as AnyObject).setValue(fixed, animated: true)
-        
-        handleFilter()
+        let currentVal = Int(sender.value)
+        let index = currentVal-1
+        labelCurrentValue1.text = options1[index]
+        slider_vals["Q3"] = currentVal
+//        handleFilter()
     }
     
     
-    @IBAction func slider2Changed(_ sender: Any) {
-        let fixed = roundf((sender as AnyObject).value / 5.0) * 5.0;
+    @IBAction func slider2Changed(_ sender: UISlider) {
+        let fixed = roundf((sender as AnyObject).value / 1.0) * 1.0;
         (sender as AnyObject).setValue(fixed, animated: true)
-        
-        handleFilter()
+        let currentVal = Int(sender.value)
+        let index = currentVal-1
+        labelCurrentValue2.text = options2[index]
+        slider_vals["Q4"] = currentVal
+//        handleFilter()
     }
     
     
@@ -141,15 +158,15 @@ class Q2ViewController: UIViewController {
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
+    
+    @IBAction func nextBtn(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "Q3View") as! Q3ViewController
+        vc.slider_vals = slider_vals
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 
 }

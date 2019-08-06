@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class WelcomeViewController: UIViewController {
 
     @IBOutlet var Next: UIButton!
@@ -23,7 +24,7 @@ class WelcomeViewController: UIViewController {
         if self.welcome_to.alpha == 0.0{
         self.welcome_to.fadeIn(duration: 0.75, delay:0.0, completion: nil)
         }
-        
+        self.navigationController?.navigationBar.isHidden = true
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
@@ -40,8 +41,12 @@ class WelcomeViewController: UIViewController {
         
     }
 
-
-        }
+    @IBAction func nextBtn(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "Q1View") as! QViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
     /*
     // MARK: - Navigation
 

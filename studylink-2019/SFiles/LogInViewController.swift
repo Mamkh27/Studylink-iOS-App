@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
+import Alamofire
 
 class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate {
 
@@ -39,17 +40,26 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print(Auth.auth().currentUser)
         if Auth.auth().currentUser != nil {
-            print(Auth.auth().currentUser?.uid)
             let uid = Auth.auth().currentUser?.uid ?? ""
+            print("UID", uid)
 //            checkFirst(uid: uid)
         }
-        
-        if GIDSignIn.sharedInstance()?.currentUser != nil {
-            let uid = GIDSignIn.sharedInstance()?.currentUser.userID ?? "user1"
-            print(uid)
-            checkFirst(uid: uid)
+
+        GIDSignIn.sharedInstance().signInSilently()
+//
+//
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                if UserDefaults.standard.string(forKey: "uid") != nil && Auth.auth().currentUser != nil {
+                    //User was already logged in
+                }
+
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
         }
+
         
     }
     
@@ -78,6 +88,7 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser?, withError error: Error!) {
         print("Signing in")
+        
         if(user != nil){
             guard let authentication = user?.authentication else { return }
             let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,accessToken: authentication.accessToken)
@@ -152,24 +163,45 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     
     @IBAction func forgotPassword(_ sender: Any) {
-        let alert = UIAlertController(title: "Please enter Email!", message: "Enter your email address", preferredStyle: .alert)
+        sendReq()
         
-        alert.addTextField { (textField) in
-            textField.placeholder = "ex: user@example.com"
+//        let alert = UIAlertController(title: "Please enter Email!", message: "Enter your email address", preferredStyle: .alert)
+//
+//        alert.addTextField { (textField) in
+//            textField.placeholder = "ex: user@example.com"
+//        }
+//
+//        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+//            let textField = alert?.textFields![0]
+//            let email = textField?.text ?? ""
+//            self.sendEmail(email_add: email)
+//        }))
+//
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { [weak alert] (_) in
+//
+//        }))
+//
+//        // 4. Present the alert.
+//        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func sendReq(){
+        print("sending post")
+//        guard let url = String(string: "http://localhost:3000/hello") else {
+//            return
+//        }
+//
+        let urlString = "http://localhost:3000/api/hello"
+        let url = URL(string: urlString)!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        Alamofire.request(urlRequest)
+            .responseJSON { response in
+                
+            print(response)
         }
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0]
-            let email = textField?.text ?? ""
-            self.sendEmail(email_add: email)
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { [weak alert] (_) in
-            
-        }))
-        
-        // 4. Present the alert.
-        self.present(alert, animated: true, completion: nil)
+    
+
     }
     
     

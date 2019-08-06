@@ -46,6 +46,8 @@ class BadgeViewController: UIViewController {
     @IBOutlet var view1: UIView!
     @IBOutlet var view3: UIView!
     
+    var selectedBadges: [String] = []
+    
 //Makes sure user only chooses 7 badges
     func counter() -> Bool{
         if(self.count + 1 <= 7){
@@ -88,13 +90,15 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b2.setImage(tintedImage, for: .normal)
                 b2.tintColor = .black
+                selectedBadges.append(b2.titleLabel?.text ?? "")
             }}
 //if already selected then changes back to white
         else{
-        b2.tintColor = .white
-        self.count = self.count - 1;
-                                }
+            b2.tintColor = .white
+            self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b2.titleLabel?.text ?? "") ?? 0)
         }
+    }
     
     @IBAction func b1(_ sender: Any) {
         if b1.tintColor != .black{
@@ -103,10 +107,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b1.setImage(tintedImage, for: .normal)
                 b1.tintColor = .black
-                                }}
+            selectedBadges.append(b1.titleLabel?.text ?? "")
+        }}
         else{
             b1.tintColor = .none
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b1.titleLabel?.text ?? "") ?? 0)
             }
         }
     
@@ -117,10 +123,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b3.setImage(tintedImage, for: .normal)
                 b3.tintColor = .black
+            selectedBadges.append(b3.titleLabel?.text ?? "")
             }}
         else{
             b3.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b3.titleLabel?.text ?? "") ?? 0)
             }
         }
   
@@ -133,11 +141,12 @@ class BadgeViewController: UIViewController {
                 let origImage = UIImage(named: "b4_.png")
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b4.setImage(tintedImage, for: .normal)
-            
+                selectedBadges.append(b4.titleLabel?.text ?? "")
             }}
         else{
             b4.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b4.titleLabel?.text ?? "") ?? 0)
                         }
         }
     
@@ -149,10 +158,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b5.setImage(tintedImage, for: .normal)
                 b5.tintColor = .black
+            selectedBadges.append(b5.titleLabel?.text ?? "")
             }}
         else{
             b5.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b5.titleLabel?.text ?? "") ?? 0)
                         }
         }
     
@@ -163,10 +174,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b6.setImage(tintedImage, for: .normal)
                 b6.tintColor = .black
+            selectedBadges.append(b6.titleLabel?.text ?? "")
             }}
         else{
             b6.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b6.titleLabel?.text ?? "") ?? 0)
                         }
         }
     
@@ -178,10 +191,12 @@ class BadgeViewController: UIViewController {
             let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b7.setImage(tintedImage, for: .normal)
                 b7.tintColor = .black
+            selectedBadges.append(b7.titleLabel?.text ?? "")
             }}
         else{
             b7.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b7.titleLabel?.text ?? "") ?? 0)
                         }
         }
     
@@ -192,10 +207,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b8.setImage(tintedImage, for: .normal)
                 b8.tintColor = .black
+            selectedBadges.append(b8.titleLabel?.text ?? "")
             }}
         else{
             b8.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b8.titleLabel?.text ?? "") ?? 0)
               }
     }
     
@@ -206,10 +223,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b9.setImage(tintedImage, for: .normal)
                 b9.tintColor = .black
+            selectedBadges.append(b9.titleLabel?.text ?? "")
             }}
         else{
             b9.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b9.titleLabel?.text ?? "") ?? 0)
                         }}
     
     
@@ -220,10 +239,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b10.setImage(tintedImage, for: .normal)
                 b10.tintColor = .black
+                selectedBadges.append(b10.titleLabel?.text ?? "")
         }}
         else{
             b10.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b10.titleLabel?.text ?? "") ?? 0)
                         }}
     
     
@@ -234,10 +255,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b11.setImage(tintedImage, for: .normal)
                 b11.tintColor = .black
+            selectedBadges.append(b11.titleLabel?.text ?? "")
             }}
         else{
             b11.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b11.titleLabel?.text ?? "") ?? 0)
                         }
     }
     
@@ -248,10 +271,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b12.setImage(tintedImage, for: .normal)
                 b12.tintColor = .black
+            selectedBadges.append(b12.titleLabel?.text ?? "")
             }}
         else{
             b12.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b12.titleLabel?.text ?? "") ?? 0)
                         }
         }
     
@@ -262,10 +287,12 @@ class BadgeViewController: UIViewController {
                 let titedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b13.setImage(titedImage, for: .normal)
                 b13.tintColor = .black
+            selectedBadges.append(b13.titleLabel?.text ?? "")
             }}
         else{
             b13.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b13.titleLabel?.text ?? "") ?? 0)
                         }
         }
     
@@ -277,10 +304,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b14.setImage(tintedImage, for: .normal)
                 b14.tintColor = .black
+                selectedBadges.append(b14.titleLabel?.text ?? "")
             }}
         else{
             b14.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b14.titleLabel?.text ?? "") ?? 0)
         }}
     
     @IBAction func b15(_ sender: Any) {
@@ -291,10 +320,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b15.setImage(tintedImage, for: .normal)
                 b15.tintColor = .black
+            selectedBadges.append(b15.titleLabel?.text ?? "")
             }}
         else{
             b15.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b15.titleLabel?.text ?? "") ?? 0)
                 }
     }
     
@@ -305,10 +336,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b16.setImage(tintedImage, for: .normal)
                 b16.tintColor = .black
+                selectedBadges.append(b16.titleLabel?.text ?? "")
             }}
         else{
             b16.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b16.titleLabel?.text ?? "") ?? 0)
                 }
     }
     
@@ -319,10 +352,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b17.setImage(tintedImage, for: .normal)
                 b17.tintColor = .black
+                selectedBadges.append(b17.titleLabel?.text ?? "")
             }}
         else{
             b17.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b17.titleLabel?.text ?? "") ?? 0)
                 }
         }
     
@@ -334,10 +369,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b18.setImage(tintedImage, for: .normal)
                 b18.tintColor = .black
+                selectedBadges.append(b18.titleLabel?.text ?? "")
             }}
         else{
             b18.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b18.titleLabel?.text ?? "") ?? 0)
                 }
     }
     
@@ -348,10 +385,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b19.setImage(tintedImage, for: .normal)
                 b19.tintColor = .black
+                selectedBadges.append(b18.titleLabel?.text ?? "")
             }}
         else{
             b19.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b19.titleLabel?.text ?? "") ?? 0)
         }
     }
     
@@ -362,10 +401,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b21.setImage(tintedImage, for: .normal)
                 b21.tintColor = .black
+            selectedBadges.append(b21.titleLabel?.text ?? "")
             }}
         else{
             b21.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b21.titleLabel?.text ?? "") ?? 0)
             }
     }
     
@@ -376,10 +417,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b22.setImage(tintedImage, for: .normal)
                 b22.tintColor = .black
+                selectedBadges.append(b22.titleLabel?.text ?? "")
             }}
         else{
             b22.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b22.titleLabel?.text ?? "") ?? 0)
                 }
     }
     
@@ -390,10 +433,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b23.setImage(tintedImage, for: .normal)
                 b23.tintColor = .black
+                selectedBadges.append(b23.titleLabel?.text ?? "")
             }}
         else {
             b23.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b23.titleLabel?.text ?? "") ?? 0)
                 }
     }
     @IBAction func b24(_ sender: Any) {
@@ -403,11 +448,13 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b24.setImage(tintedImage, for: .normal)
                 b24.tintColor = .black
+            selectedBadges.append(b24.titleLabel?.text ?? "")
         }
         }
         else{
             b24.tintColor = .white
             self.count = self.count - 1 ;
+            selectedBadges.remove(at: selectedBadges.index(of: b24.titleLabel?.text ?? "") ?? 0)
                 }}
     
     
@@ -419,10 +466,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b25.setImage(tintedImage, for: .normal)
                 b25.tintColor = .black
+                selectedBadges.append(b25.titleLabel?.text ?? "")
             }}
         else{
             b25.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b25.titleLabel?.text ?? "") ?? 0)
                                     }
     }
     
@@ -433,11 +482,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b26.setImage(tintedImage, for: .normal)
                 b26.tintColor = .black
+                selectedBadges.append(b26.titleLabel?.text ?? "")
                             }}
         else{
             b26.tintColor = .white
             self.count = self.count - 1;
-  
+            selectedBadges.remove(at: selectedBadges.index(of: b26.titleLabel?.text ?? "") ?? 0)
         }
 
     }
@@ -449,10 +499,12 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b28.setImage(tintedImage, for: .normal)
                 b28.tintColor = .black
+                selectedBadges.append(b28.titleLabel?.text ?? "")
             }}
         else{
             b28.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b28.titleLabel?.text ?? "") ?? 0)
         }}
 
 
@@ -464,12 +516,19 @@ class BadgeViewController: UIViewController {
                 let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
                 b29.setImage(tintedImage, for: .normal)
                 b29.tintColor = .black
+                selectedBadges.append(b29.titleLabel?.text ?? "")
         }
         }
         else{
             b29.tintColor = .white
             self.count = self.count - 1;
+            selectedBadges.remove(at: selectedBadges.index(of: b29.titleLabel?.text ?? "") ?? 0)
         }
 
     }
+    
+    @IBAction func confirmBadges(_ sender: Any) {
+        print(selectedBadges)
+    }
+    
 }

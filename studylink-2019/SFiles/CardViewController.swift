@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CardViewController: UIViewController {
 
     
@@ -37,6 +38,9 @@ class CardViewController: UIViewController {
 
         card.layer.cornerRadius = 5;
         card.layer.masksToBounds = true;
+        
+        setUpNavbar()
+        
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
@@ -57,6 +61,29 @@ class CardViewController: UIViewController {
         self.view.bringSubviewToFront(self.lastInitial)
         self.view.bringSubviewToFront(self.buttonsView)
         
+    }
+    
+    private func setUpNavbar(){
+        let chatButton = UIButton(type: .system)
+        let mainLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+        
+        mainLbl.contentMode = .scaleAspectFit
+        mainLbl.text = "Find Partners"
+        
+        navigationItem.titleView = mainLbl
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        let chatIcon = UIImage(named: "chat")
+        chatButton.setImage(chatIcon, for: .normal)
+        chatButton.addTarget(self, action: #selector(chatPage), for: .touchUpInside)
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: chatButton)
+        
+    }
+    
+    @objc func chatPage(){
+        let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "messengerView") as! MessengerViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
         
     

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import FirebaseAuth
+import GoogleSignIn
 
 enum FilteringMode:Float {
     case two_to_three = 0.0
@@ -35,20 +38,29 @@ class Q3ViewController: UIViewController {
     @IBOutlet var five: UILabel!
     @IBOutlet var six: UILabel!
     
+    var slider_vals: [String: Int] = [:]
+    let options1 = ["2-3", "3-5","5-7"]
+    let options2 = ["1-3", "3-5","5-7"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelCurrentValue1.text = "3-5"
-        labelCurrentValue2.text = "3-5"
         
         box1.layer.cornerRadius = 5;
         box2.layer.cornerRadius = 5;
         
-let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-let blurEffectView = UIVisualEffectView(effect: blurEffect)
-    blurEffectView.frame = view.bounds
-    blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    blurEffectView.alpha = 0.9;
-self.view.addSubview(blurEffectView)
+        slider_vals["Q5"] = 2
+        slider_vals["Q6"] = 2
+        
+        labelCurrentValue1.text = options1[1]
+        labelCurrentValue2.text = options2[1]
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView.frame = view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.alpha = 0.9;
+        self.view.addSubview(blurEffectView)
 
         self.view.bringSubviewToFront(self.box1)
         self.view.bringSubviewToFront(self.box2)
@@ -56,8 +68,8 @@ self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.slider2)
         self.view.bringSubviewToFront(self.nextbtn)
         self.view.bringSubviewToFront(self.backbtn)
-    self.view.bringSubviewToFront(self.labelCurrentValue1)
-    self.view.bringSubviewToFront(self.labelCurrentValue2)
+        self.view.bringSubviewToFront(self.labelCurrentValue1)
+        self.view.bringSubviewToFront(self.labelCurrentValue2)
         
         self.view.bringSubviewToFront(self.one)
         self.view.bringSubviewToFront(self.two)
@@ -73,19 +85,25 @@ self.view.addSubview(blurEffectView)
         handleFilter()
     }
     
-    @IBAction func sliderChanged(_ sender: Any) {
+    @IBAction func sliderChanged(_ sender: UISlider) {
         //Restrict slider to fixed value
-        let fixed = roundf((sender as AnyObject).value / 5.0) * 5.0;
+        let fixed = roundf((sender as AnyObject).value / 1.0) * 1.0;
         (sender as AnyObject).setValue(fixed, animated: true)
-        
-        handleFilter()
+        let currentVal = Int(sender.value)
+        let index = currentVal-1
+        slider_vals["Q5"] = currentVal
+        labelCurrentValue1.text = options1[index]
+//        handleFilter()
     }
     
-    @IBAction func slider2Changed(_ sender: Any) {
-        let fixed = roundf((sender as AnyObject).value / 5.0) * 5.0;
+    @IBAction func slider2Changed(_ sender: UISlider) {
+        let fixed = roundf((sender as AnyObject).value / 1.0) * 1.0;
         (sender as AnyObject).setValue(fixed, animated: true)
-        
-        handleFilter()
+        let currentVal = Int(sender.value)
+        let index = currentVal-1
+        slider_vals["Q6"] = currentVal
+        labelCurrentValue2.text = options2[index]
+//        handleFilter()
     }
     
     
@@ -142,5 +160,50 @@ self.view.addSubview(blurEffectView)
         // Pass the selected object to the new view controller.
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func confirmPreferences(_ sender: Any) {
+        let alert = UIAlertController(title: "Confirm Preferences?", message: "Pressing OK would confirm the selected preferences.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { action in
+            print(self.slider_vals)
+            self.sendPreferences()
+            let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "badgeView") as! BadgeViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func sendPreferences(){
+        var user_vals: [String: String] = slider_vals.mapValues{String($0)}
+        var uid = Auth.auth().currentUser?.uid
+        if(uid == nil){
+            uid = GIDSignIn.sharedInstance()?.currentUser.userID
+        }
+//        let uid = "7500"
+        user_vals["uid"] = uid ?? "100003"
+        
+        print(user_vals)
+        let session = URLSession.shared
+        let url = URL(string: "http://localhost:3002/api/createUser")!
 
+
+        var url_request = URLRequest(url: url)
+        url_request.httpMethod = "POST"
+
+        url_request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        url_request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
+
+        let json = try! JSONSerialization.data(withJSONObject: user_vals, options: [])
+
+        let task = session.uploadTask(with: url_request, from: json) { data, response, error in
+            print("Send POST Request")
+            print(data ?? 0)
+        }
+        task.resume()
+    }
+    
 }
