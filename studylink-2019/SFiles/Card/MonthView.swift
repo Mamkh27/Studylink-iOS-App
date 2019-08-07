@@ -19,6 +19,8 @@ class MonthView: UIView {
     var currentYear: Int = 0
     var delegate: MonthViewDelegate?
     
+    
+    
     override init(frame: CGRect){
         super.init(frame:frame)
         self.backgroundColor = UIColor.clear
@@ -81,7 +83,7 @@ class MonthView: UIView {
         lbl.textColor = UIColor.white
         lbl.textAlignment = .center
         lbl.font = UIFont.boldSystemFont(ofSize: 16)
-        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.translatesAutoresizingMaskIntoConstraints = true
         return lbl
     }()
     
@@ -90,7 +92,7 @@ class MonthView: UIView {
         btn.setTitle(">", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return btn
     }()
     
@@ -99,12 +101,14 @@ class MonthView: UIView {
         btn.setTitle("<", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(btnLeftRightAction(sender:)), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         btn.setTitleColor(UIColor.gray, for: .disabled)
         return btn
     }()
     
-    
+    @objc func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

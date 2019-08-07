@@ -1790,7 +1790,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T7y-Qr-0d0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.28792952928966853" green="0.25268900097994984" blue="0.39875475888324874" alpha="0.50939105308219179" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.4258665300443511" green="0.37374349304563048" blue="0.58978426395939088" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-b0-zOT">
                                 <rect key="frame" x="16" y="193" width="343" height="358"/>
@@ -3379,6 +3379,7 @@
         <image name="welcome.png" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="MeX-qw-ebl"/>
         <segue reference="hO0-Ox-mvh"/>
         <segue reference="tNi-8s-yR1"/>
         <segue reference="olS-hS-Ebt"/>

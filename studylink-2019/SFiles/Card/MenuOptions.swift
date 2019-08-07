@@ -8,7 +8,29 @@
 
 import UIKit
 
-class MenuOptions:  CalendarView{
+class MenuOptions:  UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    var monthcount = 0
+        var delegate: MonthViewDelegate?
+    var monthsArr = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
+    var currentMonthIndex = 0
+    var currentYear: Int = 0
+    
+    var numOfDaysInMonth = [31, 28, 31, 30, 31, 30,31, 31,30, 31,30,31]
+ 
+ 
+    var presentMonthIndex = 0
+    var presentYear = 0
+    var todaysDate = 0
+    var firstWeekDayOfMonth = 0
+
+    let myStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = true
+   
+        return stackView
+    }()
+    
     
     let Cell = "Cell"
     //profile variables
@@ -20,7 +42,7 @@ var fltrFiveLbl = UILabel()
 var bioLbl = UILabel()
 
 
-var calendar = CalendarView()
+
 
 //mutual variables
 var mutualTitle = UILabel()
@@ -38,34 +60,28 @@ var ProfFiveLbl = UILabel()
     
 
     
-    lazy var collectionViewOptions: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor(red:5/255, green: 121/255, blue: 171/255, alpha: 1.0)
-        cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Cell)
-        cv.alpha = 1.0
-        cv.dataSource = self
-        cv.delegate = self
-        cv.contentInset = UIEdgeInsets(top: 50,left: 0,bottom: 0,right: 0)
-        cv.scrollIndicatorInsets = UIEdgeInsets(top: 50,left: 0,bottom: 0,right: 0)
-        return cv
+    let myCollectionView: UICollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    
+    let myCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+    myCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+    myCollectionView.showsHorizontalScrollIndicator = false
+    myCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    myCollectionView.backgroundColor = UIColor.clear
+    myCollectionView.allowsMultipleSelection = false
+    return myCollectionView
     }()
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
+  
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell, for: indexPath)
-        cell.backgroundColor = .yellow
-        return cell
-    }
+
     
     override init(frame: CGRect){
         super.init(frame: frame)
         displayProfile()
         
-        
+
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -86,12 +102,179 @@ var ProfFiveLbl = UILabel()
         setUpBio()
         
     }
+    //////////////////////////////////////////////////////////////////////
+    let lblName: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "Default Month Year text"
+        lbl.textColor = UIColor.white
+        lbl.textAlignment = .center
+        lbl.font = UIFont.boldSystemFont(ofSize: 16)
+        lbl.translatesAutoresizingMaskIntoConstraints = true
+        return lbl
+    }()
+    
+
+        let rightBtn = UIButton(frame: CGRect(x: 300, y: -17, width: 100, height: 100))
+            let leftBtn = UIButton(frame: CGRect(x:0, y: -17, width: 100, height: 100))
     
     func displayCalendar(){
+ 
+        currentMonthIndex = Calendar.current.component(.month, from: Date()) - 1
+        currentYear = Calendar.current.component(.year, from: Date())
         backgroundColor = .darkGray
-calendar.initializeView()
+        var monthsArr = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
+
+        
+        currentMonthIndex = Calendar.current.component(.month, from: Date()) - 1
+        currentYear = Calendar.current.component(.year, from: Date())
+        
+        self.addSubview(lblName)
+    
+       lblName.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+
+        lblName.text = "\(monthsArr[currentMonthIndex]) \(currentYear)"
+        lblName.frame = CGRect(x:0, y:-15, width: frame.width , height: 100)
+        
+
+        rightBtn.tintColor = .white
+        rightBtn.setTitle(">", for: .normal)
+        rightBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        self.addSubview(rightBtn)
+        
+        leftBtn.tintColor = .white
+        leftBtn.setTitle("<", for: .normal)
+        leftBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        self.addSubview(leftBtn)
+ 
+        ////////////////////////////////////////////////////
+      
+        leftBtn.isHidden = false
+        rightBtn.isHidden = false
+        myStackView.isHidden = false
+        myCollectionView.isHidden = false
+        
+        
+        addSubview(myStackView)
+   
+        myStackView.frame =  CGRect(x:0, y:15, width: frame.width , height: 100)
+        
+        var daysArr = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+        for i in 0..<7 {
+            let lbl = UILabel()
+            lbl.text = daysArr[i]
+            lbl.textAlignment = .center
+            lbl.textColor = UIColor.white
+            myStackView.addArrangedSubview(lbl)
+            
+        }
+        self.bringSubviewToFront(rightBtn)
+        self.bringSubviewToFront(leftBtn)
+  
+        /////////////////////////////////////////////////////////
+        currentMonthIndex = Calendar.current.component(.month, from: Date())
+        currentYear = Calendar.current.component(.year, from: Date())
+        todaysDate = Calendar.current.component(.day, from: Date())
+        firstWeekDayOfMonth = getFirstWeekDay()
+        
+    presentMonthIndex = currentMonthIndex
+        presentYear = currentYear
+        backgroundColor = .darkGray
+   
+         addSubview(myCollectionView)
+        myCollectionView.delegate = self
+        myCollectionView.dataSource = self
+        myCollectionView.register(dateCVCell.self, forCellWithReuseIdentifier: "Cell")
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.clear
+        let lbl = cell?.subviews[1] as! UILabel
+        lbl.textColor = UIColor.white
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numOfDaysInMonth[currentMonthIndex - 1] + firstWeekDayOfMonth - 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
+        cell.backgroundColor = .white
+        if indexPath.item <= firstWeekDayOfMonth - 2{
+            cell.isHidden = true
+        } else {
+            let calcDate = indexPath.row - firstWeekDayOfMonth+2
+            cell.isHidden = false
+            cell.lbl1.text = "\(calcDate)"
+            if calcDate < todaysDate && currentYear == presentYear && currentMonthIndex == presentMonthIndex {
+                cell.isUserInteractionEnabled = false
+                cell.lbl1.textColor = UIColor.lightGray
+            } else {
+                cell.isUserInteractionEnabled = true
+                cell.lbl1.textColor = UIColor.white
+            }
+            
+        }
+        return cell
+    }
+    
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width/7 - 8
+        let height: CGFloat = 40
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8.0
+    }
+    
+    func getFirstWeekDay() -> Int {
+        let day = ("\(currentYear)-\(currentMonthIndex)-01".date?.firstDayOfTheMonth.weekday)!
+        return day == 7 ? 1 : day
+    }
+    func didChangeMonth(monthIndex: Int, year: Int) {
+        currentMonthIndex = monthIndex + 1
+        currentYear = year
+        
+        firstWeekDayOfMonth = getFirstWeekDay()
+        myCollectionView.reloadData()
+        
+        leftBtn.isEnabled = !(currentMonthIndex == presentMonthIndex && currentYear == presentYear)
+    }
+    @objc func buttonAction(sender: UIButton!) {
+        monthcount += 1
+        if(monthcount > 3){
+    rightBtn.isEnabled = false
+        }
+        
+        if sender == rightBtn {
+            currentMonthIndex += 1
+            if currentMonthIndex > 11 {
+                currentMonthIndex = 0
+                currentYear += 1
+            }
+        } else {
+            rightBtn.isEnabled = true
+            monthcount -= 2
+            currentMonthIndex -= 1
+            if currentMonthIndex < 0 {
+                currentMonthIndex = 11
+                currentYear -= 1
+            }
+        }
+        lblName.text = "\(monthsArr[currentMonthIndex]) \(currentYear)"
+        delegate?.didChangeMonth(monthIndex: currentMonthIndex, year: currentYear)
+    }
+    
+    
+ ////////////////////////////////////////////////////////////////////////////////
     func displayMutuals(){
         mutualTitle.isHidden = false
         setUpTitle()
@@ -193,8 +376,12 @@ calendar.initializeView()
     }
     
     func hideCalendar(){
-calendar.hidecalendar()
+
    backgroundColor = .white
+        leftBtn.isHidden = true
+        rightBtn.isHidden = true
+        myStackView.isHidden = true
+        myCollectionView.isHidden = true
     }
     
     func hideProfile(){
@@ -253,8 +440,7 @@ calendar.hidecalendar()
         addSubview(fltrFiveLbl)
         addSubview(fltrTwoLbl)
         addSubview(fltrOneLbl)
-        addSubview(calendar.myCollectionView)
-        addSubview(calendar)
+  
     
     }
     func setUpBio(){
@@ -319,4 +505,54 @@ calendar.hidecalendar()
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDict))
     }
+}
+extension Date {
+    var weekday: Int {
+        return Calendar.current.component(.weekday, from: self)
+    }
+    var firstDayOfTheMonth: Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: self))!
+    }
+}
+extension String {
+    static var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+    
+    var date: Date? {
+        return String.dateFormatter.date(from: self)
+    }
+}
+
+class dateCVCell: UICollectionViewCell{
+    override init(frame: CGRect){
+        super.init(frame:frame)
+        backgroundColor = UIColor.white
+        layer.cornerRadius = 5
+        layer.masksToBounds = true
+        setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    func setupViews(){
+        addSubview(lbl1)
+        lbl1.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        lbl1.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        lbl1.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        lbl1.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
+    
+    let lbl1: UILabel = {
+        let label = UILabel()
+        label.text = "00"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .darkGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
 }
