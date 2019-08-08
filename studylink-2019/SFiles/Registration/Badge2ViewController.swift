@@ -61,13 +61,7 @@ class Badge2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //background blur code
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.9;
-        self.view.addSubview(blurEffectView)
+
         
         //bring all views in front of the blur
         self.view.bringSubviewToFront(self.view1)

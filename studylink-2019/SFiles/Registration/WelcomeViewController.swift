@@ -24,12 +24,8 @@ class WelcomeViewController: UIViewController {
         self.welcome_to.fadeIn(duration: 0.75, delay:0.0, completion: nil)
         }
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.9;
-        self.view.addSubview(blurEffectView)
+       
+       
         self.view.bringSubviewToFront(self.welcome_to)
         self.view.bringSubviewToFront(self.study_link)
         self.view.bringSubviewToFront(self.please)

@@ -14,6 +14,7 @@ class CardViewController: UIViewController, UICollectionViewDelegateFlowLayout {
  let cellId = "cellId"
 
     
+    @IBOutlet var chatbtn: UIButton!
     @IBOutlet var linkedView: UIImageView!
     @IBOutlet var lastInitial: UILabel!
     @IBOutlet var firstName: UILabel!
@@ -44,23 +45,19 @@ class CardViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.profilebtn)
+          self.view.bringSubviewToFront(self.chatbtn)
         self.view.bringSubviewToFront(self.card)
-        self.view.bringSubviewToFront(self.view2)
-        self.view.bringSubviewToFront(self.toggleMenuButton)
-        self.view.bringSubviewToFront(self.darkFillView)
-        self.view.bringSubviewToFront(self.menuView)
         self.view.bringSubviewToFront(self.image)
         self.view.bringSubviewToFront(self.firstName)
         self.view.bringSubviewToFront(self.lastInitial)
+      
 
-        
         
         
 setupMenuOptions()
 setupMenuBar()
 
         
-print("This is" + self.menuBar.whichOptionisActive)
         
         let blurEffect1 = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView1 = UIVisualEffectView(effect: blurEffect1)

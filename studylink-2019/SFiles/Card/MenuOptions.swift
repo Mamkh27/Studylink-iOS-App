@@ -17,7 +17,7 @@ class MenuOptions:  UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     var numOfDaysInMonth = [31, 28, 31, 30, 31, 30,31, 31,30, 31,30,31]
  
- 
+    var alreadyDisplayed = false
     var presentMonthIndex = 0
     var presentYear = 0
     var todaysDate = 0
@@ -62,12 +62,14 @@ var ProfFiveLbl = UILabel()
     
     let myCollectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
-    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    
+
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 0
     let myCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     myCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
     myCollectionView.showsHorizontalScrollIndicator = false
-    myCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    myCollectionView.translatesAutoresizingMaskIntoConstraints = true
+    
     myCollectionView.backgroundColor = UIColor.clear
     myCollectionView.allowsMultipleSelection = false
     return myCollectionView
@@ -114,14 +116,14 @@ var ProfFiveLbl = UILabel()
     }()
     
 
-        let rightBtn = UIButton(frame: CGRect(x: 300, y: -17, width: 100, height: 100))
-            let leftBtn = UIButton(frame: CGRect(x:0, y: -17, width: 100, height: 100))
+        let rightBtn = UIButton(frame: CGRect(x: 275, y: -27, width: 100, height: 100))
+            let leftBtn = UIButton(frame: CGRect(x: 0, y: -27, width: 100, height: 100))
     
     func displayCalendar(){
  
         currentMonthIndex = Calendar.current.component(.month, from: Date()) - 1
         currentYear = Calendar.current.component(.year, from: Date())
-        backgroundColor = .darkGray
+      
         var monthsArr = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
 
         
@@ -133,7 +135,7 @@ var ProfFiveLbl = UILabel()
        lblName.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
         lblName.text = "\(monthsArr[currentMonthIndex]) \(currentYear)"
-        lblName.frame = CGRect(x:0, y:-15, width: frame.width , height: 100)
+        lblName.frame = CGRect(x:0, y:-25, width: frame.width , height: 100)
         
 
         rightBtn.tintColor = .white
@@ -154,23 +156,8 @@ var ProfFiveLbl = UILabel()
         rightBtn.isHidden = false
         myStackView.isHidden = false
         myCollectionView.isHidden = false
-        
-        
-        addSubview(myStackView)
-   
-        myStackView.frame =  CGRect(x:0, y:15, width: frame.width , height: 100)
-        
-        var daysArr = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-        for i in 0..<7 {
-            let lbl = UILabel()
-            lbl.text = daysArr[i]
-            lbl.textAlignment = .center
-            lbl.textColor = UIColor.white
-            myStackView.addArrangedSubview(lbl)
-            
-        }
-        self.bringSubviewToFront(rightBtn)
-        self.bringSubviewToFront(leftBtn)
+  
+
   
         /////////////////////////////////////////////////////////
         currentMonthIndex = Calendar.current.component(.month, from: Date())
@@ -180,12 +167,30 @@ var ProfFiveLbl = UILabel()
         
     presentMonthIndex = currentMonthIndex
         presentYear = currentYear
-        backgroundColor = .darkGray
+        backgroundColor = UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
    
          addSubview(myCollectionView)
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         myCollectionView.register(dateCVCell.self, forCellWithReuseIdentifier: "Cell")
+              addSubview(myStackView)
+        myStackView.frame =  CGRect(x:15, y:5, width: frame.width - 40 , height: 100)
+        myCollectionView.frame = CGRect(x: 20, y: 65, width: frame.width - 50, height: frame.height)
+
+        if (!alreadyDisplayed){
+        var daysArr = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+        for i in 0..<7 {
+            let lbl = UILabel()
+            lbl.text = daysArr[i]
+            lbl.textAlignment = .center
+            lbl.textColor = UIColor.white
+            myStackView.addArrangedSubview(lbl)
+            alreadyDisplayed = true
+            }
+        }
+        
+        self.bringSubviewToFront(rightBtn)
+        self.bringSubviewToFront(leftBtn)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -201,7 +206,8 @@ var ProfFiveLbl = UILabel()
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
+        
         if indexPath.item <= firstWeekDayOfMonth - 2{
             cell.isHidden = true
         } else {
@@ -221,8 +227,8 @@ var ProfFiveLbl = UILabel()
     }
     
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width/7 - 8
-        let height: CGFloat = 40
+        let width = collectionView.frame.width/7 - 10
+        let height: CGFloat = 20
         return CGSize(width: width, height: height)
     }
     
@@ -529,8 +535,11 @@ extension String {
 class dateCVCell: UICollectionViewCell{
     override init(frame: CGRect){
         super.init(frame:frame)
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.clear
         layer.cornerRadius = 5
+layer.borderWidth = 0
+       
+
         layer.masksToBounds = true
         setupViews()
     }
@@ -551,8 +560,9 @@ class dateCVCell: UICollectionViewCell{
         label.text = "00"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = .darkGray
+        label.padding = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         label.translatesAutoresizingMaskIntoConstraints = false
+   label.backgroundColor = .clear
         return label
     }()
 }

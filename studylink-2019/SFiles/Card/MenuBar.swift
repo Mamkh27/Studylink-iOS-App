@@ -19,7 +19,7 @@ class MenuBar: MenuOptions{
 lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    cv.backgroundColor = UIColor(red:5/255, green: 121/255, blue: 171/255, alpha: 1.0)
+    cv.backgroundColor = UIColor(red:58/255, green: 170/255, blue: 204/255, alpha: 1.0)
     cv.alpha = 1.0
     cv.dataSource = self
     cv.delegate = self

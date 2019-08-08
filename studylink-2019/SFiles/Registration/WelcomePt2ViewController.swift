@@ -17,12 +17,7 @@ class WelcomePt2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-    let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.9;
-    self.view.addSubview(blurEffectView)
+  
 
 self.view.bringSubviewToFront(self.almostbtn)
 self.view.bringSubviewToFront(self.plsbtn)
