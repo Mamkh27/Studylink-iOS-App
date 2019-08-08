@@ -19,6 +19,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var buttonsView: UIView!
     
     
+    @IBOutlet var chatbtn: UIButton!
     @IBOutlet var linkedView: UIImageView!
     @IBOutlet var lastInitial: UILabel!
     @IBOutlet var firstName: UILabel!
@@ -46,17 +47,18 @@ class CardViewController: UIViewController {
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.profilebtn)
+<<<<<<< HEAD:studylink-2019/SFiles/CardViewController.swift
         
+=======
+          self.view.bringSubviewToFront(self.chatbtn)
+>>>>>>> a112f7eb0a3abbe52cb8a7755c78f41d72010035:studylink-2019/SFiles/Card/CardViewController.swift
         self.view.bringSubviewToFront(self.card)
-        self.view.bringSubviewToFront(self.view2)
-        self.view.bringSubviewToFront(self.toggleMenuButton)
-        self.view.bringSubviewToFront(self.darkFillView)
-        self.view.bringSubviewToFront(self.menuView)
         self.view.bringSubviewToFront(self.image)
         
         self.view.bringSubviewToFront(self.firstName)
         
         self.view.bringSubviewToFront(self.lastInitial)
+<<<<<<< HEAD:studylink-2019/SFiles/CardViewController.swift
 //        self.view.bringSubviewToFront(self.buttonsView)
         
     }
@@ -64,20 +66,62 @@ class CardViewController: UIViewController {
     private func setUpNavbar(){
         let chatButton = UIButton(type: .system)
         let mainLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+=======
+      
+
+>>>>>>> a112f7eb0a3abbe52cb8a7755c78f41d72010035:studylink-2019/SFiles/Card/CardViewController.swift
         
         mainLbl.contentMode = .scaleAspectFit
         mainLbl.text = "Find Partners"
         
+<<<<<<< HEAD:studylink-2019/SFiles/CardViewController.swift
         navigationItem.titleView = mainLbl
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         let chatIcon = UIImage(named: "chat")
         chatButton.setImage(chatIcon, for: .normal)
         chatButton.addTarget(self, action: #selector(chatPage), for: .touchUpInside)
+=======
+setupMenuOptions()
+setupMenuBar()
+
+        
+>>>>>>> a112f7eb0a3abbe52cb8a7755c78f41d72010035:studylink-2019/SFiles/Card/CardViewController.swift
         
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: chatButton)
         
     }
+<<<<<<< HEAD:studylink-2019/SFiles/CardViewController.swift
+=======
+/*
+    func setupFilterLabels(){
+        self.view.addSubview(self.menuBar.menuOps.fltrThreeLbl)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrThreeLbl)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrThreeLbl)
+        menuBar.menuOps.fltrThreeLbl.transform = CGAffineTransform(translationX:100, y: 360)
+        
+///////////////////////////////////////////////////////////////////////////
+        
+        self.view.addSubview(self.menuBar.menuOps.fltrTwoLbl)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrTwoLbl)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrTwoLbl)
+         menuBar.menuOps.fltrTwoLbl.transform = CGAffineTransform(translationX: 0, y:360)
+        
+ ///////////////////////////////////////////////////////////////////////////
+        
+        self.view.addSubview(self.menuBar.menuOps.fltrOneLbl)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrOneLbl)
+        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrOneLbl)
+        menuBar.menuOps.fltrOneLbl.transform = CGAffineTransform(translationX: -100, y:360)
+        
+        
+    }
+   */
+    
+>>>>>>> a112f7eb0a3abbe52cb8a7755c78f41d72010035:studylink-2019/SFiles/Card/CardViewController.swift
     
     @objc func chatPage(){
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "messengerView") as! MessengerViewController

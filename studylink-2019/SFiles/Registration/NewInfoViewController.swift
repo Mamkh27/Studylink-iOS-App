@@ -42,12 +42,7 @@ class NewInfoViewController: UIViewController {
         print("UserID", userId)
         preloadTextViews()
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.9;
-        self.view.addSubview(blurEffectView)
+ 
 
         self.view.bringSubviewToFront(self.majorTxt)
         self.view.bringSubviewToFront(self.yearTxt)

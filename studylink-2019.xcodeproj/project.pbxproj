@@ -45,6 +45,11 @@
 		8235CB3622CC3F9500336144 /* q3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB3522CC3F9500336144 /* q3.png */; };
 		8235CB3E22CC433400336144 /* q5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB3D22CC433400336144 /* q5.png */; };
 		8235CB4022CC437D00336144 /* q6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8235CB3F22CC437C00336144 /* q6.png */; };
+		825EF40722FBEC390058D89B /* myprofile1.png in Resources */ = {isa = PBXBuildFile; fileRef = 825EF40522FBEC310058D89B /* myprofile1.png */; };
+		825EF40822FBEC390058D89B /* mycht1.png in Resources */ = {isa = PBXBuildFile; fileRef = 825EF40622FBEC340058D89B /* mycht1.png */; };
+		825EF40C22FBF92C0058D89B /* gradient2.png in Resources */ = {isa = PBXBuildFile; fileRef = 825EF40B22FBF9270058D89B /* gradient2.png */; };
+		825EF40E22FBFA470058D89B /* gradient1.png in Resources */ = {isa = PBXBuildFile; fileRef = 825EF40D22FBFA420058D89B /* gradient1.png */; };
+		825EF41022FBFC070058D89B /* gradient3.png in Resources */ = {isa = PBXBuildFile; fileRef = 825EF40F22FBFC070058D89B /* gradient3.png */; };
 		8264CDFC22D160C2000110E4 /* b26_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8264CDDF22D160B5000110E4 /* b26_.png */; };
 		8264CDFD22D160C2000110E4 /* b23_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8264CDE022D160B6000110E4 /* b23_.png */; };
 		8264CDFE22D160C2000110E4 /* b22_.png in Resources */ = {isa = PBXBuildFile; fileRef = 8264CDE122D160B6000110E4 /* b22_.png */; };
@@ -78,6 +83,10 @@
 		82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82759B2B22CACFE800BF5373 /* LogInViewController.swift */; };
 		82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2D22CAD45700BF5373 /* pic2.jpg */; };
 		82759B3222CADF2400BF5373 /* studylink.png in Resources */ = {isa = PBXBuildFile; fileRef = 82759B3122CADF2400BF5373 /* studylink.png */; };
+		82831F5922F8D2C0002E2C7C /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5822F8D2C0002E2C7C /* MonthView.swift */; };
+		82831F5B22F8D94F002E2C7C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5A22F8D94F002E2C7C /* CalendarView.swift */; };
+		82831F5D22F8E2E1002E2C7C /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */; };
+		82831F5F22F96F2A002E2C7C /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82831F5E22F96F26002E2C7C /* girl2.jpg */; };
 		82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF12266ECE70086CE27 /* AppDelegate.swift */; };
 		82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF32266ECE70086CE27 /* UserViewController.swift */; };
 		82917AF72266ECE70086CE27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82917AF52266ECE70086CE27 /* Main.storyboard */; };
@@ -176,6 +185,11 @@
 		8235CB3D22CC433400336144 /* q5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q5.png; sourceTree = "<group>"; };
 		8235CB3F22CC437C00336144 /* q6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q6.png; sourceTree = "<group>"; };
 		825C3EFEEB90D548AA44F978 /* Pods_studylink_2019Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studylink_2019Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825EF40522FBEC310058D89B /* myprofile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myprofile1.png; sourceTree = "<group>"; };
+		825EF40622FBEC340058D89B /* mycht1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mycht1.png; sourceTree = "<group>"; };
+		825EF40B22FBF9270058D89B /* gradient2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient2.png; sourceTree = "<group>"; };
+		825EF40D22FBFA420058D89B /* gradient1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient1.png; sourceTree = "<group>"; };
+		825EF40F22FBFC070058D89B /* gradient3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient3.png; sourceTree = "<group>"; };
 		8264CDDF22D160B5000110E4 /* b26_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b26_.png; sourceTree = "<group>"; };
 		8264CDE022D160B6000110E4 /* b23_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b23_.png; sourceTree = "<group>"; };
 		8264CDE122D160B6000110E4 /* b22_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b22_.png; sourceTree = "<group>"; };
@@ -209,6 +223,10 @@
 		82759B2B22CACFE800BF5373 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		82759B2D22CAD45700BF5373 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
 		82759B3122CADF2400BF5373 /* studylink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studylink.png; sourceTree = "<group>"; };
+		82831F5822F8D2C0002E2C7C /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		82831F5A22F8D94F002E2C7C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		82831F5E22F96F26002E2C7C /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
 		82917AEE2266ECE70086CE27 /* studylink-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studylink-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82917AF12266ECE70086CE27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82917AF32266ECE70086CE27 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +310,12 @@
 		82134551227908B800832A7C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				825EF40F22FBFC070058D89B /* gradient3.png */,
+				825EF40B22FBF9270058D89B /* gradient2.png */,
+				825EF40D22FBFA420058D89B /* gradient1.png */,
+				825EF40522FBEC310058D89B /* myprofile1.png */,
+				825EF40622FBEC340058D89B /* mycht1.png */,
+				82831F5E22F96F26002E2C7C /* girl2.jpg */,
 				82D6CB3422D6ECCA006495FF /* girl.jpg */,
 				826BCDEA22D01E8C00586DEE /* descriptions */,
 				826BCDE922D01E4600586DEE /* icons */,
@@ -313,14 +337,13 @@
 		821F6DB12267038D005FD1FB /* SFiles */ = {
 			isa = PBXGroup;
 			children = (
+				82831F5522F8C107002E2C7C /* Card */,
 				8231CF7122CDAFBB00436A9A /* Registration */,
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
 				82917AF32266ECE70086CE27 /* UserViewController.swift */,
 				82759B2B22CACFE800BF5373 /* LogInViewController.swift */,
-				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
 				8235CB2322CBE6AB00336144 /* UIViewExtensions.swift */,
 				82964F1222CE7AE700D90169 /* curvedView.swift */,
-				82AF351322CEA85F00309FC3 /* CardViewController.swift */,
 				82D6CB3222D6DFC4006495FF /* RoundButton.swift */,
 				82BEE7B122D7D71400790EDC /* MessengerViewController.swift */,
 				6B7835D822F225BA005FFE24 /* MessageUserViewController.swift */,
@@ -339,6 +362,7 @@
 		8231CF7122CDAFBB00436A9A /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				6B0A45AC22CDD69600BAD2F5 /* RegisterViewController.swift */,
 				82AF351522CEAA7200309FC3 /* BadgeViewController.swift */,
 				826BCDEC22D02CA500586DEE /* Badge2ViewController.swift */,
 				8231CF6022CD831B00436A9A /* WelcomePt2ViewController.swift */,
@@ -454,6 +478,19 @@
 			path = descriptions;
 			sourceTree = "<group>";
 		};
+		82831F5522F8C107002E2C7C /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				82AF351322CEA85F00309FC3 /* CardViewController.swift */,
+				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
+				8230FD7E22F53877001B6834 /* MenuOptions.swift */,
+				82831F5822F8D2C0002E2C7C /* MonthView.swift */,
+				82831F5A22F8D94F002E2C7C /* CalendarView.swift */,
+				82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		82917AE52266ECE70086CE27 = {
 			isa = PBXGroup;
 			children = (
@@ -484,8 +521,6 @@
 				821F6DB022670348005FD1FB /* VC */,
 				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
-				8230FD7E22F53877001B6834 /* MenuOptions.swift */,
-				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
 				82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */,
 			);
 			path = "studylink-2019";
@@ -634,11 +669,13 @@
 				8264CE0922D160C2000110E4 /* b5_.png in Resources */,
 				8264CDFF22D160C2000110E4 /* b8_.png in Resources */,
 				8264CE0A22D160C2000110E4 /* b20_.png in Resources */,
+				825EF40E22FBFA470058D89B /* gradient1.png in Resources */,
 				8264CE0622D160C2000110E4 /* b10_.png in Resources */,
 				8231CF8022CDB87200436A9A /* bio.png in Resources */,
 				8231CF6F22CDABFE00436A9A /* continue.png in Resources */,
 				8264CDFE22D160C2000110E4 /* b22_.png in Resources */,
 				8235CB2022CBD60D00336144 /* welcome.png in Resources */,
+				825EF40822FBEC390058D89B /* mycht1.png in Resources */,
 				82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */,
 				8264CDFD22D160C2000110E4 /* b23_.png in Resources */,
 				8231CF6522CD84EB00436A9A /* please2.png in Resources */,
@@ -647,6 +684,7 @@
 				8264CE0F22D160C2000110E4 /* b9_.png in Resources */,
 				8264CE1622D160C2000110E4 /* b17_.png in Resources */,
 				8213454C2279012100832A7C /* back_arrow.png in Resources */,
+				825EF41022FBFC070058D89B /* gradient3.png in Resources */,
 				82AF351A22CEABFF00309FC3 /* badge2.png in Resources */,
 				8264CE0122D160C2000110E4 /* b12_.png in Resources */,
 				8231CF6722CDA5E100436A9A /* tutorial.png in Resources */,
@@ -656,9 +694,11 @@
 				8264CE1122D160C2000110E4 /* b4_.png in Resources */,
 				8235CB2822CBEE4500336144 /* please.png in Resources */,
 				82917AFC2266ECE90086CE27 /* LaunchScreen.storyboard in Resources */,
+				82831F5F22F96F2A002E2C7C /* girl2.jpg in Resources */,
 				8231CF7422CDB1A900436A9A /* lightbulb.png in Resources */,
 				82AF351222CE9A7A00309FC3 /* cam_3.png in Resources */,
 				82BEE7B422D7ED1700790EDC /* mutual.png in Resources */,
+				825EF40722FBEC390058D89B /* myprofile1.png in Resources */,
 				8235CB3022CC170100336144 /* q1.png in Resources */,
 				821345462279000800832A7C /* mag_glass3.png in Resources */,
 				8235CB2A22CBF0D200336144 /* next.png in Resources */,
@@ -684,6 +724,7 @@
 				82A6E0BD22E0233E004A1815 /* chat.png in Resources */,
 				8264CE0322D160C2000110E4 /* b18_.png in Resources */,
 				82A6E0BF22E02482004A1815 /* My Post Copy (5).png in Resources */,
+				825EF40C22FBF92C0058D89B /* gradient2.png in Resources */,
 				8264CE1022D160C2000110E4 /* b3_.png in Resources */,
 				8264CE0B22D160C2000110E4 /* b16_.png in Resources */,
 				82AF351822CEAB6A00309FC3 /* badge1.png in Resources */,
@@ -859,6 +900,7 @@
 			files = (
 				82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */,
 				8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */,
+				82831F5B22F8D94F002E2C7C /* CalendarView.swift in Sources */,
 				826BCDED22D02CA500586DEE /* Badge2ViewController.swift in Sources */,
 				8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */,
 				6B0A45AD22CDD69600BAD2F5 /* RegisterViewController.swift in Sources */,
