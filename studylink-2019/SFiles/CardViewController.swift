@@ -10,13 +10,14 @@ import UIKit
 
 
 class CardViewController: UIViewController {
-
     
-
-    @IBOutlet var mutualLine: UIView!
-    @IBOutlet var calendarLine: UIView!
-    @IBOutlet var profileLine: UIView!
-    @IBOutlet var buttonsView: UIView!
+    
+    
+    @IBOutlet weak var mutualLine: UIView!
+    @IBOutlet weak var calendarLine: UIView!
+    @IBOutlet weak var profileLine: UIView!
+    @IBOutlet weak var buttonsView: UIView!
+    
     
     @IBOutlet var linkedView: UIImageView!
     @IBOutlet var lastInitial: UILabel!
@@ -32,10 +33,7 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mutualLine.alpha = 0;
-        calendarLine.alpha = 0;
-        profileLine.alpha = 1;
-
+        
         card.layer.cornerRadius = 5;
         card.layer.masksToBounds = true;
         
@@ -48,18 +46,18 @@ class CardViewController: UIViewController {
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.profilebtn)
-                
+        
         self.view.bringSubviewToFront(self.card)
         self.view.bringSubviewToFront(self.view2)
-    self.view.bringSubviewToFront(self.toggleMenuButton)
+        self.view.bringSubviewToFront(self.toggleMenuButton)
         self.view.bringSubviewToFront(self.darkFillView)
         self.view.bringSubviewToFront(self.menuView)
         self.view.bringSubviewToFront(self.image)
-
+        
         self.view.bringSubviewToFront(self.firstName)
         
         self.view.bringSubviewToFront(self.lastInitial)
-        self.view.bringSubviewToFront(self.buttonsView)
+//        self.view.bringSubviewToFront(self.buttonsView)
         
     }
     
@@ -85,7 +83,7 @@ class CardViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "messengerView") as! MessengerViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-        
+    
     
     @IBAction func calendarChosen(_ sender: Any) {
         self.calendarLine.alpha = 1;
@@ -126,12 +124,12 @@ class CardViewController: UIViewController {
             }
         }
     }
-        
-        func radians(degrees: Double) -> CGFloat{
-            return CGFloat(degrees * .pi / degrees)
-        }
     
-
+    func radians(degrees: Double) -> CGFloat{
+        return CGFloat(degrees * .pi / degrees)
+    }
+    
+    
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
@@ -141,7 +139,7 @@ class CardViewController: UIViewController {
         
         if yFromCenter < 0 {
             linkedView.image = UIImage(named: "linked.png")
-
+            
             linkedView.tintColor = .green
             
         } else {
@@ -157,7 +155,7 @@ class CardViewController: UIViewController {
                     card.center = CGPoint(x: card.center.x , y: card.center.y - 200 )
                     card.alpha = 0
                 })
-            performSegue(withIdentifier: "swipeUp", sender: self)
+                performSegue(withIdentifier: "swipeUp", sender: self)
                 return
             } else if card.center.x < 75 {
                 //Move to left side to previous card
@@ -170,7 +168,7 @@ class CardViewController: UIViewController {
                 //FIX ME: INSERT CODE FOR PREVIOUS CARD HERE
                 
             } else if card.center.x > (view.frame.width - 85){
-            //Move to right side to next card
+                //Move to right side to next card
                 UIView.animate(withDuration: 0.3, animations: {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0;
@@ -180,27 +178,27 @@ class CardViewController: UIViewController {
                 
                 return
             }
-        //go back to center
-        resetCard()
+            //go back to center
+            resetCard()
         }
         
     }
-        func resetCard(){
-
-            UIView.animate(withDuration: 0.2, animations: {
-                self.card.center = self.view.center
-                    self.linkedView.alpha = 0
-                    self.card.alpha = 1
-            })
-  
-
-        }
+    func resetCard(){
+        
+        UIView.animate(withDuration: 0.2, animations: {
+            self.card.center = self.view.center
+            self.linkedView.alpha = 0
+            self.card.alpha = 1
+        })
+        
+        
+    }
     
     @IBAction func resetBtn(_ sender: Any) {
         resetCard()
     }
- 
-    }
     
+}
+
 
 

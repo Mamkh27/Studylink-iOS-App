@@ -15,6 +15,7 @@ import Alamofire
 class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelegate {
 
     
+ 
     @IBOutlet var loginbtn: UIButton!
     @IBOutlet var loginBox: UIView!
     
@@ -25,6 +26,7 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
         loginbtn.layer.cornerRadius = 5;
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
@@ -34,6 +36,7 @@ class LogInViewController: UIViewController,GIDSignInUIDelegate, GIDSignInDelega
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
         self.view.bringSubviewToFront(self.loginBox)
+        
         setUpGoogleSignin()
 //        first = checkFirstProfile()
         // Do any additional setup after loading the view.
