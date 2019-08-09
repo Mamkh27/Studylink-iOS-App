@@ -10,7 +10,6 @@ import UIKit
 
 class MenuOptions:  UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     var monthcount = 0
-        var delegate: MonthViewDelegate?
     var monthsArr = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
     var currentMonthIndex = 0
     var currentYear: Int = 0
@@ -276,7 +275,7 @@ var ProfFiveLbl = UILabel()
             }
         }
         lblName.text = "\(monthsArr[currentMonthIndex]) \(currentYear)"
-        delegate?.didChangeMonth(monthIndex: currentMonthIndex, year: currentYear)
+//        delegate?.didChangeMonth(monthIndex: currentMonthIndex, year: currentYear)
     }
     
     

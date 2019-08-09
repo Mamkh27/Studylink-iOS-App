@@ -67,7 +67,7 @@
                                         <state key="normal" title="New User"/>
                                         <connections>
                                             <action selector="signupBtn:" destination="edU-44-aln" eventType="touchUpInside" id="Vdz-iN-BZZ"/>
-                                            <segue destination="sgu-6b-e8s" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="3P7-Dl-H1F"/>
+                                            <segue destination="sgu-6b-e8s" kind="presentation" id="3P7-Dl-H1F"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -757,7 +757,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lol-MN-QOi">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lol-MN-QOi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messenger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swu-jz-9k0">
@@ -809,7 +809,7 @@
                                     <constraint firstAttribute="width" constant="375" id="wkG-gw-yMG"/>
                                 </constraints>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-y4-aSi">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-y4-aSi">
                                 <rect key="frame" x="0.0" y="601" width="375" height="207"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6j-GT-pfw" customClass="RoundButton" customModule="studylink_2019" customModuleProvider="target">
@@ -843,10 +843,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONe-OM-33L" userLabel="card">
-                                <rect key="frame" x="0.0" y="78" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="466"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-Nu-Iyb">
-                                        <rect key="frame" x="37" y="8" width="300" height="292"/>
+                                        <rect key="frame" x="37" y="8" width="300" height="264"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </imageView>
@@ -880,24 +880,6 @@
                                     <outletCollection property="gestureRecognizers" destination="fYh-eK-ffK" appends="YES" id="xll-6J-toO"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StM-5H-F8z">
-                                <rect key="frame" x="-16" y="9" width="105" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="My Profile" image="myprofile1.png">
-                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="jh2-fE-6eq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-1v-9IC">
-                                <rect key="frame" x="261" y="-13" width="148" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Chat" image="mycht1.png"/>
-                                <connections>
-                                    <segue destination="bgl-tI-O4H" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="olS-hS-Ebt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -987,12 +969,6 @@
                                     <constraint firstAttribute="width" constant="953" id="qQ9-VQ-BIH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="please.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-NZ-dSY">
-                                <rect key="frame" x="-346" y="192" width="1067" height="413"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1067" id="SFK-mh-TDn"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbt-hp-SU9">
                                 <rect key="frame" x="138" y="511" width="99" height="48"/>
                                 <color key="backgroundColor" red="0.076038335859290693" green="0.19786541125101298" blue="0.21177030461776647" alpha="0.12598994004383562" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1013,7 +989,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="please.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-NZ-dSY">
-                                <rect key="frame" x="-346" y="148" width="1067" height="457"/>
+                                <rect key="frame" x="-346" y="192" width="1067" height="413"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1067" id="SFK-mh-TDn"/>
                                 </constraints>
@@ -3298,6 +3274,7 @@
         <image name="edit_2.png" width="1080" height="1080"/>
         <image name="filter.png" width="1080" height="1080"/>
         <image name="girl.jpg" width="1427.4000244140625" height="951.5999755859375"/>
+        <image name="girl2.jpg" width="614.4000244140625" height="409.5"/>
         <image name="gradyear.png" width="589" height="99"/>
         <image name="hourglass.png" width="1080" height="1080"/>
         <image name="iconTab3" width="25" height="25"/>
