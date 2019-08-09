@@ -18,7 +18,12 @@ class AddDataViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath)
         
         
-        cell.textLabel?.text = classList[indexPath.row]
+        cell.textLabel?.text = classList[indexPath.row].name
+        
+        let class_info_str = classList[indexPath.row].professor + " \u{2022} " + classList[indexPath.row].time + " \u{2022} " +  classList[indexPath.row].days
+        
+        cell.detailTextLabel?.text = class_info_str
+        
         
         return cell
     }
@@ -27,13 +32,26 @@ class AddDataViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var classesTable: UITableView!
-    var classList: [String] = []
+    var classList: [ClassInfo] = []
+    
+    struct ClassInfo {
+        var name: String
+        var professor: String
+        var time: String
+        var days: String
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        getClassList()
+        let queue = DispatchQueue(label: "work-queue")
+        queue.async {
+            print("Thread: ", Thread.current)
+            self.getClassList()
+        }
         
+        print("ClassList:", classList)
         classesTable.delegate = self
         classesTable.dataSource = self
+        classesTable.tableFooterView = UIView(frame: .zero)
     }
     
     func getClassList(){
@@ -58,7 +76,12 @@ class AddDataViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
                 for dic in jsonArray{
                     let name = dic["Name"] as? String ?? ""
-                    self.classList.append(name)
+                    let professor = dic["Professor"] as? String ?? ""
+                    let time = dic["Time"] as? String ?? ""
+                    let days = dic["Days"] as? String ?? ""
+                    
+                    let class_val = ClassInfo(name: name, professor: professor, time: time, days: days)
+                    self.classList.append(class_val)
                 }
                 
                 print(self.classList)
@@ -74,8 +97,11 @@ class AddDataViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func reload(){
-        self.classesTable.reloadData()
+        DispatchQueue.main.async {
+            self.classesTable.reloadData()
+        }
+        
     }
     
-
+    
 }

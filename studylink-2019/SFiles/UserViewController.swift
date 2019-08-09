@@ -77,6 +77,9 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         setNames()
         
+        
+        
+        
         cambox.layer.borderWidth = 1
         cambox.layer.masksToBounds = false
         cambox.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.0).cgColor
@@ -89,7 +92,12 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
             userId = Auth.auth().currentUser?.uid ?? "user_id"
         }
         
-        retrieveData()
+        let queue = DispatchQueue(label: "user-data-queue")
+        queue.async {
+            self.retrieveData()
+        }
+        
+        
 //        getProfilePicture()
         classesTable.delegate = self
         classesTable.dataSource = self
