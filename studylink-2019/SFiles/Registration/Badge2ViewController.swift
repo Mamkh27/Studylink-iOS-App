@@ -46,6 +46,7 @@ class Badge2ViewController: UIViewController {
     @IBOutlet var view1: UIView!
     @IBOutlet var view3: UIView!
     
+    var navy = UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
     //Makes sure user only chooses 7 badges
     func counter() -> Bool{
         if(self.count < 7){
@@ -76,9 +77,10 @@ class Badge2ViewController: UIViewController {
     
     //button changes color once selected
     @IBAction func b2(_ sender: Any) {
-        if b2.backgroundColor != .black{
+        
+        if b2.backgroundColor != navy {
             if(self.counter()){
-                b2.backgroundColor = .black
+                b2.backgroundColor = navy
             }
         }
             //if already selected then changes back to clear
