@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -111,12 +111,12 @@
                         <outlet property="loginbtn" destination="z1H-zy-C4w" id="zoy-qD-Ezb"/>
                         <outlet property="passwordTxt" destination="nGT-OO-rUH" id="TeR-5H-hxX"/>
                         <segue destination="vcP-wu-KGW" kind="presentation" identifier="loginFirstSegue" id="bWa-po-xfj"/>
-                        <segue destination="15B-ZJ-MD7" kind="presentation" identifier="loginSegue" id="wtW-LI-Cbu"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginSegue" animates="NO" id="niC-wp-ITt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I16-yk-1gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2167" y="-612"/>
+            <point key="canvasLocation" x="-2167" y="-613"/>
         </scene>
         <!--User-->
         <scene sceneID="tne-QT-ifu">
@@ -141,7 +141,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLS-Vi-0Zt">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLS-Vi-0Zt" customClass="curvedView" customModule="studylink_2019" customModuleProvider="target">
                                                 <rect key="frame" x="-1" y="0.0" width="376" height="224"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.64806493371513829" green="0.88424651529972043" blue="1" alpha="0.66941352739726023" colorSpace="custom" customColorSpace="displayP3"/>
@@ -302,6 +302,14 @@
                                                 <color key="textColor" red="0.27492574059596436" green="0.49748335214385286" blue="0.66459787436548223" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpC-sS-8KI">
+                                                <rect key="frame" x="306" y="242" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="y3d-Mf-2oC" kind="show" identifier="cardSegue" animates="NO" id="1sZ-CA-P6L"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -379,11 +387,12 @@
                         <outlet property="view4" destination="zUu-2k-JwN" id="e4S-bm-xLr"/>
                         <outlet property="yearLbl" destination="Uuh-gw-U7P" id="FgL-sm-HGn"/>
                         <segue destination="edU-44-aln" kind="presentation" identifier="logoutUser" id="Bts-1W-yy5"/>
+                        <segue destination="bgl-tI-O4H" kind="show" identifier="chatSegue" animates="NO" id="8zr-Uc-ojY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5016.8000000000002" y="-598.2008995502249"/>
+            <point key="canvasLocation" x="5174" y="-470"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HnC-47-1h8">
@@ -758,10 +767,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONe-OM-33L" userLabel="card">
-                                <rect key="frame" x="0.0" y="78" width="375" height="466"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="515"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="girl2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-Nu-Iyb">
-                                        <rect key="frame" x="37" y="8" width="300" height="264"/>
+                                        <rect key="frame" x="37" y="8" width="300" height="292"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </imageView>
@@ -796,16 +805,19 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-1v-9IC">
-                                <rect key="frame" x="269" y="-4" width="131" height="138"/>
+                                <rect key="frame" x="251" y="-10" width="149" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Profile" image="mycht1.png">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bgl-tI-O4H" kind="presentation" animates="NO" id="VAq-ym-kqA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StM-5H-F8z">
-                                <rect key="frame" x="-8" y="23" width="94" height="85"/>
+                                <rect key="frame" x="23" y="45" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="My Profile" image="myprofile1.png">
+                                <state key="normal" title="My Profile" image="myprof.png">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -1099,7 +1111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhu-OW-S5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7863.1999999999998" y="-1399.2503748125939"/>
+            <point key="canvasLocation" x="7975" y="-726"/>
         </scene>
         <!--Messenger View Controller-->
         <scene sceneID="G2r-GW-5mg">
@@ -1130,7 +1142,7 @@
                                         <state key="normal" title="Button" image="back_arrow.png"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.019607843140000001" green="0.47450980390000003" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.25882352941176473" green="0.59215686274509804" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="sAa-16-uIu" secondAttribute="bottom" constant="11" id="4jZ-6K-JYr"/>
                                     <constraint firstItem="D6i-xK-Ze8" firstAttribute="top" secondItem="bLZ-JS-FP5" secondAttribute="top" constant="10" id="8ky-K1-gCj"/>
@@ -1213,10 +1225,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9OZ-b3-YXS"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="profileSegue1" animates="NO" id="iRu-ek-dUq"/>
+                        <segue destination="y3d-Mf-2oC" kind="show" identifier="cardSegue1" animates="NO" id="yjy-y8-bqX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBK-xI-830" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6816.8000000000002" y="-1400.1499250374814"/>
+            <point key="canvasLocation" x="7086" y="-793"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OPl-qs-jtV">
@@ -2279,25 +2295,6 @@
             </objects>
             <point key="canvasLocation" x="-1012" y="-597.75112443778119"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="wfW-Ss-s9X">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="15B-ZJ-MD7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UH1-SJ-xFb">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4NR-Pp-2Nv"/>
-                        <segue destination="q9z-uN-enS" kind="relationship" relationship="viewControllers" id="bUW-ve-Js4"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jp4-mw-mas" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4077.5999999999999" y="-598.65067466266873"/>
-        </scene>
         <!--Card-->
         <scene sceneID="yoQ-41-9r9">
             <objects>
@@ -3002,8 +2999,8 @@
         <image name="classes.png" width="862" height="68"/>
         <image name="continue.png" width="1080" height="1080"/>
         <image name="edit_2.png" width="1080" height="1080"/>
-        <image name="girl.jpg" width="1427.4000244140625" height="951.5999755859375"/>
-        <image name="girl2.jpg" width="614.4000244140625" height="409.5"/>
+        <image name="girl.jpg" width="4758" height="3172"/>
+        <image name="girl2.jpg" width="2048" height="1365"/>
         <image name="gradyear.png" width="589" height="99"/>
         <image name="hourglass.png" width="1080" height="1080"/>
         <image name="iconTab3" width="25" height="25"/>
@@ -3014,7 +3011,7 @@
         <image name="menu_2.png" width="1080" height="1080"/>
         <image name="mutual" width="30" height="30"/>
         <image name="mycht1.png" width="1080" height="1080"/>
-        <image name="myprofile1.png" width="1080" height="1080"/>
+        <image name="myprof.png" width="1080" height="1080"/>
         <image name="pic2.jpg" width="1366" height="768"/>
         <image name="please.png" width="1080" height="1080"/>
         <image name="please2.png" width="1080" height="1080"/>
@@ -3024,16 +3021,18 @@
         <image name="q4.png" width="1080" height="1080"/>
         <image name="q5.png" width="1080" height="1080"/>
         <image name="q6.png" width="1080" height="1080"/>
-        <image name="studylink.png" width="278.16000366210938" height="371"/>
+        <image name="studylink.png" width="1159" height="1546"/>
         <image name="studylink_name.png" width="1080" height="1080"/>
         <image name="tutorial.png" width="1080" height="1080"/>
         <image name="user" width="30" height="30"/>
         <image name="welcome.png" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="VAq-ym-kqA"/>
         <segue reference="IPm-9q-xnt"/>
+        <segue reference="yjy-y8-bqX"/>
         <segue reference="buo-Co-FFG"/>
-        <segue reference="jh2-fE-6eq"/>
+        <segue reference="iRu-ek-dUq"/>
         <segue reference="Bts-1W-yy5"/>
     </inferredMetricsTieBreakers>
 </document>

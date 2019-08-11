@@ -27,9 +27,8 @@ class curvedView: UIView {
     
     override func draw(_ rect: CGRect) {
         
-        let y:CGFloat = 20
-        let curveTo:CGFloat = 0
-        
+        let y:CGFloat = 215
+        let curveTo:CGFloat = 150
         let myBezier = UIBezierPath()
         myBezier.move(to: CGPoint(x: 0, y: y))
         myBezier.addQuadCurve(to: CGPoint(x: rect.width, y: y), controlPoint: CGPoint(x: rect.width / 2, y: curveTo))

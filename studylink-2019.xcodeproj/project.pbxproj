@@ -14,6 +14,8 @@
 		6BFF259722F7550200A249A8 /* AddDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF259622F7550200A249A8 /* AddDataViewController.swift */; };
 		821345462279000800832A7C /* mag_glass3.png in Resources */ = {isa = PBXBuildFile; fileRef = 821345452279000800832A7C /* mag_glass3.png */; };
 		8213454C2279012100832A7C /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8213454B2279012000832A7C /* back_arrow.png */; };
+		821EA0F122FFA66C00C1ABEE /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821EA0F022FFA66C00C1ABEE /* TabBar.swift */; };
+		821EA0F422FFBFEC00C1ABEE /* myprof.png in Resources */ = {isa = PBXBuildFile; fileRef = 821EA0F322FFBFEC00C1ABEE /* myprof.png */; };
 		821F6DAF2266F600005FD1FB /* camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 821F6DAE2266F600005FD1FB /* camera.jpg */; };
 		821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */; };
 		8230FD7F22F53877001B6834 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8230FD7E22F53877001B6834 /* MenuOptions.swift */; };
@@ -83,9 +85,6 @@
 		82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82759B2B22CACFE800BF5373 /* LogInViewController.swift */; };
 		82759B2E22CAD45700BF5373 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82759B2D22CAD45700BF5373 /* pic2.jpg */; };
 		82759B3222CADF2400BF5373 /* studylink.png in Resources */ = {isa = PBXBuildFile; fileRef = 82759B3122CADF2400BF5373 /* studylink.png */; };
-		82831F5922F8D2C0002E2C7C /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5822F8D2C0002E2C7C /* MonthView.swift */; };
-		82831F5B22F8D94F002E2C7C /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5A22F8D94F002E2C7C /* CalendarView.swift */; };
-		82831F5D22F8E2E1002E2C7C /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */; };
 		82831F5F22F96F2A002E2C7C /* girl2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82831F5E22F96F26002E2C7C /* girl2.jpg */; };
 		82917AF22266ECE70086CE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF12266ECE70086CE27 /* AppDelegate.swift */; };
 		82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82917AF32266ECE70086CE27 /* UserViewController.swift */; };
@@ -97,7 +96,6 @@
 		82917B202266F0420086CE27 /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 82917B1F2266F0420086CE27 /* edit.png */; };
 		82917B222266F1060086CE27 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 82917B212266F1060086CE27 /* menu2.png */; };
 		82964F1322CE7AE700D90169 /* curvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82964F1222CE7AE700D90169 /* curvedView.swift */; };
-		82A6E0BB22DD4DA9004A1815 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */; };
 		82A6E0BD22E0233E004A1815 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A6E0BC22E0233A004A1815 /* chat.png */; };
 		82A6E0BF22E02482004A1815 /* My Post Copy (5).png in Resources */ = {isa = PBXBuildFile; fileRef = 82A6E0BE22E0247E004A1815 /* My Post Copy (5).png */; };
 		82A6E0C122E0248D004A1815 /* myprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A6E0C022E0248D004A1815 /* myprofile.png */; };
@@ -153,6 +151,8 @@
 		7FFB910240AA6C615021A232 /* Pods-studylink-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studylink-2019.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studylink-2019/Pods-studylink-2019.debug.xcconfig"; sourceTree = "<group>"; };
 		821345452279000800832A7C /* mag_glass3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mag_glass3.png; sourceTree = "<group>"; };
 		8213454B2279012000832A7C /* back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_arrow.png; sourceTree = "<group>"; };
+		821EA0F022FFA66C00C1ABEE /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		821EA0F322FFBFEC00C1ABEE /* myprof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myprof.png; sourceTree = "<group>"; };
 		821F6DAE2266F600005FD1FB /* camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camera.jpg; sourceTree = "<group>"; };
 		821F6DB2226703B1005FD1FB /* NewInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfoViewController.swift; sourceTree = "<group>"; };
 		8230FD7E22F53877001B6834 /* MenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
@@ -223,9 +223,6 @@
 		82759B2B22CACFE800BF5373 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		82759B2D22CAD45700BF5373 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
 		82759B3122CADF2400BF5373 /* studylink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studylink.png; sourceTree = "<group>"; };
-		82831F5822F8D2C0002E2C7C /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
-		82831F5A22F8D94F002E2C7C /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
 		82831F5E22F96F26002E2C7C /* girl2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpg; sourceTree = "<group>"; };
 		82917AEE2266ECE70086CE27 /* studylink-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "studylink-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82917AF12266ECE70086CE27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,7 +240,6 @@
 		82917B1F2266F0420086CE27 /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
 		82917B212266F1060086CE27 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
 		82964F1222CE7AE700D90169 /* curvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = curvedView.swift; sourceTree = "<group>"; };
-		82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		82A6E0BC22E0233A004A1815 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		82A6E0BE22E0247E004A1815 /* My Post Copy (5).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My Post Copy (5).png"; sourceTree = "<group>"; };
 		82A6E0C022E0248D004A1815 /* myprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myprofile.png; sourceTree = "<group>"; };
@@ -337,6 +333,7 @@
 		821F6DB12267038D005FD1FB /* SFiles */ = {
 			isa = PBXGroup;
 			children = (
+				821EA0F022FFA66C00C1ABEE /* TabBar.swift */,
 				82831F5522F8C107002E2C7C /* Card */,
 				8231CF7122CDAFBB00436A9A /* Registration */,
 				82917AF12266ECE70086CE27 /* AppDelegate.swift */,
@@ -428,6 +425,7 @@
 		826BCDE922D01E4600586DEE /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				821EA0F322FFBFEC00C1ABEE /* myprof.png */,
 				82A6E0BE22E0247E004A1815 /* My Post Copy (5).png */,
 				82A6E0C022E0248D004A1815 /* myprofile.png */,
 				82A6E0BC22E0233A004A1815 /* chat.png */,
@@ -484,9 +482,6 @@
 				82AF351322CEA85F00309FC3 /* CardViewController.swift */,
 				82BEE7B922D7F5F700790EDC /* MenuBar.swift */,
 				8230FD7E22F53877001B6834 /* MenuOptions.swift */,
-				82831F5822F8D2C0002E2C7C /* MonthView.swift */,
-				82831F5A22F8D94F002E2C7C /* CalendarView.swift */,
-				82831F5C22F8E2E1002E2C7C /* WeekdaysView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -521,7 +516,6 @@
 				821F6DB022670348005FD1FB /* VC */,
 				82134551227908B800832A7C /* Images */,
 				82917AFD2266ECE90086CE27 /* Info.plist */,
-				82A6E0BA22DD4DA9004A1815 /* TabViewController.swift */,
 			);
 			path = "studylink-2019";
 			sourceTree = "<group>";
@@ -683,6 +677,7 @@
 				8264CE0822D160C2000110E4 /* b15_.png in Resources */,
 				8264CE0F22D160C2000110E4 /* b9_.png in Resources */,
 				8264CE1622D160C2000110E4 /* b17_.png in Resources */,
+				821EA0F422FFBFEC00C1ABEE /* myprof.png in Resources */,
 				8213454C2279012100832A7C /* back_arrow.png in Resources */,
 				825EF41022FBFC070058D89B /* gradient3.png in Resources */,
 				82AF351A22CEABFF00309FC3 /* badge2.png in Resources */,
@@ -900,7 +895,6 @@
 			files = (
 				82759B2C22CACFE800BF5373 /* LogInViewController.swift in Sources */,
 				8235CB3422CC337F00336144 /* Q3ViewController.swift in Sources */,
-				82831F5B22F8D94F002E2C7C /* CalendarView.swift in Sources */,
 				826BCDED22D02CA500586DEE /* Badge2ViewController.swift in Sources */,
 				8235CB2222CBD69400336144 /* WelcomeViewController.swift in Sources */,
 				6B0A45AD22CDD69600BAD2F5 /* RegisterViewController.swift in Sources */,
@@ -908,7 +902,6 @@
 				8231CF6122CD831B00436A9A /* WelcomePt2ViewController.swift in Sources */,
 				8235CB2E22CC0F1300336144 /* Q2ViewController.swift in Sources */,
 				8230FD7F22F53877001B6834 /* MenuOptions.swift in Sources */,
-				82A6E0BB22DD4DA9004A1815 /* TabViewController.swift in Sources */,
 				82BEE7B222D7D71400790EDC /* MessengerViewController.swift in Sources */,
 				6B7835D922F225BA005FFE24 /* MessageUserViewController.swift in Sources */,
 				82917AF42266ECE70086CE27 /* UserViewController.swift in Sources */,
@@ -922,6 +915,7 @@
 				821F6DB3226703B1005FD1FB /* NewInfoViewController.swift in Sources */,
 				82964F1322CE7AE700D90169 /* curvedView.swift in Sources */,
 				6BFF259722F7550200A249A8 /* AddDataViewController.swift in Sources */,
+				821EA0F122FFA66C00C1ABEE /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

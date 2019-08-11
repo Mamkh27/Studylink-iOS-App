@@ -49,7 +49,7 @@ class CardViewController: UIViewController {
         
         
    
-        setUpNavbar()
+   //     setUpNavbar()
         setupMenuOptions()
         setupMenuBar()
 
@@ -64,7 +64,7 @@ class CardViewController: UIViewController {
     
 
     
-    
+    /*
     private func setUpNavbar(){
          self.navigationController?.setNavigationBarHidden(true, animated: false)
         let chatButton = UIButton(type: .system)
@@ -78,13 +78,9 @@ class CardViewController: UIViewController {
         let chatIcon = UIImage(named: "chat")
         chatButton.setImage(chatIcon, for: .normal)
         chatButton.addTarget(self, action: #selector(chatPage), for: .touchUpInside)
-
-        
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: chatButton)
-        
+ 
     }
-
+*/
 
 //    func setupFilterLabels(){
 //        self.view.addSubview(self.menuBar.menuOps.fltrThreeLbl)

@@ -8,8 +8,18 @@
 
 import UIKit
 
-class MessengerViewController: UIViewController {
-
+class MessengerViewController: UIViewController, CellTapped{
+    func cellGotTapped(indexOfCell: Int) {
+        if (tabbar.clickedCardBtn){
+            self.performSegue(withIdentifier: "cardSegue1", sender: nil)
+        }
+        if (tabbar.clickedChatBtn){
+            
+        }
+        if(tabbar.clickedProfileBtn){
+             self.performSegue(withIdentifier: "profileSegue1", sender: nil)
+        }
+    }
   
     @IBOutlet var navBarImage: UIImageView!
     
@@ -19,6 +29,8 @@ class MessengerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTabBar()
+        self.tabbar.delegate = self
         
         print("Reaching Messenger View")
         self.navigationItem.title = "Messenger"
@@ -33,6 +45,34 @@ class MessengerViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    let tabbar: TabBar = {
+        let tb = TabBar()
+        return tb
+    }()
+    
+    private func setupTabBar(){
+        view.addSubview(tabbar)
+        
+        addContraintsWithFormat("H:|[v0]|", views: tabbar)
+        addContraintsWithFormat("V:|[v0(55)]", views: tabbar)
+        tabbar.transform = CGAffineTransform(translationX: 0, y: 615)
+        
+        
+    }
+    
+    
+    
+    func addContraintsWithFormat(_ format: String, views: UIView...) {
+        var viewDict = [String: UIView]()
+        
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewDict[key] = view
+        }
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDict))
+    }
 
     /*
     // MARK: - Navigation
