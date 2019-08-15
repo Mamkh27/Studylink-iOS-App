@@ -30,10 +30,11 @@ class PageFourViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 self.q5.alpha = 0
 self.q6.alpha = 0
 self.q7.alpha = 0
-
 self.nextBtn.alpha = 0
     
 self.q5op1.alpha = 0

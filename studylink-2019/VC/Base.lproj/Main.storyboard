@@ -310,6 +310,14 @@
                                                     <segue destination="ycb-oG-YEh" kind="show" animates="NO" id="0g3-Wy-0LJ"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfg-1A-hW1">
+                                                <rect key="frame" x="313" y="309" width="33" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Card"/>
+                                                <connections>
+                                                    <segue destination="y3d-Mf-2oC" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="pZJ-Gb-EKV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -824,6 +832,14 @@
                                     <segue destination="bgl-tI-O4H" kind="presentation" animates="NO" id="VAq-ym-kqA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO1-kf-hnj">
+                                <rect key="frame" x="-10" y="366" width="154" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calendar" image="calendar.png"/>
+                                <connections>
+                                    <action selector="popUpCalendar:" destination="y3d-Mf-2oC" eventType="touchUpInside" id="0iB-0P-9GN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -836,6 +852,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cbA-r7-SgF"/>
                     <connections>
+                        <outlet property="calendarBtn" destination="VO1-kf-hnj" id="NcN-b3-Sy1"/>
                         <outlet property="card" destination="ONe-OM-33L" id="MZf-m3-kpB"/>
                         <outlet property="chatbtn" destination="Q3Q-1v-9IC" id="0GZ-h0-ULp"/>
                         <outlet property="firstName" destination="29Y-tb-JVR" id="GgG-NQ-lBC"/>
@@ -852,7 +869,22 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5869.6000000000004" y="-1400.1499250374814"/>
+            <point key="canvasLocation" x="2320.8000000000002" y="281.10944527736132"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="N8u-gH-abe">
+            <objects>
+                <viewController storyboardIdentifier="calendarPopUpID" id="k7Y-jg-OUq" customClass="CalendarViewController" customModule="studylink_2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eR3-en-dfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tiR-x8-89t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVm-v0-L6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282" y="282"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jpD-vv-F0E">
@@ -1142,7 +1174,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="nextBtn1.png"/>
                                 <connections>
-                                    <segue destination="zww-bW-dBa" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="1uF-ha-aUc"/>
+                                    <segue destination="zww-bW-dBa" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="UpK-Ho-jfg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3696,6 +3728,7 @@
         <image name="badge1.png" width="1080" height="1080"/>
         <image name="badges_1.png" width="1080" height="1080"/>
         <image name="bio.png" width="829" height="119"/>
+        <image name="calendar.png" width="1080" height="1080"/>
         <image name="cam_3.png" width="1080" height="1080"/>
         <image name="chat_card2.png" width="1080" height="1080"/>
         <image name="classes.png" width="862" height="68"/>
@@ -3739,7 +3772,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="VAq-ym-kqA"/>
         <segue reference="IPm-9q-xnt"/>
-        <segue reference="yjy-y8-bqX"/>
+        <segue reference="pZJ-Gb-EKV"/>
         <segue reference="buo-Co-FFG"/>
         <segue reference="jh2-fE-6eq"/>
         <segue reference="Bts-1W-yy5"/>

@@ -11,12 +11,13 @@ import UIKit
 
 class CardViewController: UIViewController {
     
-    
+            let cellId = "cellId"
     
     @IBOutlet weak var mutualLine: UIView!
     @IBOutlet weak var calendarLine: UIView!
     @IBOutlet weak var profileLine: UIView!
     @IBOutlet weak var buttonsView: UIView!
+    @IBOutlet var calendarBtn: UIButton!
     
     
     @IBOutlet var chatbtn: UIButton!
@@ -32,26 +33,42 @@ class CardViewController: UIViewController {
     @IBOutlet var profilebtn: UIButton!
     
     
+    @IBAction func popUpCalendar(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "calendarPopUpID") as! CalendarViewController
+        
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         image.layer.cornerRadius = 5;
         image.layer.masksToBounds = true;
         
-
+        calendarBtn.tintColor =  UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
+        
+        let origImage = UIImage(named: "calendar.png")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        calendarBtn.setImage(tintedImage, for: .normal)
+        calendarBtn.tintColor = UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
+    
+        
         self.view.bringSubviewToFront(self.profilebtn)
         self.view.bringSubviewToFront(self.chatbtn)
         self.view.bringSubviewToFront(self.card)
         self.view.bringSubviewToFront(self.image)
         self.view.bringSubviewToFront(self.firstName)
         self.view.bringSubviewToFront(self.lastInitial)
-//        self.view.bringSubviewToFront(self.buttonsView)
+        self.view.bringSubviewToFront(self.calendarBtn)
         
         
    
    //     setUpNavbar()
-        setupMenuOptions()
-        setupMenuBar()
+       // setupMenuOptions()
+      //  setupMenuBar()
 
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -59,76 +76,18 @@ class CardViewController: UIViewController {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.alpha = 0.9;
         self.view.addSubview(blurEffectView)
-//        self.tabBarController?.tabBar.isHidden = true
-    }
-    
 
-    
-    /*
-    private func setUpNavbar(){
-         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        let chatButton = UIButton(type: .system)
-        let mainLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
-        
-        mainLbl.contentMode = .scaleAspectFit
-        mainLbl.text = "Find Partners"
-        
-        navigationItem.titleView = mainLbl
-       // self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
-        let chatIcon = UIImage(named: "chat")
-        chatButton.setImage(chatIcon, for: .normal)
-        chatButton.addTarget(self, action: #selector(chatPage), for: .touchUpInside)
- 
     }
-*/
-
-//    func setupFilterLabels(){
-//        self.view.addSubview(self.menuBar.menuOps.fltrThreeLbl)
-//     
-//        addConstraintsWithFormat("H:|[v0]|", views: MenuBar.menuOps.fltrThreeLbl)
-//        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrThreeLbl)
-//        menuBar.menuOps.fltrThreeLbl.transform = CGAffineTransform(translationX:100, y: 360)
-//     
-/////////////////////////////////////////////////////////////////////////
-//     
-//        self.view.addSubview(self.menuBar.menuOps.fltrTwoLbl)
-//     
-//        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrTwoLbl)
-//        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrTwoLbl)
-//         menuBar.menuOps.fltrTwoLbl.transform = CGAffineTransform(translationX: 0, y:360)
-//     
-// ///////////////////////////////////////////////////////////////////////
-//        
-//        self.view.addSubview(self.menuBar.menuOps.fltrOneLbl)
-//        
-//        addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps.fltrOneLbl)
-//        addConstraintsWithFormat("V:|[v0(55)]", views: menuBar.menuOps.fltrOneLbl)
-//        menuBar.menuOps.fltrOneLbl.transform = CGAffineTransform(translationX: -100, y:360)
-//        
-//        
-//    }
     
     
     @objc func chatPage(){
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "messengerView") as! MessengerViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-    //
-    //  CardViewController.swift
-    //  studylink-2019
-    //
-    //  Created by Manprit Heer on 7/4/19.
-    //  Copyright © 2019 Manprit Heer. All rights reserved.
-    //
-    
+   
+
         
-        
-        let cellId = "cellId"
-        
-        
-        func addConstraintsWithFormat(_ format: String, views: UIView...) {
+    func addConstraintsWithFormat(_ format: String, views: UIView...) {
             var viewDict = [String: UIView]()
             
             for (index, view) in views.enumerated() {

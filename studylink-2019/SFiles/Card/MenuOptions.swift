@@ -22,6 +22,7 @@ class MenuOptions:  UIView, UICollectionViewDelegate, UICollectionViewDataSource
     var todaysDate = 0
     var firstWeekDayOfMonth = 0
 
+    /*
     let myStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
@@ -29,7 +30,7 @@ class MenuOptions:  UIView, UICollectionViewDelegate, UICollectionViewDataSource
    
         return stackView
     }()
-    
+    */
     
     let Cell = "Cell"
     //profile variables
@@ -117,7 +118,7 @@ var ProfFiveLbl = UILabel()
 
         let rightBtn = UIButton(frame: CGRect(x: 275, y: -27, width: 100, height: 100))
             let leftBtn = UIButton(frame: CGRect(x: 0, y: -27, width: 100, height: 100))
-    
+    /*
     func displayCalendar(){
  
         currentMonthIndex = Calendar.current.component(.month, from: Date()) - 1
@@ -191,7 +192,7 @@ var ProfFiveLbl = UILabel()
         self.bringSubviewToFront(rightBtn)
         self.bringSubviewToFront(leftBtn)
     }
-    
+    */
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.clear
@@ -385,7 +386,7 @@ var ProfFiveLbl = UILabel()
    backgroundColor = .white
         leftBtn.isHidden = true
         rightBtn.isHidden = true
-        myStackView.isHidden = true
+      //  myStackView.isHidden = true
         myCollectionView.isHidden = true
     }
     

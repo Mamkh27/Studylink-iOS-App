@@ -8,29 +8,19 @@
 
 import UIKit
 
-class MessengerViewController: UIViewController, CellTapped{
-    func cellGotTapped(indexOfCell: Int) {
-        if (tabbar.clickedCardBtn){
-            self.performSegue(withIdentifier: "cardSegue1", sender: nil)
-        }
-        if (tabbar.clickedChatBtn){
-            
-        }
-        if(tabbar.clickedProfileBtn){
-             self.performSegue(withIdentifier: "profileSegue1", sender: nil)
-        }
-    }
+class MessengerViewController: UIViewController{
+
+    
   
     @IBOutlet var navBarImage: UIImageView!
-    
     @IBOutlet var firstName: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTabBar()
-        self.tabbar.delegate = self
+    
+  
         
         print("Reaching Messenger View")
         self.navigationItem.title = "Messenger"
@@ -45,20 +35,7 @@ class MessengerViewController: UIViewController, CellTapped{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    let tabbar: TabBar = {
-        let tb = TabBar()
-        return tb
-    }()
-    
-    private func setupTabBar(){
-        view.addSubview(tabbar)
-        
-        addContraintsWithFormat("H:|[v0]|", views: tabbar)
-        addContraintsWithFormat("V:|[v0(55)]", views: tabbar)
-        tabbar.transform = CGAffineTransform(translationX: 0, y: 615)
-        
-        
-    }
+
     
     
     

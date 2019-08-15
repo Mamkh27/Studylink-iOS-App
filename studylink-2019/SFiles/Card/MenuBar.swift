@@ -54,7 +54,7 @@ menuOps.hideCalendar()
         if ((imageNames[indexPath.item] == "iconTab1")){
             whichOptionisActive = "calendar"
             menuOps.hideProfile()
-            menuOps.displayCalendar()
+//            menuOps.displayCalendar()
             menuOps.hideMutuals()
         
         }

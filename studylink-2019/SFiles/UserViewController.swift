@@ -12,18 +12,8 @@ import FirebaseAuth
 import FirebaseStorage
 import GoogleSignIn
 
-class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CellTapped {
-    func cellGotTapped(indexOfCell: Int) {
-        if (tabbar.clickedCardBtn){
-     self.performSegue(withIdentifier: "cardSegue", sender: nil)
-    }
-        if (tabbar.clickedChatBtn){
-            self.performSegue(withIdentifier: "chatSegue", sender: nil)
-        }
-        if(tabbar.clickedProfileBtn){
-            
-        }
-    }
+class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
     
     @IBOutlet var topview: UIView!
     
@@ -87,8 +77,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         profileImg.clipsToBounds = true
         
         setNames()
-        setupTabBar()
-        self.tabbar.delegate = self
+ 
         
         
         cambox.layer.borderWidth = 1
@@ -118,24 +107,7 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(GIDSignIn.sharedInstance()?.currentUser.userID)
         
     }
-    
-    let tabbar: TabBar = {
-        let tb = TabBar()
-        return tb
-    }()
-    
-    private func setupTabBar(){
-        view.addSubview(tabbar)
-        
-        addContraintsWithFormat("H:|[v0]|", views: tabbar)
-        addContraintsWithFormat("V:|[v0(55)]", views: tabbar)
-        tabbar.transform = CGAffineTransform(translationX: 0, y: 615)
-        
-        
-    }
-    
- 
-    
+
     func addContraintsWithFormat(_ format: String, views: UIView...) {
         var viewDict = [String: UIView]()
         
