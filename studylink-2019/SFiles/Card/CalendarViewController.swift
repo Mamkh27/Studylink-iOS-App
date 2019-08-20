@@ -52,7 +52,7 @@ self.showAnimate()
     }
     
     func closeButton(){
-        let button = UIButton(frame: CGRect(x: 150, y: 450, width: 70, height: 40))
+        let button = UIButton(frame: CGRect(x: 150, y: 470, width: 70, height: 40))
         
         button.setTitle("Close", for: .normal)
         button.addTarget(self, action: #selector(buttonClose), for: .touchUpInside)

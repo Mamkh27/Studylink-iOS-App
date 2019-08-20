@@ -8,17 +8,27 @@
 
 import UIKit
 
+struct ModelCollectionFlowLayout {
+    var firstName: String = " "
+    var lastName: String = " "
+    var image: UIImage!
+    
+    
+}
 
-class CardViewController: UIViewController {
+
+class CardViewController: UIViewController, UIGestureRecognizerDelegate {
     
             let cellId = "cellId"
-    
+        var arrData = [ModelCollectionFlowLayout]()
     @IBOutlet weak var mutualLine: UIView!
     @IBOutlet weak var calendarLine: UIView!
     @IBOutlet weak var profileLine: UIView!
     @IBOutlet weak var buttonsView: UIView!
     @IBOutlet var calendarBtn: UIButton!
     
+    @IBOutlet var startChat: UIButton!
+    @IBOutlet var collectionView: UICollectionView!
     
     @IBOutlet var chatbtn: UIButton!
     @IBOutlet var linkedView: UIImageView!
@@ -26,7 +36,7 @@ class CardViewController: UIViewController {
     @IBOutlet var firstName: UILabel!
     @IBOutlet var image: UIImageView!
     @IBOutlet var view2: UIView!
-    @IBOutlet var card: UIView!
+    //@IBOutlet var card: UIView!
     @IBOutlet var toggleMenuButton: UIButton!
     @IBOutlet var darkFillView: RoundButton!
     @IBOutlet var menuView: UIView!
@@ -42,43 +52,71 @@ class CardViewController: UIViewController {
         popOverVC.didMove(toParent: self)
     }
     
+    @IBAction func popUpMutuals(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mutualsPopUpID") as! MutualsViewController
+        
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        image.layer.cornerRadius = 5;
-        image.layer.masksToBounds = true;
-        
-        calendarBtn.tintColor =  UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
-        
+
         let origImage = UIImage(named: "calendar.png")
         let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
         calendarBtn.setImage(tintedImage, for: .normal)
         calendarBtn.tintColor = UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
-    
         
+    calendarBtn.frame.origin.y = calendarBtn.frame.origin.y + 50
+        collectData()
+        setupCollectionView()
+                self.view.addSubview(collectionView)
         self.view.bringSubviewToFront(self.profilebtn)
         self.view.bringSubviewToFront(self.chatbtn)
-        self.view.bringSubviewToFront(self.card)
-        self.view.bringSubviewToFront(self.image)
-        self.view.bringSubviewToFront(self.firstName)
-        self.view.bringSubviewToFront(self.lastInitial)
+        //self.view.bringSubviewToFront(self.card)
+        //self.view.bringSubviewToFront(self.image)
+       // self.view.bringSubviewToFront(self.firstName)
+       // self.view.bringSubviewToFront(self.lastInitial)
+        collectData()
+        setupCollectionView()
         self.view.bringSubviewToFront(self.calendarBtn)
-        
-        
-   
-   //     setUpNavbar()
-       // setupMenuOptions()
-      //  setupMenuBar()
-
-        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = menuBar.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = 0.9;
-        self.view.addSubview(blurEffectView)
+        self.view.bringSubviewToFront(collectionView)
+       
+        /*
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(CardViewController.panCard(_:)))
+        collectionView.addGestureRecognizer(panGesture)
+*/
 
     }
     
+
+    
+func scrollViewDidEndDecelerating( _ scrollView: UIScrollView){
+    let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
+    let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
+    let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+    currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+}
+
+fileprivate var currentPage: Int = 0{
+    didSet{
+        print("page at center = \(currentPage)")
+    }
+}
+
+fileprivate var pageSize: CGSize {
+    let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
+    var pageSize = layout.itemSize
+    if layout.scrollDirection == .horizontal {
+        pageSize.width += layout.minimumLineSpacing
+    } else {
+        pageSize.height += layout.minimumLineSpacing
+    }
+    return pageSize
+}
     
     @objc func chatPage(){
         let vc = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "messengerView") as! MessengerViewController
@@ -98,35 +136,51 @@ class CardViewController: UIViewController {
             
             view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDict))
         }
+ 
+    func setupCollectionView(){
+        collectData()
+        self.collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         
-        let menuBar: MenuBar = {
-            let mb = MenuBar()
-            return mb
-        }()
+        let customflow = UPCarouselFlowLayout()
+        customflow.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60.0, height: collectionView.frame.size.height)
+        customflow.scrollDirection = .horizontal
+        customflow.sideItemScale = 0.8
+        customflow.sideItemAlpha = 1.0
+        customflow.spacingMode = .fixed(spacing: 5.0)
+        collectionView.collectionViewLayout = customflow
+        collectionView.layer.cornerRadius = 13.0
         
-        let menuOptions: MenuOptions = {
-            let mo = MenuOptions()
-            return mo
-        }()
         
-        private func setupMenuBar(){
-            view.addSubview(menuBar)
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func collectData(){
+        arrData = [
+
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg")),
+            ModelCollectionFlowLayout(firstName: "Johnny", lastName: "Bravo", image: UIImage(named:"basic2.jpg")),
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg")),
+            ModelCollectionFlowLayout(firstName: "Johnny", lastName: "Bravo", image: UIImage(named:"basic2.jpg")),
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg")),
+            ModelCollectionFlowLayout(firstName: "Johnny", lastName: "Bravo", image: UIImage(named:"basic2.jpg")),
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg")),
+            ModelCollectionFlowLayout(firstName: "Johnny", lastName: "Bravo", image: UIImage(named:"basic2.jpg")),
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg")),
+            ModelCollectionFlowLayout(firstName: "Johnny", lastName: "Bravo", image: UIImage(named:"basic2.jpg")),
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg")),
+            ModelCollectionFlowLayout(firstName: "Johnny", lastName: "Bravo", image: UIImage(named:"basic2.jpg")),
+            ModelCollectionFlowLayout(firstName: "Mark", lastName: "Zuckerberg", image: UIImage(named:"basic.jpg")),
+            ModelCollectionFlowLayout(firstName: "Jon", lastName: "Snow", image: UIImage(named:"basic3.jpg"))
             
-            addConstraintsWithFormat("H:|[v0]|", views: menuBar)
-            addConstraintsWithFormat("V:|[v0(55)]", views: menuBar)
-            menuBar.transform = CGAffineTransform(translationX: 0, y: 615)
-            
-            
-        }
-        
-        private func setupMenuOptions(){
-            view.addSubview(menuBar.menuOps)
-            addConstraintsWithFormat("H:|[v0]|", views: menuBar.menuOps)
-            addConstraintsWithFormat("V:|[v0(215)]", views: menuBar.menuOps)
-            
-            menuBar.menuOps.transform = CGAffineTransform(translationX: 0, y: 395)
-            
-        }
+        ]
+    }
+
         
         
         @IBAction func toggleMenu(_ sender: Any) {
@@ -163,15 +217,15 @@ class CardViewController: UIViewController {
             card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
             
             if yFromCenter < 0 {
-                linkedView.image = UIImage(named: "linked.png")
+             //   linkedView.image = UIImage(named: "linked.png")
                 
-                linkedView.tintColor = .green
+               // linkedView.tintColor = .green
                 
             } else {
-                linkedView.image = nil;
+              //  linkedView.image = nil;
             }
             
-            linkedView.alpha = abs(yFromCenter) / view.center.y
+           // linkedView.alpha = abs(yFromCenter) / view.center.y
             
             if sender.state == UIGestureRecognizer.State.ended {
                 if card.center.y < 75 {
@@ -182,38 +236,44 @@ class CardViewController: UIViewController {
                     })
                     performSegue(withIdentifier: "swipeUp", sender: self)
                     return
+                }
+                
                 } else if card.center.x < 75 {
+                           resetCard()
                     //Move to left side to previous card
-                    UIView.animate(withDuration: 0.3, animations: {
-                        card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
-                        card.alpha = 0;
-                    })
+                
+                //    UIView.animate(withDuration: 0.3, animations: {
+                   //     card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
+                   //     card.alpha = 0;
+                 //   })
                     return
                     
                     //FIX ME: INSERT CODE FOR PREVIOUS CARD HERE
                     
                 } else if card.center.x > (view.frame.width - 85){
+                           resetCard()
                     //Move to right side to next card
-                    UIView.animate(withDuration: 0.3, animations: {
-                        card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
-                        card.alpha = 0;
-                    })
+                //    UIView.animate(withDuration: 0.3, animations: {
+                   //     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
+                        card.alpha = 0;//
+                 //   })
                     
                     //FIX ME: INSERT CODE FOR NEW CARD HERE
                     
                     return
                 }
                 //go back to center
-                resetCard()
+            resetCard()
             }
-            
-        }
+
+
+
         func resetCard(){
             
             UIView.animate(withDuration: 0.2, animations: {
-                self.card.center = self.view.center
-                self.linkedView.alpha = 0
-                self.card.alpha = 1
+                self.collectionView.center = self.view.center
+              //  self.linkedView.alpha = 0
+                self.collectionView.alpha = 1
             })
             
             
@@ -222,10 +282,28 @@ class CardViewController: UIViewController {
         @IBAction func resetBtn(_ sender: Any) {
             resetCard()
         }
-        
+
 }
 
 
+extension CardViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrData.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+        cell.img.image = arrData[indexPath.row].image
+        cell.firstLbl.text = arrData[indexPath.row].firstName
+        cell.lastLbl.text = arrData[indexPath.row].lastName
+        cell.img.contentMode = .scaleAspectFill
+        return cell
+    }
+    
+    
+    
+}
 
 
 
