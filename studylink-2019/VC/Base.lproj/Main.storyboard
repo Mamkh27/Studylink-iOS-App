@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edU-44-aln">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pjk-Yr-tde">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -111,14 +111,14 @@
                         <outlet property="loginbtn" destination="z1H-zy-C4w" id="zoy-qD-Ezb"/>
                         <outlet property="passwordTxt" destination="nGT-OO-rUH" id="TeR-5H-hxX"/>
                         <segue destination="vcP-wu-KGW" kind="presentation" identifier="loginFirstSegue" id="bWa-po-xfj"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginSegue" animates="NO" id="niC-wp-ITt"/>
+                        <segue destination="xUs-zq-yaF" kind="show" identifier="loginSegue" animates="NO" id="niC-wp-ITt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I16-yk-1gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2636" y="-612"/>
         </scene>
-        <!--User-->
+        <!--User View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="UserViewController" customModule="studylink_2019" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="w5a-ok-cWP">
-                                <rect key="frame" x="0.0" y="20" width="375" height="680"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="636"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y69-LJ-9WG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
@@ -394,7 +394,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User" image="user" id="XVq-6d-wz3"/>
                     <navigationItem key="navigationItem" id="w1W-O7-TV0"/>
                     <size key="freeformSize" width="375" height="700"/>
                     <connections>
@@ -421,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="282"/>
+            <point key="canvasLocation" x="2160.8000000000002" y="281.55922038980509"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="HnC-47-1h8">
@@ -708,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSn-nT-1rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3810" y="-1472"/>
+            <point key="canvasLocation" x="3193" y="-1316"/>
         </scene>
         <!--TutorialA View Controller-->
         <scene sceneID="OJp-Qc-oXz">
@@ -785,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpL-4t-BXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="1135"/>
+            <point key="canvasLocation" x="2161" y="1135"/>
         </scene>
         <!--Card View Controller-->
         <scene sceneID="TvQ-LD-ABx">
@@ -795,26 +794,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StM-5H-F8z">
-                                <rect key="frame" x="23" y="45" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="My Profile" image="prof_card2.png">
-                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="jh2-fE-6eq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-1v-9IC">
-                                <rect key="frame" x="312" y="39" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="My Profile" image="chat_card2.png">
-                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bgl-tI-O4H" kind="presentation" animates="NO" id="VAq-ym-kqA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO1-kf-hnj">
                                 <rect key="frame" x="-17" y="344" width="154" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -879,22 +858,31 @@
                                     <action selector="popUpMutuals:" destination="y3d-Mf-2oC" eventType="touchUpInside" id="gqC-MG-eVz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8R-QK-b5i">
+                                <rect key="frame" x="163" y="34" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ycb-oG-YEh" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="4O1-dp-D5n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bUE-gj-awq"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="cards_icon" id="ppD-aE-XK0">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="cbA-r7-SgF"/>
                     <connections>
                         <outlet property="calendarBtn" destination="VO1-kf-hnj" id="NcN-b3-Sy1"/>
-                        <outlet property="chatbtn" destination="Q3Q-1v-9IC" id="0GZ-h0-ULp"/>
                         <outlet property="collectionView" destination="oOO-Xz-dCw" id="lYY-dk-4pp"/>
-                        <outlet property="profilebtn" destination="StM-5H-F8z" id="vrr-TA-0m5"/>
                         <outlet property="startChat" destination="zEH-Ic-JPK" id="Ms9-UV-qKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfj-v2-zHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4344.8000000000002" y="333.28335832083962"/>
+            <point key="canvasLocation" x="4166" y="-612"/>
         </scene>
         <!--Mutuals View Controller-->
         <scene sceneID="Tth-si-lSI">
@@ -1023,7 +1011,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebJ-nR-0kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5396" y="350.37481259370315"/>
+            <point key="canvasLocation" x="5108" y="-612"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="N8u-gH-abe">
@@ -1038,7 +1026,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVm-v0-L6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6071" y="350"/>
+            <point key="canvasLocation" x="6047" y="-613"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jpD-vv-F0E">
@@ -1053,7 +1041,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTg-jd-J94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="1135"/>
+            <point key="canvasLocation" x="1222" y="1135"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gdo-3v-vAb">
@@ -1068,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpp-3c-DMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="1135"/>
+            <point key="canvasLocation" x="204" y="1135"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="r1Y-dO-EBH">
@@ -1264,7 +1252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPH-nt-jBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="-612"/>
+            <point key="canvasLocation" x="626" y="-612"/>
         </scene>
         <!--Page Three View Controller-->
         <scene sceneID="0DT-qL-XWC">
@@ -1347,7 +1335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atZ-wX-3Up" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="-613"/>
+            <point key="canvasLocation" x="1446" y="-612"/>
         </scene>
         <!--Page Four View Controller-->
         <scene sceneID="jcb-Oj-G0Y">
@@ -1365,7 +1353,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O1Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="8Nk-2o-h21"/>
+                                    <action selector="q6o1tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="0e3-xO-c6K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEs-pI-FWT">
@@ -1376,7 +1364,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O1Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="BUz-Z8-9Nb"/>
+                                    <action selector="q5op2tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="e7k-qY-c38"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGB-EW-sZh">
@@ -1387,7 +1375,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O1Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="3Nt-2T-1Iw"/>
+                                    <action selector="q5op3tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="9br-c4-73C"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question6.png" translatesAutoresizingMaskIntoConstraints="NO" id="5hi-6e-U4m">
@@ -1402,7 +1390,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O1Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="81m-7d-cVg"/>
+                                    <action selector="q6o3tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="5Qy-vC-g70"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5v-FA-wJ3">
@@ -1413,7 +1401,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O1Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="DQc-Ba-j2d"/>
+                                    <action selector="q6o2tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="QKH-kk-qZ7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vV-03-SbO">
@@ -1424,7 +1412,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O1Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="Cxn-rz-Znc"/>
+                                    <action selector="q5op1tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="QQo-Kc-1LV"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question7.png" translatesAutoresizingMaskIntoConstraints="NO" id="quw-Iu-S65">
@@ -1439,7 +1427,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O2Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="qK9-lZ-atv"/>
+                                    <action selector="q7o1tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="6N2-Vg-hY7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="H6T-dk-OBi">
@@ -1450,7 +1438,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O2Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="8f5-Ul-bIs"/>
+                                    <action selector="q7o2tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="NCS-FK-rNV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="SKo-1Z-pkN">
@@ -1461,13 +1449,16 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="O2Tapped:" destination="nlJ-Ii-dGl" eventType="touchUpInside" id="hyR-jf-ntv"/>
+                                    <action selector="q7o3tapped:" destination="zww-bW-dBa" eventType="touchUpInside" id="ExS-VL-kLx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jag-WR-hEt">
                                 <rect key="frame" x="278" y="575" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="nextBtn1.png"/>
+                                <connections>
+                                    <segue destination="qXb-oT-4X5" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="j7c-Ra-aBg"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question5.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Bv-P9-unG">
                                 <rect key="frame" x="64" y="0.0" width="247" height="146"/>
@@ -1495,7 +1486,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rS6-zD-w3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749.5999999999999" y="-612.14392803598207"/>
+            <point key="canvasLocation" x="2258" y="-612"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JoW-mm-411">
+            <objects>
+                <tabBarController storyboardIdentifier="tabbar" id="pjk-Yr-tde" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rPx-wb-Rgh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.29803921570000003" green="0.67843137249999996" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                            <color key="value" red="1" green="0.13650203089999999" blue="0.24381002930000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="bgl-tI-O4H" kind="relationship" relationship="viewControllers" id="B5s-Tj-01P"/>
+                        <segue destination="y3d-Mf-2oC" kind="relationship" relationship="viewControllers" id="oZr-HG-KPf"/>
+                        <segue destination="xUs-zq-yaF" kind="relationship" relationship="viewControllers" id="JDa-XG-rky"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxw-ew-9mn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3193" y="-612"/>
         </scene>
         <!--Message User View Controller-->
         <scene sceneID="nbA-kS-Qin">
@@ -1641,7 +1661,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhu-OW-S5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6654" y="-612"/>
+            <point key="canvasLocation" x="5108" y="266"/>
         </scene>
         <!--Messenger View Controller-->
         <scene sceneID="G2r-GW-5mg">
@@ -1755,63 +1775,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9OZ-b3-YXS"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="chat_icon" id="mUP-Bp-51T">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="profileSegue1" animates="NO" id="iRu-ek-dUq"/>
+                        <segue destination="xUs-zq-yaF" kind="show" identifier="profileSegue1" animates="NO" id="iRu-ek-dUq"/>
                         <segue destination="y3d-Mf-2oC" kind="show" identifier="cardSegue1" animates="NO" id="yjy-y8-bqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBK-xI-830" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5870" y="-612"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OPl-qs-jtV">
-            <objects>
-                <viewController id="26d-Wd-anc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="X0N-yQ-pYo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Hub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXk-fM-1rx">
-                                <rect key="frame" x="148" y="323" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="RhX-2B-RXd"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="iconTab3" selectedImage="iconTab3" id="nF8-FH-doA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1hW-JU-zUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3929" y="1135"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="JXX-eN-cGU">
-            <objects>
-                <viewController id="cBY-Ha-4hD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fl1-6X-Wmf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Live Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVg-Or-i19">
-                                <rect key="frame" x="128" y="323" width="118" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="UpL-jn-OGu"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YqS-UD-Glw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4956" y="1135"/>
+            <point key="canvasLocation" x="4166" y="266"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Spc-dJ-MZS">
@@ -2265,7 +2239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mue-aP-lws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74.400000000000006" y="-1510.7946026986508"/>
+            <point key="canvasLocation" x="-170" y="-1316"/>
         </scene>
         <!--Badge View Controller-->
         <scene sceneID="ib7-uK-72Z">
@@ -2275,21 +2249,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxU-hh-6ad">
-                                <rect key="frame" x="0.0" y="79" width="375" height="114"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uem-Z4-oHz">
-                                        <rect key="frame" x="0.0" y="-57" width="375" height="228"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.104104238" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="Uem-Z4-oHz" firstAttribute="leading" secondItem="KxU-hh-6ad" secondAttribute="leading" id="Ied-cY-WpA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Uem-Z4-oHz" secondAttribute="trailing" id="PDs-vn-Ltp"/>
-                                    <constraint firstItem="Uem-Z4-oHz" firstAttribute="top" secondItem="KxU-hh-6ad" secondAttribute="top" constant="-57" id="ayd-2x-MEK"/>
-                                    <constraint firstItem="Uem-Z4-oHz" firstAttribute="centerY" secondItem="KxU-hh-6ad" secondAttribute="centerY" id="tNx-NS-gJ1"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZW-Kz-3nv">
                                 <rect key="frame" x="153" y="581" width="70" height="35"/>
                                 <color key="backgroundColor" red="0.07603833586" green="0.19786541129999999" blue="0.21177030459999999" alpha="0.12598993999999999" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2311,7 +2270,9 @@
                                         <rect key="frame" x="119" y="281" width="106" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Down-to-Earth"/>
+                                        <state key="normal" title="Down-to-Earth">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2324,6 +2285,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="b1:" destination="qXb-oT-4X5" eventType="touchUpInside" id="P4R-tW-MDY"/>
                                             <action selector="b29:" destination="iGx-da-FEu" eventType="touchUpInside" id="Yjw-F9-ITc"/>
                                         </connections>
                                     </button>
@@ -2331,7 +2293,9 @@
                                         <rect key="frame" x="29" y="281" width="87" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Organized"/>
+                                        <state key="normal" title="Organized">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2345,13 +2309,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b28:" destination="iGx-da-FEu" eventType="touchUpInside" id="kM2-Sy-Ek5"/>
+                                            <action selector="b2:" destination="qXb-oT-4X5" eventType="touchUpInside" id="tIw-AM-G8s"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGB-Ls-J1M">
                                         <rect key="frame" x="26" y="122" width="61" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Leader"/>
+                                        <state key="normal" title="Leader">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2365,13 +2332,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b1:" destination="iGx-da-FEu" eventType="touchUpInside" id="Sot-7g-ZaP"/>
+                                            <action selector="b3:" destination="qXb-oT-4X5" eventType="touchUpInside" id="zQl-Ih-q63"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-bi-CjU">
                                         <rect key="frame" x="6" y="51" width="91" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Enthusiastic"/>
+                                        <state key="normal" title="Enthusiastic">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2385,13 +2355,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b2:" destination="iGx-da-FEu" eventType="touchUpInside" id="FOu-il-lqe"/>
+                                            <action selector="b4:" destination="qXb-oT-4X5" eventType="touchUpInside" id="R2M-u7-Zgz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-r8-x0z">
                                         <rect key="frame" x="127" y="324" width="91" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Visual Learner"/>
+                                        <state key="normal" title="Visual Learner">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2405,13 +2378,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b3:" destination="iGx-da-FEu" eventType="touchUpInside" id="HYe-uo-SJU"/>
+                                            <action selector="b5:" destination="qXb-oT-4X5" eventType="touchUpInside" id="VXc-5D-oIe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cag-WM-Gob">
                                         <rect key="frame" x="6" y="15" width="106" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Good Explainer"/>
+                                        <state key="normal" title="Good Explainer">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2425,13 +2401,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b4:" destination="iGx-da-FEu" eventType="touchUpInside" id="D1p-yW-lgF"/>
+                                            <action selector="b6:" destination="qXb-oT-4X5" eventType="touchUpInside" id="z4Z-LC-5MF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCD-Re-T5z">
                                         <rect key="frame" x="100" y="51" width="109" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Goal-Oriented"/>
+                                        <state key="normal" title="Goal-Oriented">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2445,13 +2424,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b5:" destination="iGx-da-FEu" eventType="touchUpInside" id="6N6-KH-iE0"/>
+                                            <action selector="b7:" destination="qXb-oT-4X5" eventType="touchUpInside" id="3Jq-Tj-BIj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7M-5H-zbQ">
                                         <rect key="frame" x="8" y="86" width="174" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Not Mandatory? Not Doing"/>
+                                        <state key="normal" title="Not Mandatory? Not Doing">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2465,13 +2447,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b6:" destination="iGx-da-FEu" eventType="touchUpInside" id="bvi-Ej-fXz"/>
+                                            <action selector="b8:" destination="qXb-oT-4X5" eventType="touchUpInside" id="zwK-kS-JZk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZ7-tN-pIb">
                                         <rect key="frame" x="212" y="51" width="121" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Asks Questions"/>
+                                        <state key="normal" title="Asks Questions">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2485,13 +2470,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b7:" destination="iGx-da-FEu" eventType="touchUpInside" id="LPh-4x-Lx3"/>
+                                            <action selector="b9:" destination="qXb-oT-4X5" eventType="touchUpInside" id="i1F-zV-qTJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMt-wq-TVW">
                                         <rect key="frame" x="185" y="86" width="118" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Attends Lectures"/>
+                                        <state key="normal" title="Attends Lectures">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2504,6 +2492,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="b10:" destination="qXb-oT-4X5" eventType="touchUpInside" id="B0c-VD-hn9"/>
                                             <action selector="b9:" destination="iGx-da-FEu" eventType="touchUpInside" id="U5c-e9-IH0"/>
                                         </connections>
                                     </button>
@@ -2511,7 +2500,9 @@
                                         <rect key="frame" x="251" y="122" width="84" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Respectful"/>
+                                        <state key="normal" title="Respectful">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2525,13 +2516,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b10:" destination="iGx-da-FEu" eventType="touchUpInside" id="zV6-ke-yEK"/>
+                                            <action selector="b11:" destination="qXb-oT-4X5" eventType="touchUpInside" id="6ie-W5-G9H"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWC-LX-aBb">
                                         <rect key="frame" x="220" y="198" width="95" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Extrovert"/>
+                                        <state key="normal" title="Extrovert">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2545,13 +2539,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b11:" destination="iGx-da-FEu" eventType="touchUpInside" id="iuT-Nz-SPN"/>
+                                            <action selector="b12:" destination="qXb-oT-4X5" eventType="touchUpInside" id="2OQ-0T-mlp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHd-01-3lX">
                                         <rect key="frame" x="160" y="122" width="88" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Introvert"/>
+                                        <state key="normal" title="Introvert">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2565,13 +2562,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b12:" destination="iGx-da-FEu" eventType="touchUpInside" id="Lq5-pn-ae7"/>
+                                            <action selector="b13:" destination="qXb-oT-4X5" eventType="touchUpInside" id="fe7-k5-Y3T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-CV-Den">
                                         <rect key="frame" x="90" y="122" width="67" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="SOS Only"/>
+                                        <state key="normal" title="SOS Only">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2585,13 +2585,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b13:" destination="iGx-da-FEu" eventType="touchUpInside" id="ual-Xh-t7Z"/>
+                                            <action selector="b14:" destination="qXb-oT-4X5" eventType="touchUpInside" id="gUu-qx-YTd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pII-0e-u22">
                                         <rect key="frame" x="257" y="158" width="65" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Reliable"/>
+                                        <state key="normal" title="Reliable">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2605,13 +2608,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b14:" destination="iGx-da-FEu" eventType="touchUpInside" id="jxf-30-dy9"/>
+                                            <action selector="b15:" destination="qXb-oT-4X5" eventType="touchUpInside" id="IBf-jw-4k6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtF-xN-eaj">
                                         <rect key="frame" x="188" y="158" width="66" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Creative"/>
+                                        <state key="normal" title="Creative">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2625,13 +2631,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b15:" destination="iGx-da-FEu" eventType="touchUpInside" id="Fbc-wk-eKY"/>
+                                            <action selector="b16:" destination="qXb-oT-4X5" eventType="touchUpInside" id="yUv-fl-VuG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ydd-xI-U2Y">
                                         <rect key="frame" x="107" y="158" width="78" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="On-Time"/>
+                                        <state key="normal" title="On-Time">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2645,13 +2654,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b16:" destination="iGx-da-FEu" eventType="touchUpInside" id="sL7-xb-Eis"/>
+                                            <action selector="b17:" destination="qXb-oT-4X5" eventType="touchUpInside" id="UfT-WB-SvQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9q-g1-sFe">
                                         <rect key="frame" x="-4" y="158" width="108" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Great Scheduler"/>
+                                        <state key="normal" title="Great Scheduler">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2665,13 +2677,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b17:" destination="iGx-da-FEu" eventType="touchUpInside" id="miN-UW-OSk"/>
+                                            <action selector="b18:" destination="qXb-oT-4X5" eventType="touchUpInside" id="eU8-94-vPW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOV-w5-Cjv">
                                         <rect key="frame" x="115" y="15" width="130" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Verbal Brainstormer"/>
+                                        <state key="normal" title="Verbal Brainstormer">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2685,13 +2700,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b18:" destination="iGx-da-FEu" eventType="touchUpInside" id="wVV-J9-RJK"/>
+                                            <action selector="b19:" destination="qXb-oT-4X5" eventType="touchUpInside" id="TsD-yA-j9D"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-5C-Whe">
                                         <rect key="frame" x="110" y="198" width="107" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Quiet Study Only"/>
+                                        <state key="normal" title="Quiet Study Only">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2705,13 +2723,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b19:" destination="iGx-da-FEu" eventType="touchUpInside" id="TXO-JM-wN6"/>
+                                            <action selector="b21:" destination="qXb-oT-4X5" eventType="touchUpInside" id="dBQ-pt-riL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgg-Xw-fyY">
                                         <rect key="frame" x="12" y="238" width="115" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Highlighters Ready"/>
+                                        <state key="normal" title="Highlighters Ready">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2725,13 +2746,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b21:" destination="iGx-da-FEu" eventType="touchUpInside" id="9dE-0p-SI6"/>
+                                            <action selector="b22:" destination="qXb-oT-4X5" eventType="touchUpInside" id="y7a-U7-upH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f2-oe-e9f">
                                         <rect key="frame" x="6" y="198" width="101" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Enthusiastic"/>
+                                        <state key="normal" title="Enthusiastic">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2745,13 +2769,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b22:" destination="iGx-da-FEu" eventType="touchUpInside" id="dKV-MM-fuF"/>
+                                            <action selector="b23:" destination="qXb-oT-4X5" eventType="touchUpInside" id="eAb-dL-snK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-QM-obX">
                                         <rect key="frame" x="130" y="238" width="59" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Leader"/>
+                                        <state key="normal" title="Leader">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2765,13 +2792,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b23:" destination="iGx-da-FEu" eventType="touchUpInside" id="gCh-rr-28C"/>
+                                            <action selector="b24:" destination="qXb-oT-4X5" eventType="touchUpInside" id="ORo-S2-3PO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o14-kv-kgG">
                                         <rect key="frame" x="192" y="238" width="73" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Talker"/>
+                                        <state key="normal" title="Talker">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2785,13 +2815,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b24:" destination="iGx-da-FEu" eventType="touchUpInside" id="gIn-1I-WeD"/>
+                                            <action selector="b25:" destination="qXb-oT-4X5" eventType="touchUpInside" id="Toh-DK-c3v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz9-p3-oz3">
                                         <rect key="frame" x="268" y="238" width="67" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Thinker"/>
+                                        <state key="normal" title="Thinker">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2805,13 +2838,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b25:" destination="iGx-da-FEu" eventType="touchUpInside" id="0EN-nP-FSW"/>
+                                            <action selector="b26:" destination="qXb-oT-4X5" eventType="touchUpInside" id="vJL-Rq-H7I"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqT-wK-yAX">
                                         <rect key="frame" x="228" y="281" width="98" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Resourceful"/>
+                                        <state key="normal" title="Resourceful">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2825,13 +2861,16 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="b26:" destination="iGx-da-FEu" eventType="touchUpInside" id="D4d-Xa-zAz"/>
+                                            <action selector="b29:" destination="qXb-oT-4X5" eventType="touchUpInside" id="1Fw-BC-jFS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTn-On-vdd">
                                         <rect key="frame" x="248" y="15" width="87" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
-                                        <state key="normal" title="Responsible"/>
+                                        <state key="normal" title="Responsible">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                                 <integer key="value" value="1"/>
@@ -2844,6 +2883,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="b28:" destination="qXb-oT-4X5" eventType="touchUpInside" id="fIp-SG-ITK"/>
                                             <action selector="b8:" destination="iGx-da-FEu" eventType="touchUpInside" id="Wna-nb-nGD"/>
                                         </connections>
                                     </button>
@@ -2860,7 +2900,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-b0-zOT">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hF2-b0-zOT">
                                 <rect key="frame" x="16" y="204" width="343" height="358"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtp-gy-o6M">
@@ -2876,33 +2916,65 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badges_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="PvI-Ct-bqD">
+                                <rect key="frame" x="-186" y="-46" width="747" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpD-zc-sSk">
+                                <rect key="frame" x="276" y="578" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="nextBtn1.png"/>
+                                <connections>
+                                    <segue destination="iGx-da-FEu" kind="presentation" animates="NO" modalTransitionStyle="crossDissolve" id="1eJ-eJ-fEP"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.32816777289999999" green="0.48363845659999999" blue="0.56466132609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KxU-hh-6ad" firstAttribute="leading" secondItem="1vu-ED-WQo" secondAttribute="leadingMargin" constant="-16" id="1WO-se-mJV"/>
-                            <constraint firstItem="hF2-b0-zOT" firstAttribute="top" secondItem="KxU-hh-6ad" secondAttribute="bottom" id="3zd-mG-1Q1"/>
-                            <constraint firstItem="KxU-hh-6ad" firstAttribute="leading" secondItem="hF2-b0-zOT" secondAttribute="leading" constant="-16" id="AsC-KH-qwJ"/>
-                            <constraint firstItem="KxU-hh-6ad" firstAttribute="trailing" secondItem="1vu-ED-WQo" secondAttribute="trailingMargin" constant="16" id="DhN-Fa-s9O"/>
                             <constraint firstItem="vAQ-KX-c3i" firstAttribute="bottom" secondItem="kZW-Kz-3nv" secondAttribute="bottom" constant="51" id="QHy-D3-qIN"/>
                             <constraint firstItem="kZW-Kz-3nv" firstAttribute="top" secondItem="hF2-b0-zOT" secondAttribute="bottom" constant="30" id="RjV-Jx-waT"/>
-                            <constraint firstItem="KxU-hh-6ad" firstAttribute="trailing" secondItem="hF2-b0-zOT" secondAttribute="trailing" constant="16" id="Y52-MA-c6d"/>
                             <constraint firstItem="hF2-b0-zOT" firstAttribute="top" secondItem="1vu-ED-WQo" secondAttribute="top" constant="193" id="ise-c1-n2H"/>
                             <constraint firstItem="hF2-b0-zOT" firstAttribute="centerX" secondItem="kZW-Kz-3nv" secondAttribute="centerX" id="jMZ-9P-Bf8"/>
                             <constraint firstItem="kZW-Kz-3nv" firstAttribute="leading" secondItem="vAQ-KX-c3i" secondAttribute="leading" constant="153" id="tVQ-9M-S8x"/>
-                            <constraint firstItem="KxU-hh-6ad" firstAttribute="top" secondItem="vAQ-KX-c3i" secondAttribute="top" constant="59" id="v8e-cq-Qf0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vAQ-KX-c3i"/>
                     </view>
                     <connections>
+                        <outlet property="b1" destination="H6H-oW-Z7s" id="ZCO-sn-BNk"/>
+                        <outlet property="b10" destination="dMt-wq-TVW" id="Y3x-dj-eqd"/>
+                        <outlet property="b11" destination="KA6-a0-y7s" id="88f-Yy-LR9"/>
+                        <outlet property="b12" destination="jWC-LX-aBb" id="0wB-tY-rSV"/>
+                        <outlet property="b13" destination="PHd-01-3lX" id="cgY-MF-zuj"/>
+                        <outlet property="b14" destination="qAt-CV-Den" id="vGP-Dm-T8u"/>
+                        <outlet property="b15" destination="pII-0e-u22" id="JCM-7C-9ql"/>
+                        <outlet property="b16" destination="RtF-xN-eaj" id="Yxg-Q8-w7V"/>
+                        <outlet property="b17" destination="Ydd-xI-U2Y" id="Bqg-qw-VE2"/>
+                        <outlet property="b18" destination="y9q-g1-sFe" id="oKk-Ws-MWt"/>
+                        <outlet property="b19" destination="GOV-w5-Cjv" id="zkI-If-MsA"/>
+                        <outlet property="b2" destination="D1c-0U-T72" id="gAV-XE-tHo"/>
+                        <outlet property="b21" destination="pvL-5C-Whe" id="Mmt-Oy-jjg"/>
+                        <outlet property="b22" destination="Wgg-Xw-fyY" id="4ha-PF-C7s"/>
+                        <outlet property="b23" destination="1f2-oe-e9f" id="43h-US-6og"/>
+                        <outlet property="b24" destination="JdL-QM-obX" id="7Gw-JO-RvE"/>
+                        <outlet property="b25" destination="o14-kv-kgG" id="jtd-jB-rFI"/>
+                        <outlet property="b26" destination="vz9-p3-oz3" id="sPl-gF-7ji"/>
+                        <outlet property="b28" destination="vTn-On-vdd" id="w2z-Up-Jfe"/>
+                        <outlet property="b29" destination="XqT-wK-yAX" id="hoD-wp-TtK"/>
+                        <outlet property="b3" destination="kGB-Ls-J1M" id="5NE-YR-Bzp"/>
+                        <outlet property="b4" destination="OdK-bi-CjU" id="w2e-F1-Vvz"/>
+                        <outlet property="b5" destination="Udc-r8-x0z" id="uL2-dB-iFI"/>
+                        <outlet property="b6" destination="cag-WM-Gob" id="P0H-Qp-8wS"/>
+                        <outlet property="b7" destination="YCD-Re-T5z" id="zeO-OX-Cl1"/>
+                        <outlet property="b8" destination="a7M-5H-zbQ" id="iFm-bG-xF2"/>
+                        <outlet property="b9" destination="YZ7-tN-pIb" id="Kbg-TI-TD5"/>
                         <outlet property="nextbtn" destination="kZW-Kz-3nv" id="TWH-XO-WDk"/>
                         <outlet property="view1" destination="hF2-b0-zOT" id="sub-6z-SmF"/>
-                        <outlet property="view2" destination="KxU-hh-6ad" id="WOL-fZ-6ww"/>
                         <outlet property="view3" destination="hF2-b0-zOT" id="G8z-jz-kpB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPp-Xi-EX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="-1472.1139430284859"/>
+            <point key="canvasLocation" x="625" y="-1316"/>
         </scene>
         <!--Welcome Pt2 View Controller-->
         <scene sceneID="i6N-CD-hA1">
@@ -2970,7 +3042,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkT-SY-avU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863" y="-1472"/>
+            <point key="canvasLocation" x="2257" y="-1316"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oWT-gA-sLx">
@@ -3186,7 +3258,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EpS-RQ-uLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5016.8000000000002" y="-1399.2503748125939"/>
+            <point key="canvasLocation" x="4166" y="-1316"/>
         </scene>
         <!--Badge2 View Controller-->
         <scene sceneID="DgD-3N-WiU">
@@ -3207,7 +3279,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Down-to-Earth">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3229,7 +3301,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Organized">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3251,7 +3323,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Leader">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3273,7 +3345,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Enthusiastic">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3295,7 +3367,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Visual Learner">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3317,7 +3389,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Good Explainer">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3339,7 +3411,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Goal-Oriented">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3361,7 +3433,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Not Mandatory? Not Doing">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3383,7 +3455,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Asks Questions">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3405,7 +3477,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Attends Lectures">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3427,7 +3499,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Respectful">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3449,7 +3521,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Extrovert">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3471,7 +3543,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Introvert">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3493,7 +3565,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="SOS Only">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3515,7 +3587,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Reliable">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3537,7 +3609,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Creative">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3559,7 +3631,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="On-Time">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3581,7 +3653,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Great Scheduler">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3603,7 +3675,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Verbal Brainstormer">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3625,7 +3697,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Quiet Study Only">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3647,7 +3719,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Highlighters Ready">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3669,7 +3741,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Enthusiastic">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3691,7 +3763,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Leader">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3713,7 +3785,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Talker">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3735,7 +3807,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Thinker">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3757,7 +3829,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Resourceful">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3779,7 +3851,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                         <state key="normal" title="Responsible">
-                                            <color key="titleColor" red="0.2295566307106599" green="0.2295566307106599" blue="0.2295566307106599" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -3872,26 +3944,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAa-W3-JIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016.8" y="-1400.1499250374814"/>
+            <point key="canvasLocation" x="1446" y="-1316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VJ5-GK-N1L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xUs-zq-yaF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile_icon" id="XVq-6d-wz3">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p1i-X5-EZd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HMn-Gb-2FK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdp-aB-gKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5999999999999" y="281.10944527736132"/>
         </scene>
     </scenes>
     <resources>
         <image name="Gender.png" width="1080" height="1080"/>
         <image name="almostdone.png" width="1080" height="1080"/>
         <image name="back_arrow.png" width="1080" height="1080"/>
-        <image name="badge1.png" width="1080" height="1080"/>
         <image name="badges_1.png" width="1080" height="1080"/>
+        <image name="badges_2.png" width="1080" height="1080"/>
         <image name="bio.png" width="829" height="119"/>
         <image name="calendar.png" width="1080" height="1080"/>
         <image name="cam_3.png" width="1080" height="1080"/>
-        <image name="chat_card2.png" width="1080" height="1080"/>
+        <image name="cards_icon" width="35" height="35"/>
+        <image name="chat_icon" width="35" height="35"/>
         <image name="classes.png" width="862" height="68"/>
         <image name="continue.png" width="1080" height="1080"/>
         <image name="edit_2.png" width="1080" height="1080"/>
         <image name="girl.jpg" width="4758" height="3172"/>
         <image name="gradyear.png" width="589" height="99"/>
         <image name="hourglass.png" width="1080" height="1080"/>
-        <image name="iconTab3" width="25" height="25"/>
         <image name="lightbulb2.png" width="1080" height="1080"/>
         <image name="linked.png" width="1080" height="1080"/>
         <image name="linked2.png" width="287" height="286"/>
@@ -3904,7 +3997,7 @@
         <image name="pic2.jpg" width="1366" height="768"/>
         <image name="please.png" width="1080" height="1080"/>
         <image name="please2.png" width="1080" height="1080"/>
-        <image name="prof_card2.png" width="1080" height="1080"/>
+        <image name="profile_icon" width="35" height="35"/>
         <image name="q1.png" width="1080" height="1080"/>
         <image name="q2.png" width="1080" height="1080"/>
         <image name="q3.png" width="1080" height="1080"/>
@@ -3921,15 +4014,15 @@
         <image name="studylink.png" width="1159" height="1546"/>
         <image name="studylink_name.png" width="1080" height="1080"/>
         <image name="tutorial.png" width="1080" height="1080"/>
-        <image name="user" width="30" height="30"/>
         <image name="welcome.png" width="1080" height="1080"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="odJ-nr-agJ"/>
+        <segue reference="iRu-ek-dUq"/>
+        <segue reference="Pby-cx-fT0"/>
+        <segue reference="4O1-dp-D5n"/>
         <segue reference="IPm-9q-xnt"/>
-        <segue reference="pZJ-Gb-EKV"/>
-        <segue reference="buo-Co-FFG"/>
-        <segue reference="jh2-fE-6eq"/>
+        <segue reference="yjy-y8-bqX"/>
+        <segue reference="XMi-O4-KsI"/>
         <segue reference="Bts-1W-yy5"/>
     </inferredMetricsTieBreakers>
 </document>

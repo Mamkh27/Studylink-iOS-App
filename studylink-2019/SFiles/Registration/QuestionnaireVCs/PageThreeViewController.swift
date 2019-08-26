@@ -31,7 +31,6 @@ class PageThreeViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     @IBOutlet var q4: UIImageView!
     @IBOutlet var option1: UIButton!
     @IBOutlet var q3: UIImageView!
-
     @IBOutlet var option2: UIButton!
     @IBOutlet var option3: UIButton!
 
@@ -40,8 +39,14 @@ class PageThreeViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     var Op3Tapped = false
     
     override func viewDidLoad() {
+        initialSetup()
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    func initialSetup(){
         super.viewDidLoad()
-       self.q3.alpha = 0
+        self.q3.alpha = 0
         self.option1.alpha = 0
         self.option2.alpha = 0
         self.option3.alpha = 0
@@ -51,8 +56,9 @@ class PageThreeViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
         self.option1.layer.cornerRadius = 5
         self.option2.layer.cornerRadius = 5
         self.option3.layer.cornerRadius = 5
-        // Do any additional setup after loading the view.
     }
+    
+
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 1, animations: {
             self.q3.alpha = 1

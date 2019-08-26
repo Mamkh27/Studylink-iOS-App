@@ -11,8 +11,6 @@ import UIKit
 
 class MenuBar: MenuOptions{
     
-   
-    
 
     var whichOptionisActive = "profile"
     let menuOps = MenuOptions()

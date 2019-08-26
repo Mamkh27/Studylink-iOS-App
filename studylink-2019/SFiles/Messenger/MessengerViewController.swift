@@ -36,9 +36,6 @@ class MessengerViewController: UIViewController{
     }
     
 
-    
-    
-    
     func addContraintsWithFormat(_ format: String, views: UIView...) {
         var viewDict = [String: UIView]()
         

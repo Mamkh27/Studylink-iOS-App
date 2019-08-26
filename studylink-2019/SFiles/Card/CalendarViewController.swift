@@ -15,18 +15,14 @@ weak var delegate: MonthChangeDelegate?
     var monthsArr = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
     var currentMonthIndex = 0
     var currentYear: Int = 0
-    
     var numOfDaysInMonth = [31, 28, 31, 30, 31, 30,31, 31,30, 31,30,31]
-    
     var alreadyDisplayed = false
     var presentMonthIndex = 0
     var presentYear = 0
     var todaysDate = 0
     var firstWeekDayOfMonth = 0
-    
     let rightBtn = UIButton(frame: CGRect(x: 275, y: 175, width: 100, height: 100))
     let leftBtn = UIButton(frame: CGRect(x: 0, y: 175, width: 100, height: 100))
-    
     
     let lblName: UILabel = {
         let lbl = UILabel()
@@ -42,20 +38,17 @@ weak var delegate: MonthChangeDelegate?
         super.viewDidLoad()
     
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-displayCalendar()
-closeButton()
-self.showAnimate()
-        
-        // Do any additional setup after loading the view.
-        
+        displayCalendar()
+        closeButton()
+        showAnimate()
         leftBtn.isEnabled = false
     }
     
+    
     func closeButton(){
         let button = UIButton(frame: CGRect(x: 150, y: 470, width: 70, height: 40))
-        
-        button.setTitle("Close", for: .normal)
-        button.addTarget(self, action: #selector(buttonClose), for: .touchUpInside)
+            button.setTitle("Close", for: .normal)
+            button.addTarget(self, action: #selector(buttonClose), for: .touchUpInside)
         
         self.view.addSubview(button)
     }
@@ -65,18 +58,18 @@ self.showAnimate()
     }
     
     func showAnimate(){
-        self.view.transform = CGAffineTransform(scaleX: 1.3,y: 1.3)
-        self.view.alpha = 0.0
-        UIView.animate(withDuration: 0.25, animations: {
-            self.view.alpha = 1.0
-    self.view.transform = CGAffineTransform(scaleX: 1.0,y: 1.0)
+                self.view.transform = CGAffineTransform(scaleX: 1.3,y: 1.3)
+                self.view.alpha = 0.0
+                UIView.animate(withDuration: 0.25, animations: {
+                self.view.alpha = 1.0
+                self.view.transform = CGAffineTransform(scaleX: 1.0,y: 1.0)
         })
     }
     
     func removeAnimate(){
-        UIView.animate(withDuration: 0.25, animations: {
-    self.view.transform = CGAffineTransform(scaleX: 1.3,y: 1.3)
-            self.view.alpha = 0.0
+                UIView.animate(withDuration: 0.25, animations: {
+                self.view.transform = CGAffineTransform(scaleX: 1.3,y: 1.3)
+                self.view.alpha = 0.0
         }, completion: {(finished: Bool) in
             if (finished){
                 self.view.removeFromSuperview()
@@ -141,10 +134,13 @@ self.showAnimate()
         return 8.0
     }
     
+    //calendar specifics
     func getFirstWeekDay() -> Int {
         let day = ("\(currentYear)-\(currentMonthIndex)-01".date?.firstDayOfTheMonth.weekday)!
         return day == 7 ? 1 : day
     }
+    
+    //work in progress
     func didChangeMonth( monthIndex: Int,  year: Int){
         currentMonthIndex = monthIndex + 1
         currentYear = year
@@ -157,6 +153,7 @@ self.showAnimate()
             print("USER CLICKED NEXT MONTH, SHOW NEW DATES")
     }
     
+    //user clicks for next/previous month
     @objc func buttonAction(sender: UIButton!) {
         monthcount += 1
         if(monthcount > 2){
@@ -184,6 +181,7 @@ self.showAnimate()
         self.delegate?.didChangeMonth( monthIndex: currentMonthIndex, year: currentYear)
     }
     
+    //collection view for calendar
     let myCalendarView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         
@@ -193,7 +191,6 @@ self.showAnimate()
         myCalendarView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         myCalendarView.showsHorizontalScrollIndicator = false
         myCalendarView.translatesAutoresizingMaskIntoConstraints = true
-        
         myCalendarView.backgroundColor = UIColor.clear
         myCalendarView.allowsMultipleSelection = false
         return myCalendarView
@@ -203,25 +200,19 @@ self.showAnimate()
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = true
-       
         return stackView
     }()
+    
     
     func displayCalendar(){
         
         currentMonthIndex = Calendar.current.component(.month, from: Date()) - 1
         currentYear = Calendar.current.component(.year, from: Date())
-        
-        var monthsArr = ["January","February","March","April","May","June","July","August","September","October", "November", "December"]
-        
-        
         currentMonthIndex = Calendar.current.component(.month, from: Date()) - 1
         currentYear = Calendar.current.component(.year, from: Date())
-        
         self.view.addSubview(lblName)
         
         lblName.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
         lblName.text = "\(monthsArr[currentMonthIndex]) \(currentYear)"
         lblName.frame = CGRect(x:0, y: 200, width: self.view.frame.width , height: 50)
         lblName.backgroundColor =  UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
@@ -229,13 +220,11 @@ self.showAnimate()
         rightBtn.tintColor = .white
         rightBtn.setTitle(">", for: .normal)
         rightBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
         self.view.addSubview(rightBtn)
         
         leftBtn.tintColor = .white
         leftBtn.setTitle("<", for: .normal)
         leftBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
         self.view.addSubview(leftBtn)
         
         ////////////////////////////////////////////////////
@@ -246,8 +235,8 @@ self.showAnimate()
         myCalendarView.isHidden = false
         
         
-        
         /////////////////////////////////////////////////////////
+        
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())
         todaysDate = Calendar.current.component(.day, from: Date())
@@ -281,16 +270,5 @@ self.showAnimate()
         self.view.bringSubviewToFront(rightBtn)
         self.view.bringSubviewToFront(leftBtn)
     }
-    
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
  }

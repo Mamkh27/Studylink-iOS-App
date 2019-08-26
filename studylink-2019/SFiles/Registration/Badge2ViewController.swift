@@ -66,8 +66,8 @@ class Badge2ViewController: UIViewController {
         
         //bring all views in front of the blur
         self.view.bringSubviewToFront(self.view1)
-        self.view.bringSubviewToFront(self.nextbtn)
-        self.view.bringSubviewToFront(self.view2)
+       // self.view.bringSubviewToFront(self.nextbtn)
+       self.view.bringSubviewToFront(self.view2)
         
         self.view.bringSubviewToFront(self.view3)
         

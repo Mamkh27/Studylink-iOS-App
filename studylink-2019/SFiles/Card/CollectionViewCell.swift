@@ -24,7 +24,7 @@ class CollectionViewCell: UICollectionViewCell {
         self.contentView.layer.shadowOffset = .zero
         self.contentView.layer.shadowPath = UIBezierPath(rect: self.contentView.bounds).cgPath
         self.contentView.layer.shouldRasterize = true
- self.mainView.layer.cornerRadius = 13.0
+        self.mainView.layer.cornerRadius = 13.0
 
     }
 }

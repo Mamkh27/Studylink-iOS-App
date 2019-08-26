@@ -36,8 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //tabBar
+        UITabBar.appearance().barTintColor = UIColor(red: 7/255, green: 51/255, blue: 70/255, alpha: 1.0)
+        UITabBar.appearance().tintColor = .white
         
-
         //background animation set-up
         backgroundImg.frame = CGRect(x:0, y:0, width:self.window!.bounds.height * 1.688,height:self.window!.bounds.height)
         backgroundImg.image = UIImage(named:"pic2.jpg")
